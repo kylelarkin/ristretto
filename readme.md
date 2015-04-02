@@ -1,4 +1,4 @@
-![Ristretto](screenshot.png)
+![Ristretto](img/wp-login-logo-ristretto.png)
 
 Ristretto WordPress Theme Framework
 ================================
