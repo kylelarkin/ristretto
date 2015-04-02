@@ -1,3 +1,4 @@
+		</div>
 	</section>
 
 	<footer class="body--footer">

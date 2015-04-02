@@ -38,3 +38,4 @@
 		</div>
 	</header>
 	<section class="body--wrapper" role="main">
+		<div class="inner">
