@@ -1,0 +1,39 @@
+/* IE Overrides */
+@import "framework/ristretto";
+@import "framework/typography";
+
+
+// -------------------------------------------------
+// Sass-y IE Specific Variables/Mixins
+// ---------------------------------------------- */
+$shadow_alt: #333;
+$pie-behavior: url('/wp-content/themes/ristretto/js/PIE.php');
+
+@mixin shadow-replace {
+	border-bottom: 1px solid $shadow_alt;
+}
+
+
+// -------------------------------------------------
+// IE<10
+// ---------------------------------------------- */
+.lt-ie10 {
+
+} // end .lt-ie10
+
+
+// -------------------------------------------------
+// IE<9
+// ---------------------------------------------- */
+.lt-ie9 {
+
+} // end .lt-ie9
+
+
+// -------------------------------------------------
+// IE<8
+// ---------------------------------------------- */
+.lt-ie8 {
+	// Hack for IE7 and lower box-sizing
+	* { box-sizing: border-box; *behavior: url('/wp-content/themes/ristretto/js/boxsizing.htc'); }
+} // end .lt-ie8

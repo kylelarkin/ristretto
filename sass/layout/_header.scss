@@ -1,0 +1,31 @@
+header.body--header {
+	@include clearfix;
+
+	nav.nav--primary {
+		ul.menu {
+			// Styles for ALL <li>'s and <a>'s
+			li {
+				&:hover, &:active {}
+				a {
+					&:hover, &:active {}
+				}
+			}
+			// Styles for only TOP LEVEL <li>'s and <a>'s
+			& > li {
+				&:hover, &:active {}
+				& > a {
+					&:hover, &:active {}
+				}
+			}
+		}
+		ul.sub-menu {
+			// Styles for only CHILD LEVEL <li>'s and <a>'s
+			& > li {
+				&:hover, &:active {}
+				a {
+					&:hover, &:active {}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,91 @@
+/* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
+
+// -------------------------------------------------
+// Ristretto Bourbon Imports
+// ---------------------------------------------- */
+@import "bourbon", "neat";
+@import "grid";
+
+
+// -------------------------------------------------
+// Ristretto Variables
+// ---------------------------------------------- */
+@import "variables";
+
+
+// -------------------------------------------------
+// Custom Text Selection Setup
+// ---------------------------------------------- */
+body,select,input,textarea {
+	color:#333;
+}
+// Custom text-selection colors (remove any text shadows:twitter.com/miketaylr/status/12228805301)
+::-moz-selection {
+	background:$highlight-color;
+	color:#000;
+	text-shadow:none;
+}
+::selection {
+	background:$highlight-color;
+	color:#000;
+	text-shadow:none;
+}
+// j.mp/webkit-tap-highlight-color
+a:link {
+	-webkit-tap-highlight-color:$highlight-color;
+}
+ins {
+	background-color:$highlight-color;
+	color:#000;
+	text-decoration:none;
+
+}
+mark {
+	background-color:$highlight-color;
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+}
+
+
+// -------------------------------------------------
+// Ristretto Mixins
+// ---------------------------------------------- */
+
+// Omega Reset (via http://joshfry.me/notes/omega-reset-for-bourbon-neat/)
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// Remove UL Styling
+@mixin ul-reset {
+	list-style: none;
+	margin: 0;
+	padding-bottom: 0;
+}
+
+// Hyphenation (FF compatible)
+@mixin hyphenation(){
+	// -ms-word-break: break-all;
+	// word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+// Center element vertically without knowing height (IE9+) via http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+
+// -------------------------------------------------
+// Project-specific Mixins
+// ---------------------------------------------- */
+@import "mixins";

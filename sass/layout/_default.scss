@@ -1,0 +1,4 @@
+.inner {
+	@include outer-container();
+	padding: 0 1rem;
+}

@@ -1,0 +1,1 @@
+(function(){$(document).ready(function(){}),$(window).load(function(){})}).call(this);

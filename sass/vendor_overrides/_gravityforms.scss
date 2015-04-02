@@ -1,0 +1,47 @@
+@import "framework/ristretto";
+
+body .gform_wrapper {
+	input[type=text],
+	input[type=url],
+	input[type=email],
+	input[type=tel],
+	input[type=number],
+	input[type=password],
+	textarea {
+		border: 1px solid $body-color;
+		font-size: 12px;
+		padding: 4px 2px 4px 2px;
+
+		&:focus {
+			border: 1px solid lighten($body-color, 25%);
+		}
+	}
+	.top_label, .left_label, .right_label {
+		.gfield_label {
+			font-weight: normal;
+			color: $body-color;
+		}
+	}
+	label, .instruction, .gfield_required {
+		color: $body-color;
+	}
+	.gform_footer {
+		margin: 0;
+
+		input.button,
+		input[type=submit] {
+			-webkit-appearance: inherit;
+		}
+	}
+	.gform_footer input.button, .gform_footer input[type=submit] {
+		background: $body-color;
+		border: none;
+		color: white;
+		padding: .45em 0.75em .35em;
+		outline: 0;
+
+		&:hover, &:active {
+			background: lighten($body-color, 25%);
+		}
+	}
+}
