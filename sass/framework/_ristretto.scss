@@ -12,6 +12,10 @@
 // ---------------------------------------------- */
 @import "variables";
 
+// -------------------------------------------------
+// Ristretto Resets
+// ---------------------------------------------- */
+* { box-sizing: 'border-box'; }
 
 // -------------------------------------------------
 // Custom Text Selection Setup
@@ -62,7 +66,7 @@ mark {
 @mixin ul-reset {
 	list-style: none;
 	margin: 0;
-	padding-bottom: 0;
+	padding-left: 0;
 }
 
 // Hyphenation (FF compatible)

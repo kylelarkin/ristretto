@@ -11,7 +11,7 @@
 	<?php endwhile; endif; // end loop ?>
 
 	<nav role="navigation" class="single-post-nav">
-		<?php posts_nav_link('|;','&laquo; Newer Posts ','Older Posts &raquo;'); ?>
+		<?php posts_nav_link('|','&laquo; Newer Posts ','Older Posts &raquo;'); ?>
 	</nav>
 
 	<?php //get_sidebar(); ?>

@@ -1,8 +1,8 @@
-$(document).ready ->
+jQuery(document).ready ($) ->
 
 
 
-$(window).load ->
+jQuery(window).load ($) ->
 
 
 

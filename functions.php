@@ -25,6 +25,21 @@ function ristretto_enqueue_init() {
 add_action('wp_enqueue_scripts', 'ristretto_enqueue_init', 15);
 
 /**
+ * TypeKit Fonts (from: http://wptheming.com/2013/02/typekit-code-snippet/)
+ */
+function theme_typekit() {
+    wp_enqueue_script( 'theme_typekit', '//use.typekit.net/xxxxxxx.js');
+}
+add_action( 'wp_enqueue_scripts', 'theme_typekit' );
+
+function theme_typekit_inline() {
+  if ( wp_script_is( 'theme_typekit', 'done' ) ) { ?>
+  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<?php }
+}
+add_action( 'wp_head', 'theme_typekit_inline' );
+
+/**
  * Move Gravity Forms inline JS into footer after our JS is enqueue'd
  */
 add_filter( 'gform_init_scripts_footer', '__return_true' );

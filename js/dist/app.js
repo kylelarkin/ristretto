@@ -1,1 +1,1 @@
-(function(){$(document).ready(function(){}),$(window).load(function(){})}).call(this);
+(function(){jQuery(document).ready(function($){}),jQuery(window).load(function($){})}).call(this);

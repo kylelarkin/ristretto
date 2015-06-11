@@ -1,10 +1,9 @@
+/* IE Overrides */
 /* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
 html {
   box-sizing: border-box; }
 
-*,
-*::after,
-*::before {
+*, *::after, *::before {
   box-sizing: inherit; }
 
 * {
@@ -117,24 +116,6 @@ ul {
     nav ul a {
       text-decoration: none; }
 
-.inner {
-  max-width: 80em;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem; }
-  .inner::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-header.body--header::after {
-  clear: both;
-  content: "";
-  display: table; }
-
-footer.body--footer::after {
-  clear: both;
-  content: "";
-  display: table; }
-
-/*# sourceMappingURL=screen.css.map */
+.lt-ie8 * {
+  box-sizing: border-box;
+  *behavior: url("/wp-content/themes/ristretto/js/boxsizing.htc"); }

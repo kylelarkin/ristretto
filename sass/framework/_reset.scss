@@ -68,7 +68,6 @@ button{width:auto;overflow:visible;}
 // -------------------------------------------------
 // Ristretto resets
 // ---------------------------------------------- */
-* { @include box-sizing(border-box); }
 
 // iOS fixes
 html { -webkit-text-size-adjust: none; }
