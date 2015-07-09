@@ -33,7 +33,7 @@
 		<div class="inner">
 			<h6 class="logo"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>"><?php bloginfo('title'); ?></a></h6>
 			<nav class="nav--primary" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary-header-menu-location', 'container' => false) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary-header-menu', 'container' => false) ); ?>
 			</nav>
 		</div>
 	</header>
