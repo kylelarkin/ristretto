@@ -12,10 +12,10 @@
 
 	<nav role="navigation" class="post-nav">
 		<div class="previous-post">
-			<?php previous_posts_link('<i class="fa fa-caret-left"></i> Previous'); ?>
+			<?php previous_post_link('%link', '<i class="fa fa-caret-left"></i> Previous'); ?>
 		</div>
 		<div class="next-post">
-			<?php next_posts_link('Next <i class="fa fa-caret-right"></i>');?>
+			<?php next_post_link('%link', 'Next <i class="fa fa-caret-right"></i>')?>
 		</div>
 	</nav>
 

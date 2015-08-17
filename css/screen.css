@@ -1,3 +1,145 @@
+/* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+* {
+  box-sizing: 'border-box'; }
+
+body, select, input, textarea {
+  color: #333; }
+
+::-moz-selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none; }
+
+::selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none; }
+
+a:link {
+  -webkit-tap-highlight-color: #ccc; }
+
+ins {
+  background-color: #ccc;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ccc;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+body .gform_wrapper {
+  max-width: 100%; }
+  body .gform_wrapper input[type=text],
+  body .gform_wrapper input[type=url],
+  body .gform_wrapper input[type=email],
+  body .gform_wrapper input[type=tel],
+  body .gform_wrapper input[type=number],
+  body .gform_wrapper input[type=password],
+  body .gform_wrapper textarea {
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    padding: 0.75rem 0.5rem; }
+    body .gform_wrapper input[type=text]:focus,
+    body .gform_wrapper input[type=url]:focus,
+    body .gform_wrapper input[type=email]:focus,
+    body .gform_wrapper input[type=tel]:focus,
+    body .gform_wrapper input[type=number]:focus,
+    body .gform_wrapper input[type=password]:focus,
+    body .gform_wrapper textarea:focus {
+      border: 1px solid #999;
+      background: #f9f9f9; }
+  body .gform_wrapper .gfield {
+    margin-bottom: 1rem; }
+  body .gform_wrapper .top_label .gfield_label, body .gform_wrapper .left_label .gfield_label, body .gform_wrapper .right_label .gfield_label {
+    font-size: 0.875rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    color: #555;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+  body .gform_wrapper .ginput_complex label {
+    margin-bottom: 0; }
+  body .gform_wrapper label, body .gform_wrapper .instruction, body .gform_wrapper .gfield_required {
+    color: #555; }
+  body .gform_wrapper .gform_footer {
+    margin: 0; }
+    body .gform_wrapper .gform_footer input.button,
+    body .gform_wrapper .gform_footer input[type=submit] {
+      -webkit-appearance: inherit; }
+  body .gform_wrapper .gform_footer input.button, body .gform_wrapper .gform_footer input[type=submit] {
+    background: #333;
+    border: none;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    padding: 1rem 1.25rem;
+    outline: 0;
+    text-transform: uppercase;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out; }
+    body .gform_wrapper .gform_footer input.button:hover, body .gform_wrapper .gform_footer input.button:active, body .gform_wrapper .gform_footer input[type=submit]:hover, body .gform_wrapper .gform_footer input[type=submit]:active {
+      background: #404040; }
+  body .gform_wrapper .gform_footer input[type=submit] {
+    float: left; }
+  body .gform_wrapper .gform_ajax_spinner {
+    float: left;
+    margin-left: 1rem;
+    margin-top: 1.125rem; }
+  body .gform_wrapper .validation_error {
+    border: none;
+    background: #555;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 1rem;
+    text-transform: uppercase; }
+  body .gform_wrapper .top_label .gfield_error {
+    background: none;
+    border: none;
+    width: 100%; }
+    body .gform_wrapper .top_label .gfield_error textarea.textarea {
+      max-width: 100%; }
+  body .gform_wrapper li.gfield.gfield_error.gfield_contains_required {
+    margin: 0 !important; }
+    body .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, body .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+      margin: 0;
+      max-width: 100%; }
+    body .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+      color: #cc0000;
+      letter-spacing: 1px;
+      margin: 0;
+      margin-bottom: .5rem;
+      margin-top: .25rem;
+      padding: 0;
+      padding-top: 0 !important;
+      max-width: 100%;
+      text-transform: uppercase; }
+      body .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description:before {
+        color: #555;
+        content: '\f0aa';
+        font-family: 'FontAwesome';
+        margin-right: .35rem; }
+  body .gform_wrapper li.gfield_error input[type=email],
+  body .gform_wrapper li.gfield_error input[type=number],
+  body .gform_wrapper li.gfield_error input[type=password],
+  body .gform_wrapper li.gfield_error input[type=tel],
+  body .gform_wrapper li.gfield_error input[type=text],
+  body .gform_wrapper li.gfield_error input[type=url],
+  body .gform_wrapper li.gfield_error textarea {
+    border-color: #cc0000; }
+
 /*
 HTML5 Reset ::style.css - via https://github.com/murtaugh/HTML5-Reset/blob/master/_/css/style.css
 ----------------------------------------------------------
@@ -176,7 +318,7 @@ button {
 html {
   -webkit-text-size-adjust: none; }
 
-input {
+input[type='text'], input[type='submit'], textarea {
   -webkit-appearance: none;
   -moz-appearance: none; }
 

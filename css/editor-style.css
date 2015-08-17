@@ -176,7 +176,7 @@ button {
 html {
   -webkit-text-size-adjust: none; }
 
-input {
+input[type='text'], input[type='submit'], textarea {
   -webkit-appearance: none;
   -moz-appearance: none; }
 

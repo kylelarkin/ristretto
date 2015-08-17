@@ -24,7 +24,7 @@
 	<![endif]-->
 
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
-	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicon.ico" />
+	<?php include( locate_template('molecules/_favicon.php') ); ?>
 
 </head>
 
@@ -38,4 +38,3 @@
 		</div>
 	</header>
 	<section class="body--wrapper" role="main">
-		<div class="inner">

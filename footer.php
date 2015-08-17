@@ -1,5 +1,4 @@
-		</div>
-	</section>
+	</section> <?php // End .body--wrapper ?>
 
 	<footer class="body--footer">
 		<div class="inner">
