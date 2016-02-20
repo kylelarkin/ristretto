@@ -11,13 +11,12 @@ foreach (glob(dirname(__FILE__) . '/lib/' . '*.php') as $filename) {
  */
 function ristretto_enqueue_init() {
 	// Register Scripts
-	wp_register_script( 'fitvids', get_bloginfo( 'stylesheet_directory' ) . '/bower_components/FitVids/jquery.fitvids.js', array('jquery'), null, true );
+	wp_register_script( 'ristretto-app', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/app.js', array('jquery'), null, true );
 	// Enqueue Scripts
-	wp_enqueue_script('fitvids');
 	wp_enqueue_script('ristretto-app');
 
 	// Register Styles
-	wp_register_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), null, 'all' );
+	wp_register_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), null, 'all' );
 	wp_register_style( 'ristretto-screen', get_bloginfo( 'stylesheet_directory' ) . '/css/screen.css', array(), null, 'all' );
 	// Enqueue Styles
 	wp_enqueue_style('fontawesome');
@@ -35,7 +34,7 @@ add_action( 'wp_enqueue_scripts', 'theme_typekit' );
 
 function theme_typekit_inline() {
   if ( wp_script_is( 'theme_typekit', 'done' ) ) { ?>
-  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 <?php }
 }
 add_action( 'wp_head', 'theme_typekit_inline' );
