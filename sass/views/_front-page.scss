@@ -1,0 +1,4 @@
+.intro {
+  background: $green;
+  @include grid-column(3);
+}

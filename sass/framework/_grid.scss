@@ -1,31 +1,24 @@
-@import "neat-helpers";
-
-// Set Max Width of Outer Container
-$max-width: em(1280);
-
-// Visual Grid Toggle
-$visual-grid: false;
-
 // Setup Breakpoints
-$no_of_columns: 12;
+$v-small-breakpoint: 375px;
 $small-breakpoint:  580px;
 $medium-breakpoint: 768px;
 $large-breakpoint:  1024px;
-$nav-breakpoint: 1012px;
+$xl-breakpoint: 1344px;
+$nav-breakpoint: 900px;
+$nav-small-breakpoint: 680px;
 
-$pre-small-only:  new-breakpoint(max-width ($small-breakpoint - 1) $no_of_columns);
-$pre-nav-only:    new-breakpoint(max-width ($nav-breakpoint - 1) $no_of_columns);
-$small:           new-breakpoint(min-width $small-breakpoint $no_of_columns);
-$small-only:      new-breakpoint(min-width $small-breakpoint max-width ($medium-breakpoint - 1) $no_of_columns);
-$small-medium:    new-breakpoint(min-width $small-breakpoint max-width ($large-breakpoint - 1) $no_of_columns);
-$pre-medium-only: new-breakpoint(max-width ($medium-breakpoint - 1) $no_of_columns);
-$pre-nav-only: new-breakpoint(max-width ($nav-breakpoint - 1) $no_of_columns);
-$nav:             new-breakpoint(min-width $nav-breakpoint $no_of_columns);
-$medium:          new-breakpoint(min-width $medium-breakpoint $no_of_columns);
-$medium-only:     new-breakpoint(min-width $medium-breakpoint max-width ($large-breakpoint - 1) $no_of_columns);
-$pre-large-only:  new-breakpoint(max-width ($large-breakpoint - 1) $no_of_columns);
-$large:           new-breakpoint(min-width $large-breakpoint $no_of_columns);
-
-// Set Neat grid settings to match Bourbon for Omega Reset (https://github.com/thoughtbot/neat#getting-started)
-$fg-column: $column;
-$fg-gutter: $gutter;
+$v-small:           (media: $v-small-breakpoint);
+$pre-small-only:  (media: '(max-width: $small-breakpoint - 1)' );
+$pre-nav-only:    (media: '(max-width: $nav-breakpoint - 1)' );
+$small:           (media: $small-breakpoint);
+$small-only:      (media: '(min-width: $small-breakpoint) and (max-width: $medium-breakpoint - 1 )');
+$small-medium:    (media: '(min-width: $small-breakpoint) and (max-width: $large-breakpoint - 1 )');
+$pre-medium-only: (media: '(max-width: $medium-breakpoint - 1)' );
+$pre-nav-only:    (media: '(max-width: $nav-breakpoint - 1)' );
+$nav:             (media: $nav-breakpoint);
+$nav-small:       (media: $nav-small-breakpoint);
+$medium:          (media: $medium-breakpoint);
+$medium-only:     (media: '(min-width: $medium-breakpoint) and (max-width: $large-breakpoint - 1 )');
+$pre-large-only:  (media: '(max-width: $large-breakpoint - 1)' );
+$large:           (media: $large-breakpoint);
+$xl:              (media: $xl-breakpoint);

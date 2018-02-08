@@ -6,7 +6,6 @@
 @import "bourbon", "neat";
 @import "grid";
 
-
 // -------------------------------------------------
 // Ristretto Variables
 // ---------------------------------------------- */
@@ -15,7 +14,7 @@
 // -------------------------------------------------
 // Ristretto Resets
 // ---------------------------------------------- */
-* { box-sizing: 'border-box'; }
+* { box-sizing: border-box; }
 
 // -------------------------------------------------
 // Custom Text Selection Setup
@@ -56,12 +55,6 @@ mark {
 // Ristretto Mixins
 // ---------------------------------------------- */
 
-// Omega Reset (via http://joshfry.me/notes/omega-reset-for-bourbon-neat/)
-@mixin omega-reset($nth) {
-  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
-  &:nth-child(#{$nth}+1) { clear: none }
-}
-
 // Remove UL Styling
 @mixin ul-reset {
 	list-style: none;
@@ -88,6 +81,17 @@ mark {
 	transform: translateY(-50%);
 }
 
+// Pixels to Rems
+$remBaseFontSize: 16;
+@function rem($pixels, $context: $remBaseFontSize) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+	@return $pixels / $context * 1rem;
+}
 
 // -------------------------------------------------
 // Project-specific Mixins

@@ -5,7 +5,14 @@ Ristretto WordPress Theme Framework
 
 ## A Sass + Bourbon based starter theme for WordPress created by [Extra Small Design](http://extrasmalldesign.com).
 
-Under the hood Ristretto uses CodeKit 2 to make theme development easy.
+Under the hood Ristretto uses CodeKit 3 to make theme development easy.
+
+## Updates February 8, 2018
+- Bourbon 5.0.0
+- Neat v2.1.0
+- CodeKit 3x
+- Addition of replacement rem() function
+- Better Default Gravity Forms Styles (wrap form with #contact-form)
 
 ## Thanks to:
 - [Kyle Larkin] (http://kylelarkin.com/)
