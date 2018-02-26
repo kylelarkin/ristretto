@@ -38,3 +38,12 @@ function theme_typekit_inline() {
 <?php }
 }
 add_action( 'wp_head', 'theme_typekit_inline' );
+
+/**
+ * Custom Gravity Forms Submission Spinner
+ * From: https://mattrad.uk/gravity-forms-css-spinner/
+ */
+ function gf_spinner_replace( $image_src, $form ) {
+ 	return  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // relative to you theme images folder
+ }
+ add_filter( 'gform_ajax_spinner_url', 'gf_spinner_replace', 10, 2 );
