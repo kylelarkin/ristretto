@@ -10,34 +10,59 @@ foreach (glob(dirname(__FILE__) . '/lib/' . '*.php') as $filename) {
  * Enqueue Scripts and Styles
  */
 function ristretto_enqueue_init() {
-	// Register Scripts
-	wp_register_script( 'ristretto-app', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/app.js', array('jquery'), null, true );
-	// Enqueue Scripts
-	wp_enqueue_script('ristretto-app');
+ 	// Register Scripts
+ 	wp_register_script( 'fontawesome', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/fontawesome-all.min.js', null, null, true );
+ 	wp_register_script( 'ristretto-app', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/app.js', array('jquery'), null, true );
+ 	// Enqueue Scripts
+ 	wp_enqueue_script('fontawesome');
+ 	wp_enqueue_script('ristretto-app');
 
 	// Register Styles
-	wp_register_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), null, 'all' );
-	wp_register_style( 'ristretto-screen', get_bloginfo( 'stylesheet_directory' ) . '/css/screen.css', array(), null, 'all' );
+	wp_register_style( 'typekit', get_bloginfo( 'stylesheet_directory' ) . '//use.typekit.net/xxxxxx.css', array(), null, 'all' );
+ 	wp_register_style( 'ristretto-screen', get_bloginfo( 'stylesheet_directory' ) . '/css/screen.css', array(), null, 'all' );
 	// Enqueue Styles
-	wp_enqueue_style('fontawesome');
-	wp_enqueue_style('ristretto-screen');
-}
+	wp_enqueue_style('typekit');
+ 	wp_enqueue_style('ristretto-screen');
+ }
 add_action('wp_enqueue_scripts', 'ristretto_enqueue_init', 15);
 
-/**
- * TypeKit Fonts (from: http://wptheming.com/2013/02/typekit-code-snippet/)
- */
-function theme_typekit() {
-    wp_enqueue_script( 'theme_typekit', '//use.typekit.net/xxxxxxx.js');
+// Add Data Attribute for FontAwesome Pseudo Elements
+function add_data_attribute($tag, $handle) {
+	if ( 'fontawesome' !== $handle )
+	 return $tag;
+	return str_replace( ' src', ' data-search-pseudo-elements defer src', $tag );
 }
-add_action( 'wp_enqueue_scripts', 'theme_typekit' );
+add_filter('script_loader_tag', 'add_data_attribute', 10, 2);
 
-function theme_typekit_inline() {
-  if ( wp_script_is( 'theme_typekit', 'done' ) ) { ?>
-  	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-<?php }
+/**
+ * Add Support for Editor Styles
+ */
+add_theme_support('editor-styles');
+add_editor_style( get_bloginfo( 'stylesheet_directory' ) . '/css/editor-style.css' );
+
+function ristretto_enqueue_gutenberg() {
+   // Enqueue Typekit for Editor.
+   wp_register_style( 'ristretto-gutenberg-fonts', '//use.typekit.net/xxxxxx.css' );
+   wp_enqueue_style( 'ristretto-gutenberg-fonts' );
 }
-add_action( 'wp_head', 'theme_typekit_inline' );
+add_action( 'enqueue_block_editor_assets', 'ristretto_enqueue_gutenberg' );
+
+/**
+ * Default Article Template
+ */
+// function ristretto_register_template() {
+
+// 	$template = array(
+// 		array( 'acf/subheading', array() ),
+// 		array( 'acf/byline', array() ),
+// 		array( 'acf/article-ad', array() ),
+// 		array( 'acf/article-signup', array() ),
+// 	);
+
+//   $post_type_object = get_post_type_object( 'post' );
+// 	$post_type_object->template = $template;
+// }
+// add_action( 'init', 'ristretto_register_template' );
 
 /**
  * Custom Gravity Forms Submission Spinner
@@ -47,3 +72,40 @@ add_action( 'wp_head', 'theme_typekit_inline' );
  	return  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // relative to you theme images folder
  }
  add_filter( 'gform_ajax_spinner_url', 'gf_spinner_replace', 10, 2 );
+
+ /**
+ * Add Wide Image Support for Gutenberg
+ */
+// function ristretto_wide_images() {
+// 	add_theme_support( 'align-wide' );
+// }
+// add_action( 'after_setup_theme', 'ristretto_wide_images' );
+
+/**
+ * Disable Admin Bar for Subscribers
+ */
+function ristretto_hide_admin_bar() {
+	if (!current_user_can('edit_posts')) {
+		show_admin_bar(false);
+  }
+}
+add_action('set_current_user', 'ristretto_hide_admin_bar');
+
+/**
+ * Prevent Subscribers from seeing dashboard
+ */
+function ristretto_subscriber_redirect(){
+  if( is_admin() && !defined('DOING_AJAX') && current_user_can('subscriber') ){
+    wp_redirect( home_url() . '/myaccount' );
+    exit;
+  }
+}
+add_action('init','ristretto_subscriber_redirect');
+
+/**
+ * Change Login Logo to point to Home Page
+ */
+function ristretto_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'ristretto_login_logo_url' );

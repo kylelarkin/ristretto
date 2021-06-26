@@ -3,33 +3,24 @@
 // -------------------------------------------------
 // Vendor Overrides
 // ---------------------------------------------- */
-@import 'vendor_overrides/gravityforms';
+@import 'vendor_overrides/**/*';
 
 // -------------------------------------------------
 // Framework
 // ---------------------------------------------- */
-@import 'framework/reset';
-@import 'framework/ristretto';
-@import 'framework/typography';
+@import 'framework/**/*';
 
 // -------------------------------------------------
-// Molecules
+// Components
 // ---------------------------------------------- */
-@import 'molecules/video-embed';
-
-// -------------------------------------------------
-// Organisms
-// ---------------------------------------------- */
-
+@import 'components/**/*';
 
 // -------------------------------------------------
 // Layout
 // ---------------------------------------------- */
-@import 'layout/default';
-@import 'layout/header';
-@import 'layout/footer';
+@import 'layout/**/*';
 
 // -------------------------------------------------
 // Views
 // ---------------------------------------------- */
-@import 'views/front-page';
+@import 'views/**/*';

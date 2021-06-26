@@ -1,1 +1,0 @@
-<?php // Favicons from http://realfavicongenerator.net/

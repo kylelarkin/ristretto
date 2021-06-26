@@ -1,0 +1,51 @@
+$menu_line_color: #000;
+$menu_line_height: 2px;
+
+.menu-button{
+  .menu-toggle {
+      background: transparent;
+      border: none;
+      display: block;
+      height: 48px;
+      padding-left: 14px;
+      position: relative;
+      text-align: left;
+      width: 48px;
+      transition: all .25s ease-out;
+      z-index: 100;
+      &:hover, &:active, &:focus { background: rgba(0,0,0, .5); border: none; outline: none; }
+    }
+    .menu-toggle .menu-button {
+      transform: translateY(-1px);
+    }
+    .menu-toggle .menu-button, .menu-toggle .menu-button:before, .menu-toggle .menu-button:after {
+      background: $menu_line_color;
+      content: '';
+      cursor: pointer;
+      display: block;
+      height: $menu_line_height;
+      position: absolute;
+      width: 20px;
+    }
+    .menu-toggle .menu-button:before {
+      top: -7px;
+    }
+    .menu-toggle .menu-button:after {
+      bottom: -7px;
+    }
+    .menu-toggle .menu-button, .menu-toggle .menu-button:before, .menu-toggle .menu-button:after {
+      transition: all .25s ease-out;
+    }
+    .menu-toggle.active .menu-button {
+      background-color: transparent;
+    }
+    .menu-toggle.active .menu-button:before, .menu-toggle.active .menu-button:after {
+      top: 0;
+    }
+    .menu-toggle.active .menu-button:before {
+      transform: rotate(45deg);
+    }
+    .menu-toggle.active .menu-button:after {
+      transform: rotate(-45deg);
+    }
+}

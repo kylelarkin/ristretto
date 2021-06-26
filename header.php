@@ -5,26 +5,24 @@
 <!--[if IE 9]>    <html class="lt-ie10" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-
+	<?php if (!defined('ABSPATH')) exit; ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
+	<title><?php wp_title('|'); ?> <?php bloginfo('name'); ?></title>
 
 	<!--[if lte IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<script src="<?php bloginfo( 'template_directory' ); ?>/js/respond.min.js"></script>
 	<![endif]-->
 
 	<?php wp_head(); ?>
 
-	<!--[if lt IE 9]>
+	<!--[if lte IE 9]>
 		<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
-	<?php include( locate_template('molecules/_favicon.php') ); ?>
+	<?php include( locate_template('components/_favicon.php') ); ?>
 
 </head>
 
@@ -32,6 +30,17 @@
 	<header class="body--header" role="banner">
 		<div class="inner">
 			<h6 class="logo"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>"><?php bloginfo('title'); ?></a></h6>
+			<nav class="nav--secondary" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'secondary-header-menu', 'container' => false) ); ?>
+			</nav>
+				<div id="search-button"><span class="fas fa-search"></span></div>
+			<!-- <div class="searchbar">
+				<form method="get" class="searchform" id="searchform" action="<?php bloginfo('url'); ?>/" role="search">
+					<input type="text" placeholder="Search" name="s" id="s" class="search-input"/>
+					<input type="submit" id="searchsubmit" value="Search" />
+					<div id="search-close" title="close search"><span class="fas fa-times"></span></div>
+				</form>
+			</div> -->
 			<nav class="nav--primary" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary-header-menu', 'container' => false) ); ?>
 			</nav>
