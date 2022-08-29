@@ -1,4 +1,5 @@
 /* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
+@use "sass:math";
 
 // -------------------------------------------------
 // Ristretto Bourbon Imports
@@ -19,34 +20,34 @@
 // Custom Text Selection Setup
 // ---------------------------------------------- */
 body,select,input,textarea {
-	color:#333;
+  color:#333;
 }
 // Custom text-selection colors (remove any text shadows:twitter.com/miketaylr/status/12228805301)
 ::-moz-selection {
-	background:$highlight-color;
-	color:#000;
-	text-shadow:none;
+  background:$highlight-color;
+  color:#000;
+  text-shadow:none;
 }
 ::selection {
-	background:$highlight-color;
-	color:#000;
-	text-shadow:none;
+  background:$highlight-color;
+  color:#000;
+  text-shadow:none;
 }
 // j.mp/webkit-tap-highlight-color
 a:link {
-	-webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 ins {
-	background-color:$highlight-color;
-	color:#000;
-	text-decoration:none;
+  background-color:$highlight-color;
+  color:#000;
+  text-decoration:none;
 
 }
 mark {
-	background-color:$highlight-color;
-	color:#000;
-	font-style:italic;
-	font-weight:bold;
+  background-color:$highlight-color;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
 }
 
 
@@ -56,32 +57,32 @@ mark {
 
 // Remove UL Styling
 @mixin ul-reset {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 // Hyphenation (FF compatible)
 @mixin hyphenation() {
-	// -ms-word-break: break-all;
-	// word-break: break-all;
-	word-break: break-word;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
+  // -ms-word-break: break-all;
+  // word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 // Center element vertically without knowing height (IE9+) via http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
 @mixin vertical-align {
-	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @mixin grid-media( $size ) {
-	@media #{$size} {
+  @media #{$size} {
     @content;
   }
 }
@@ -94,38 +95,16 @@ mark {
   }
 }
 
-@mixin inner {
-	margin: 0 auto;
-	max-width: 1280px;
-	@include grid-media($large) {
-		padding-left: 3.75rem;
-	}
-}
-
-@mixin grid-centered( $columns: 12 ) {
-	display: grid;
-	grid-template-columns:
-		calc( 50vw - 40rem )
-		repeat( $columns, 1fr )
-		calc( 50vw - 40rem );
-}
-
-@mixin grid-full( $columns: 12 ) {
-	display: grid;
-	grid-template-columns: repeat( $columns, 1fr );
-}
-
-
 // Pixels to Rems
 $remBaseFontSize: 16;
 @function rem($pixels, $context: $remBaseFontSize) {
-	@if (unitless($pixels)) {
-		$pixels: $pixels * 1px;
-	}
-	@if (unitless($context)) {
-		$context: $context * 1px;
-	}
-	@return $pixels / $context * 1rem;
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return math.div($pixels, $context) * 1rem;
 }
 
 // Fluid Type with CSS Locks
@@ -147,7 +126,7 @@ $remBaseFontSize: 16;
 
 @function strip-unit($number) {
   @if type-of($number) == "number" and not unitless($number) {
-    @return $number / ($number * 0 + 1);
+    @return math.div($number, ($number * 0 + 1));
   }
   @return $number;
 }

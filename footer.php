@@ -1,5 +1,7 @@
 </section> <?php // End .body--wrapper ?>
+
 	<?php if (!defined('ABSPATH')) exit;	?>
+  
 	<footer class="body--footer">
 		<div class="inner">
 			<nav class="body--footer--nav">

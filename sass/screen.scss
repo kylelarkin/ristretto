@@ -3,24 +3,40 @@
 // -------------------------------------------------
 // Vendor Overrides
 // ---------------------------------------------- */
-@import 'vendor_overrides/**/*';
+@import 'vendor_overrides/gravityforms';
+@import 'vendor_overrides/facetwp';
 
 // -------------------------------------------------
 // Framework
 // ---------------------------------------------- */
-@import 'framework/**/*';
+@import 'framework/reset';
+@import 'framework/ristretto';
+@import 'framework/variables';
+@import 'framework/mixins';
+@import 'framework/typography';
+@import 'framework/grid';
 
 // -------------------------------------------------
 // Components
 // ---------------------------------------------- */
-@import 'components/**/*';
+@import 'components/menu-button';
+@import 'components/post-nav';
+@import 'components/video-embed';
+
+// -------------------------------------------------
+// Block Overrides
+// ---------------------------------------------- */
+@import 'blocks/wp-block-buttons';
 
 // -------------------------------------------------
 // Layout
 // ---------------------------------------------- */
-@import 'layout/**/*';
+@import 'layout/default';
+@import 'layout/header';
+@import 'layout/footer';
 
 // -------------------------------------------------
 // Views
 // ---------------------------------------------- */
-@import 'views/**/*';
+@import 'views/front-page';
+@import 'views/404';

@@ -9,9 +9,7 @@ if (!function_exists('ristretto_page_name')) {
 		}else { $page_slug = ''; }
 		// add 'class-name' to the $classes array
 		$classes[] = $page_slug;
-		if( has_category('youth-services-insider') || is_category('youth-services-insider') ) {
-			$classes[] = 'single-ysi';
-		}
+
 		// return the $classes array
 		return $classes;
 	}

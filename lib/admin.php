@@ -1,13 +1,5 @@
 <?php
 /**
- * Registers Editor Styles
- */
-function ristretto_add_editor_styles() {
-    add_editor_style( 'css/editor-style.css' );
-}
-add_action( 'init', 'ristretto_add_editor_styles' );
-
-/**
  * Remove theme/plugin editor
  */
 define( 'DISALLOW_FILE_EDIT', true );
@@ -35,3 +27,32 @@ function cc_mime_types( $mimes ){
 	return $mimes;
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
+
+/**
+ * Disable Admin Bar for Subscribers
+ */
+function ristretto_hide_admin_bar() {
+    if (!current_user_can('edit_posts')) {
+        show_admin_bar(false);
+  }
+}
+add_action('set_current_user', 'ristretto_hide_admin_bar');
+
+/**
+ * Prevent Subscribers from seeing dashboard
+ */
+function ristretto_subscriber_redirect(){
+  if( is_admin() && !defined('DOING_AJAX') && current_user_can('subscriber') ){
+    wp_redirect( home_url() . '/myaccount' );
+    exit;
+  }
+}
+add_action('init','ristretto_subscriber_redirect');
+
+/**
+ * Change Login Logo to point to Home Page
+ */
+function ristretto_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'ristretto_login_logo_url' );

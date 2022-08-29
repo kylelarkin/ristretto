@@ -6,13 +6,11 @@ function ristretto_menus_init() {
 	$header_menu = 'Primary Header Menu';
 	$secondary_menu = 'Secondary Header Menu';
 	$footer_menu = 'Primary Footer Menu';
-	$ysi_menu = 'YSI Menu';
 
 	register_nav_menus(array(
 		'primary-header-menu' => __( $header_menu ),
 		'secondary-header-menu' => __( $secondary_menu ),
 		'primary-footer-menu' => __( $footer_menu ),
-		'ysi-menu' => __( $ysi_menu )
 	));
 }
 add_action( 'init', 'ristretto_menus_init' );
@@ -33,7 +31,6 @@ function ristretto_menus_to_locations() {
 		$header_menu_exists = wp_get_nav_menu_object( $header_menu );
 		$secondary_menu_exists = wp_get_nav_menu_object( $secondary_menu );
 		$footer_menu_exists = wp_get_nav_menu_object( $footer_menu );
-		$ysi_menu_exists = wp_get_nav_menu_object( $ysi_menu );
 
 		// If it doesn't exist, let's create it.
 		if( !$header_menu_exists ){
@@ -44,9 +41,6 @@ function ristretto_menus_to_locations() {
 		}
 		if( !$footer_menu_exists ){
 			$new_footer_menu_id = wp_create_nav_menu( $footer_menu );
-		}
-		if( !$ysi_menu_exists ){
-			$new_ysi_menu_id = wp_create_nav_menu( $ysi_menu );
 		}
 
 		// Grab all theme locations and assign our newly-created menu

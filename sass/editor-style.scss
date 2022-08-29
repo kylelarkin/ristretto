@@ -1,11 +1,171 @@
 @import "framework/reset";
 @import "framework/ristretto";
 @import "framework/typography";
+@import "framework/variables";
 
 
 // -------------------------------------------------
 // WP Editor Styles
 // ---------------------------------------------- */
-#tinymce {
-	padding: 10px 16px;
+
+
+// -------------------------------------------------
+// Core Block Helper Styles
+// ---------------------------------------------- */
+/* Main column width */
+.block-editor-block-list__layout .wp-block {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+}
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+  max-width: 90%;
+}
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+  max-width: none;
+  margin: 0 !important;
+}
+.block-editor-writing-flow__click-redirect {
+  min-height: 15vh !important;
+}
+
+// Core Block Styles
+[data-align="right"] {
+  figure {
+    float: right;
+    margin-left: 1.5rem;
+    max-width: 50%;
+  }
+}
+[data-align="left"] {
+  figure {
+    float: left;
+    margin-right: 1.5rem;
+    max-width: 45%;
+  }
+}
+
+.standard-grid {
+  display: grid;
+  gap: 0 1rem;
+  grid-template-columns: [full-start] calc(50vw - 720px) [main-start] minmax(0, 1fr) [main-end] calc(50vw - 720px) [full-end];
+  margin:0 auto;
+  @include grid-media($xl) {
+    gap: 0 1.5rem;
+  }
+}
+
+.standard-grid > * {
+  grid-column: main;
+}
+
+/**
+ * Empty Value Notice
+ */
+ .empty-block-value {
+  background-color: $dark-slate;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  p {
+    color: #fff;
+    font-family: $heading-font;
+    font-size: rem(14);
+    font-style: italic;
+    margin-bottom: 0;
+  }
+}
+
+// Let's add some styles for the elements to see what's editable
+.block-editor-block-list__block.wp-block.is-selected {
+    border: 1px dashed #ccc;
+}
+
+.wp-block-columns {
+  &.alignwide {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+
+@each $name, $color in $colors-dark {
+
+  .has-#{$name}-color {
+    color: $color !important;
+    a {
+      color: $color !important;
+    }
+  }
+
+  .has-#{$name}-color:hover,
+  .has-#{$name}-color:focus {
+    color: $color;
+  }
+
+  .has-#{$name}-background-color,  .has-#{$name}-background-color {
+    background-color: $color;
+    .has-#{$name}-color {
+      color: $color;
+    }
+    &:not(.has-text-color) {
+      a {
+        color: #fff;
+      }
+    }
+    &:before {
+      display: none;
+    }
+    h1 {
+      color: #fff;
+    }
+  }
+
+}
+
+@each $name, $color in $colors-light {
+  .has-#{$name}-color {
+    color: $color !important;
+    a {
+      color: $color !important;
+    }
+  }
+  .has-#{$name}-color:hover,
+  .has-#{$name}-color:focus {
+    color: $color;
+    a {
+      color: $color;
+    }
+  }
+
+  .has-#{$name}-background-color {
+    background-color: $color;
+    color: $black;
+    &:before {
+      display: none;
+    }
+  }
+
+  .has-#{$name}-background-color:hover,
+  .has-#{$name}-background-color:focus {
+    background-color: darken( $color, 5% );
+  }
+}
+
+
+// -------------------------------------------------
+// Core Block Styles
+// ---------------------------------------------- */
+
+  
+// -------------------------------------------------
+// WP Editor Styles
+// ---------------------------------------------- */
+
+.wp-block-post-title a{
+  text-decoration: none;
+}
+.is-reusable {
+  max-width: none !important;
 }

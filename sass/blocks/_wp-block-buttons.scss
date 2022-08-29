@@ -1,0 +1,79 @@
+.wp-block-buttons {
+  .wp-block-button {
+    a.wp-block-button__link {
+      @include button;
+      background-color: $gold;
+      border-radius: 0;
+      color: $body-color;
+      transition: .25s ease-in-out transform;
+      &:hover {
+        text-decoration: none;
+        // transform: scale(1.015);
+        transform: translate(0, 2.5px);
+      }
+      &:not(.has-text-color) {
+        // color: white;
+        &:hover {
+          // color: white;
+        }
+      }
+  
+      &:not(.has-background) {
+        // background-color: #fff !important;
+  
+        &:hover,
+        &:focus {
+          // transform: scale(1.02);
+          transition: all .25s ease-out;
+        }
+      }
+  
+      @each $name, $color in $colors-dark {
+  
+        &.has-#{$name}-color:hover,
+        &.has-#{$name}-color:focus {
+          color: $color;
+        }
+  
+        &.has-#{$name}-background-color {
+          background-color: $color;
+          color: $white;
+          &:before {
+            display: none;
+          }
+        }
+  
+        &.has-#{$name}-background-color:hover,
+        &.has-#{$name}-background-color:focus {
+          background-color: darken( $color, 5% );
+        }
+      }
+  
+      @each $name, $color in $colors-light {
+  
+        &.has-#{$name}-color:hover,
+        &.has-#{$name}-color:focus {
+          color: $color;
+        }
+  
+        &.has-#{$name}-background-color {
+          background-color: $color;
+          color: $black;
+          &:before {
+            display: none;
+          }
+        }
+  
+        &.has-#{$name}-background-color:hover,
+        &.has-#{$name}-background-color:focus {
+          background-color: darken( $color, 5% );
+        }
+      }
+  
+    }
+  }
+}
+
+p + .wp-block-buttons {
+  margin-top: 2rem;
+}

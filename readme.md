@@ -7,6 +7,10 @@ Ristretto WordPress Theme Framework
 
 Under the hood Ristretto uses CodeKit 3 to make theme development easy.
 
+## Updates August 29, 2022
+- Remove Bourbon
+- Remove Neat
+
 ## Updates February 8, 2018
 - Bourbon 5.0.0
 - Neat v2.1.0
@@ -16,6 +20,7 @@ Under the hood Ristretto uses CodeKit 3 to make theme development easy.
 
 ## Thanks to:
 - [Kyle Larkin] (http://kylelarkin.com/)
+- Diane Mikho
 - [Alex Stockwell] (http://astockwell.com/)
 
 ## Taking inspiration from:
