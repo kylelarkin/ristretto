@@ -131,6 +131,12 @@ $remBaseFontSize: 16;
   @return $number;
 }
 
+//object fit
+@mixin objectfit($default: 'cover') {
+	object-fit: $default;
+	font-family: 'object-fit: $default;'
+}
+
 // -------------------------------------------------
 // Project-specific Mixins
 // ---------------------------------------------- */
