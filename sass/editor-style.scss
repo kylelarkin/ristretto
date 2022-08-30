@@ -2,6 +2,7 @@
 @import "framework/ristretto";
 @import "framework/typography";
 @import "framework/variables";
+@import "blocks/_wp-block-buttons";
 
 
 // -------------------------------------------------
@@ -61,24 +62,12 @@
   grid-column: main;
 }
 
-/**
- * Empty Value Notice
- */
- .empty-block-value {
-  background-color: $dark-slate;
-  border-radius: 12px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  p {
-    color: #fff;
-    font-family: $heading-font;
-    font-size: rem(14);
-    font-style: italic;
-    margin-bottom: 0;
-  }
+//editor note
+.r-editior-note {
+  display: block;
 }
 
-// Let's add some styles for the elements to see what's editable
+// apply border to 
 .block-editor-block-list__block.wp-block.is-selected {
     border: 1px dashed #ccc;
 }
@@ -90,68 +79,62 @@
   }
 }
 
-@each $name, $color in $colors-dark {
+// @each $name, $color in $colors-dark {
 
-  .has-#{$name}-color {
-    color: $color !important;
-    a {
-      color: $color !important;
-    }
-  }
+//   .has-#{$name}-color {
+//     color: $color !important;
+//     a {
+//       color: $color !important;
+//     }
+//   }
+//   .has-#{$name}-color:hover,
+//   .has-#{$name}-color:focus {
+//     color: $color;
+//     a {
+//       color: $color;
+//     }
+//   }
 
-  .has-#{$name}-color:hover,
-  .has-#{$name}-color:focus {
-    color: $color;
-  }
+//   .has-#{$name}-background-color {
+//     background-color: $color;
+//     &:before {
+//       display: none;
+//     }
+//   }
 
-  .has-#{$name}-background-color,  .has-#{$name}-background-color {
-    background-color: $color;
-    .has-#{$name}-color {
-      color: $color;
-    }
-    &:not(.has-text-color) {
-      a {
-        color: #fff;
-      }
-    }
-    &:before {
-      display: none;
-    }
-    h1 {
-      color: #fff;
-    }
-  }
+//   .has-#{$name}-background-color:hover,
+//   .has-#{$name}-background-color:focus {
+//     background-color: darken( $color, 5% );
+//   }
+// }
 
-}
+// @each $name, $color in $colors-light {
+//   .has-#{$name}-color {
+//     color: $color !important;
+//     a {
+//       color: $color !important;
+//     }
+//   }
+//   .has-#{$name}-color:hover,
+//   .has-#{$name}-color:focus {
+//     color: $color;
+//     a {
+//       color: $color;
+//     }
+//   }
 
-@each $name, $color in $colors-light {
-  .has-#{$name}-color {
-    color: $color !important;
-    a {
-      color: $color !important;
-    }
-  }
-  .has-#{$name}-color:hover,
-  .has-#{$name}-color:focus {
-    color: $color;
-    a {
-      color: $color;
-    }
-  }
+//   .has-#{$name}-background-color {
+//     background-color: $color;
+//     &:before {
+//       display: none;
+//     }
+//   }
 
-  .has-#{$name}-background-color {
-    background-color: $color;
-    color: $black;
-    &:before {
-      display: none;
-    }
-  }
-
-  .has-#{$name}-background-color:hover,
-  .has-#{$name}-background-color:focus {
-    background-color: darken( $color, 5% );
-  }
-}
+//   .has-#{$name}-background-color:hover,
+//   .has-#{$name}-background-color:focus {
+//     background-color: darken( $color, 5% );
+//   }
+// }
 
 
 // -------------------------------------------------

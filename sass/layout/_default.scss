@@ -13,7 +13,26 @@ body{
 		gap: 1.5rem;
   }
 }
-
+ 
 .standard-grid > * {
   grid-column: main;
+}
+
+//hide editor notes
+.r-editior-note {
+  display: none;
+}
+
+/**
+* apply custom color pallet
+**/
+@each $name, $color in $colors {
+
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
 }

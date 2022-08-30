@@ -36,25 +36,31 @@ add_action( 'after_setup_theme', 'ristretto_wide_images' );
  */
 add_theme_support( 'editor-color-palette', array(
   array(
-    'name'  => __( 'White'),
+    'name'  => __( 'Red', 'ristretto' ),
+    'slug'  => 'red',
+    'color' => '#ff0000',
+  ),
+  array(
+    'name'  => __( 'White', 'ristretto' ),
     'slug'  => 'white',
     'color' => '#ffffff',
   ),
   array(
-    'name'  => __( 'Black'),
+    'name'  => __( 'Black', 'ristretto' ),
     'slug'  => 'black',
     'color' => '#000000',
   ),
   array(
-    'name'  => __( 'Gray Dark'),
+    'name'  => __( 'Gray Dark', 'ristretto' ),
     'slug'  => 'gray-dark',
     'color' => '#565656',
   ),
   array(
-    'name'  => __( 'Gray Light'),
+    'name'  => __( 'Gray Light', 'ristretto' ),
     'slug'  => 'gray-light',
     'color' => '#f2f2f2',
   ),
+
 ) );
 
 /**
@@ -83,4 +89,4 @@ function wd_acf_dynamic_colors_load( $field ) {
 function color_picker_styles() {
   wp_enqueue_style( 'admin-styles', get_stylesheet_directory_uri().'/css/admin-styles.css' );
 }
-add_action( 'admin_enqueue_scripts', 'color_picker_styles' );
+//add_action( 'admin_enqueue_scripts', 'color_picker_styles' );

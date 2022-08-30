@@ -22,3 +22,12 @@ $label-color: $body-color;
 $button-color: $link-color;
 
 $ani_speed: 250ms;
+
+$colors: (
+  'white': #000000, //this should be the default button text & border color
+  'gray-dark': $gray-dark,//this should be the default background color of button
+  'gray': $gray,  
+  'gray-light': $gray-light,  
+  'black': #ffffff, 
+  'transparent': transparent,
+);

@@ -2211,7 +2211,7 @@
       }
     },
     "esLintSourceType" : 0,
-    "externalServerAddress" : "http:\/\/iajfl.local",
+    "externalServerAddress" : "http:\/\/gs3.local",
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",
