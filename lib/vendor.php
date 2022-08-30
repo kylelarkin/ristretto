@@ -3,7 +3,7 @@
  * Add ACF Google Maps API Key
  */
 function my_acf_init() { 
-  acf_update_setting('google_api_key', 'AIzaSyCR9bcWOpJ-xTcC3o_Sj3u4l_f_JwtEBIQ');
+  acf_update_setting('google_api_key', '');
 }
 add_action('acf/init', 'my_acf_init');
 
