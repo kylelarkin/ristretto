@@ -56,6 +56,15 @@ function ristretto_init_block_types() {
           'jsx' 	 => true,
           'align'  => true,
           'anchor' => true,
+          'color' => array(
+            'background' => false
+          ),
+          'experimentalBorder' => array(
+            'color' => true,
+            'radius' => true,
+            'style' => true,
+            'width' => true,
+          )
         )
       )
     );

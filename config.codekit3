@@ -53,6 +53,18 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/blocks\/css\/section.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/css\/section-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/blocks\/sass\/block.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -67,6 +79,29 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/blocks\/sass\/section.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/css\/section.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/blocks\/section.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/section.php",
+      "oF" : 0
     },
     "\/comments.php" : {
       "cB" : 0,
@@ -253,9 +288,9 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/js\/dist\/min\/fontawesome-all.min-min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 0
     },

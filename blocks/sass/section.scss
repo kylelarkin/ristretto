@@ -1,0 +1,193 @@
+@import '../../sass/framework/ristretto';
+@import '../../sass/framework/variables';
+@import '../../sass/framework/mixins';
+@import '../../sass/framework/grid';
+
+.section {
+  grid-column: full;
+  padding: 2.5rem 0 3.3rem 0;
+  position: relative;
+  z-index: 0;
+  @include grid-media($nav) {
+    scroll-margin-top: 109px;
+    padding: 3.3rem 0 3rem;
+  }
+  &.parallax {
+    background-attachment: fixed;
+    background-size: 200%;
+  }
+  &.border-top {
+    border-top-width: 2px;
+    border-style: solid;
+  }
+  &.border-bottom {
+    border-bottom-width: 2px;
+    border-style: solid;
+  }
+  &.border-left {
+    border-left-width: 2px;
+    border-style: solid;
+  }
+  &.border-right {
+    border-right-width: 2px;
+    border-style: solid;
+  }
+  &.gradient {
+   &:after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #000000 100%);    
+    bottom: 0;
+    content: ' ';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+   }
+  } 
+  
+  .blur {
+    grid-column: full;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    -webkit-backdrop-filter: blur(3px);
+  }
+  //remove margin from last column in section
+  .section-inner {
+    .wp-block-columns {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  .two-columns {
+    display: grid;
+    gap: 1.5rem;
+    @include grid-media($medium) {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+  
+  .three-columns {
+    display: grid;
+    gap: 1.5rem;
+    @include grid-media($medium) {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    @include grid-media($large) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  .four-columns {
+    display: grid;
+    gap: 1.5rem;
+    @include grid-media($medium) {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    @include grid-media($large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  * {
+    z-index: 10;
+  }
+  
+
+  &:not(.has-background) {
+		background-color: #fff !important;
+	}
+  
+  #jarallax-container-0, #jarallax-container-1, #jarallax-container-2, #jarallax-container-3, #jarallax-container-4, #jarallax-container-5, #jarallax-container-6 {
+    grid-column: full;
+  }
+
+  .slider-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 8000px;
+    width: 100%;
+  }
+
+}
+
+.section .section {
+  display: flex;
+  padding: 1.5rem;
+  @include grid-media($medium) {
+    padding: 3rem;
+  }
+  .section-inner {
+    flex-grow: 1;
+  }
+}
+
+.fancy + .section {
+  &:before {
+    opacity: 15;
+  }
+}
+
+// -------------------------------------------------
+// Editor Specific Style Overrides
+// ---------------------------------------------- */
+.editor-styles-wrapper {
+  .section {
+    padding: 4.3rem 0 3.3rem 0;
+  }
+  
+  .section-inner {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .two-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+    display: grid;
+    gap: 1.5rem;
+    @include grid-media($medium) {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+  
+  .three-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+    display: grid;
+    gap: 1.5rem;
+    @include grid-media($medium) {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    @include grid-media($large) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  .four-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+    display: grid;
+    gap: 1.5rem;
+    @include grid-media($medium) {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    @include grid-media($large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .section .section {
+    display: flex;
+    padding: 1.5rem;
+    @include grid-media($medium) {
+      padding: 3rem;
+    }
+    .section-inner {
+      flex-grow: 1;
+    }
+  }
+
+
+}

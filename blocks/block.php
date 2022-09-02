@@ -15,18 +15,27 @@ if( !empty($block['anchor']) ) {
     $id = $block['anchor'];
 }
 
-// Create class attribute allowing for custom "className" and "align" values.
+// Create class attribute allowing for custom "className", "align", "background" values.
 $className = 'BLOCK-NAME-GOES-HERE';
+
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
 if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
+if ( ! empty( $block['backgroundColor'] ) ) {
+	$classes[] = 'has-background';
+	$classes[] = 'has-' . $block['backgroundColor'] . '-background-color';
+}
+if ( ! empty( $block['textColor'] ) ) {
+	$classes[] = 'has-text-color';
+	$classes[] = 'has-' . $block['textColor'] . '-color';
+}
 //acf fields go here
 ?>
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-    <!--code goes here-->
+  <!--code goes here-->
 </div>
 
