@@ -1,0 +1,70 @@
+{
+    "key": "group_633676a478e69",
+    "title": "Featured News Block",
+    "fields": [
+        {
+            "key": "field_633676a4a951a",
+            "label": "Override Button Text",
+            "name": "featured_custom_button",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Make this more actionable by giving the button a custom call to action. Override the default button text (Learn More) here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Learn More",
+            "maxlength": "",
+            "placeholder": "Learn More",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_638a3311d7d38",
+            "label": "Featured News",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "To selected the featured piece of news click on the \"page\" tab above and scroll down in the right sidebar. There will be a section to selecte featured news. If no piece of news is selected it will default to the most recent news post.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/featured-news"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1670001492
+}

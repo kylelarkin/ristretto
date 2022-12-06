@@ -7,7 +7,7 @@
       "uuidString" : "9E350C24-7153-46D2-86B7-2393A399A36E"
     }
   ],
-  "creatorBuild" : "34418",
+  "creatorBuild" : "34434",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -32,6 +32,22 @@
       "oA" : 0,
       "oAP" : "\/404.php",
       "oF" : 0
+    },
+    "\/acf-json\/group_6127f75b3a728.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_6127f75b3a728-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/acf-json\/group_633676a478e69.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_633676a478e69-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
     },
     "\/blocks\/block.php" : {
       "cB" : 0,
@@ -1699,7 +1715,8 @@
         "active" : 1
       },
       "no-fallthrough" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'allowEmptyCase': false}"
       },
       "no-floating-decimal" : {
         "active" : 0
@@ -2246,7 +2263,7 @@
       }
     },
     "esLintSourceType" : 0,
-    "externalServerAddress" : "http:\/\/gs3.local",
+    "externalServerAddress" : "https:\/\/gs3.local",
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",
