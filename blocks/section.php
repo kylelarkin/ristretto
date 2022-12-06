@@ -91,7 +91,7 @@ if( $borders && in_array('Right', $borders) ) {
       $template = array(
           array( 'core/paragraph', array(
               'placeholder' => 'Text goes here...',
-          ) )
+          ) ),
       );
       echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $template ) ) . '" />';
       ?>
