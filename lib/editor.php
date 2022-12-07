@@ -23,32 +23,44 @@ function ristretto_enqueue_gutenberg() {
 add_action( 'enqueue_block_editor_assets', 'ristretto_enqueue_gutenberg' );
 
 
-/**
-* Add Wide Image Support for Gutenberg
-*/
+/* Add Wide Image Support for Gutenberg */
 function ristretto_wide_images() {
   add_theme_support( 'align-wide' );
 }
 add_action( 'after_setup_theme', 'ristretto_wide_images' );
 
-/**
-* Some blocks can have padding controls. This is off by default, and requires the theme to opt in by declaring support:
-*/
+/* Some blocks can have padding controls. This is off by default, and requires the theme to opt in by declaring support: */
 add_theme_support( 'custom-spacing' );
 
-/*
-* Use this setting to enable the following Global Styles settings:
-  border: color, radius, style, width
-  color: link
-  spacing: blockGap, margin, padding
-  typography: lineHeight
-*/
+/* Use this setting to enable the following Global Styles settings: */
 add_theme_support( 'appearance-tools' );
 
-/*
-* remove default block patterns
-*/
+/* remove default block patterns */
 remove_theme_support( 'core-block-patterns' );
+
+/**
+* Editor Font Sizes
+*/
+add_theme_support( 'editor-font-sizes', array(
+  array(
+    'name'      => __( 'Small', 'ea_genesis_child' ),
+    'shortName' => __( 'S', 'ea_genesis_child' ),
+    'size'      => 18,
+    'slug'      => 'small'
+  ),
+  array(
+    'name'      => __( 'Default', 'ea_genesis_child' ),
+    'shortName' => __( 'D', 'ea_genesis_child' ),
+    'size'      => 20,
+    'slug'      => 'default'
+  ),
+  array(
+    'name'      => __( 'Large', 'ea_genesis_child' ),
+    'shortName' => __( 'L', 'ea_genesis_child' ),
+    'size'      => 28,
+    'slug'      => 'large'
+  ),
+) );
 
 /**
  * Customize Gutenberg color palette
