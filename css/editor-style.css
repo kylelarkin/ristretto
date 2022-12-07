@@ -83,13 +83,19 @@ body {
   font-size: 100%;
   font-weight: 300;
   line-height: 1.5;
+  font-display: swap;
 }
 
 a {
   color: #333;
+  text-decoration-color: #333;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: all 0.25s ease-out;
 }
 a:hover, a:focus {
   color: #000;
+  text-decoration-thickness: 2px;
 }
 nav a {
   text-decoration: none;
@@ -101,36 +107,33 @@ nav a:hover, nav a:active {
 h1 {
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
 }
 @media (min-width: 320px) {
   h1 {
-    font-size: calc(24px + 22 * (100vw - 320px) / 960);
+    font-size: calc(30px + 20 * (100vw - 320px) / 960);
   }
 }
 @media (min-width: 1280px) {
   h1 {
-    font-size: 46px;
+    font-size: 50px;
   }
 }
 
 h2 {
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 21px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 2rem 0 0.5rem;
 }
 @media (min-width: 320px) {
   h2 {
-    font-size: calc(21px + 15 * (100vw - 320px) / 960);
+    font-size: calc(28px + 8 * (100vw - 320px) / 960);
   }
 }
 @media (min-width: 1280px) {
@@ -142,46 +145,80 @@ h2 {
 h3 {
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  margin-top: 2.5rem;
+  line-height: 1.1;
+  margin: 1.5rem 0 0.5rem;
 }
 @media (min-width: 320px) {
   h3 {
-    font-size: calc(18px + 10 * (100vw - 320px) / 960);
+    font-size: calc(20px + 6 * (100vw - 320px) / 960);
   }
 }
 @media (min-width: 1280px) {
   h3 {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 
 h4 {
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
+  font-weight: 700;
   line-height: 1.3;
+  margin: 1.25rem 0 0.5rem;
+}
+@media (min-width: 320px) {
+  h4 {
+    font-size: calc(18px + 4 * (100vw - 320px) / 960);
+  }
+}
+@media (min-width: 1280px) {
+  h4 {
+    font-size: 22px;
+  }
 }
 
 h5 {
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 17px;
+  font-weight: 700;
   line-height: 1.3;
+  margin: 1rem 0 0.5rem;
+}
+@media (min-width: 320px) {
+  h5 {
+    font-size: calc(17px + 3 * (100vw - 320px) / 960);
+  }
+}
+@media (min-width: 1280px) {
+  h5 {
+    font-size: 20px;
+  }
 }
 
 h6 {
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 1.3;
+  margin: 1rem 0 0.5rem;
+}
+@media (min-width: 320px) {
+  h6 {
+    font-size: calc(16px + 2 * (100vw - 320px) / 960);
+  }
+}
+@media (min-width: 1280px) {
+  h6 {
+    font-size: 18px;
+  }
 }
 
-p {
+p, .has-default-font-size {
   font-size: 17px;
   line-height: 1.5;
   margin: 0 0 1rem 0;
@@ -190,12 +227,12 @@ p {
           font-feature-settings: "pnum" on, "lnum" on;
 }
 @media (min-width: 320px) {
-  p {
+  p, .has-default-font-size {
     font-size: calc(17px + 3 * (100vw - 320px) / 960);
   }
 }
 @media (min-width: 1280px) {
-  p {
+  p, .has-default-font-size {
     font-size: 20px;
   }
 }
@@ -215,12 +252,20 @@ strong em, strong i, b em, b i {
 }
 
 ol {
-  margin: 1em 0 1em 1.25em;
+  margin: 1em 0 1em 1.1em;
+  padding: 0;
+}
+ol ol {
+  margin: 0 0 0 1.1em;
 }
 
 ul {
   list-style: disc;
   margin: 1em 0 1em 1.1em;
+  padding: 0;
+}
+ul ul {
+  margin: 0 0 0 1.1em;
 }
 nav ul {
   list-style: none;
@@ -229,6 +274,11 @@ nav ul {
 }
 nav ul a {
   text-decoration: none;
+}
+
+li {
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
 }
 
 div.wp-block-buttons div.wp-block-button {
@@ -842,13 +892,6 @@ div.wp-block-buttons div.wp-block-button.is-style-outline .wp-block-button__link
   border-color: #fff;
 }
 
-/* Main column width */
-.block-editor-block-list__layout .wp-block {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1080px;
-}
-
 /* Width of "wide" blocks */
 .wp-block[data-align=wide] {
   max-width: 90%;
@@ -856,7 +899,7 @@ div.wp-block-buttons div.wp-block-button.is-style-outline .wp-block-button__link
 
 /* Width of "full-wide" blocks */
 .wp-block[data-align=full] {
-  max-width: none;
+  max-width: 100%;
   margin: 0 !important;
 }
 
@@ -876,19 +919,32 @@ div.wp-block-buttons div.wp-block-button.is-style-outline .wp-block-button__link
   max-width: 45%;
 }
 
-.standard-grid {
+h1, h2, h3 {
+  width: 100%;
+  max-width: 1440px;
+}
+
+p {
+  margin-left: 0 !important;
+}
+
+.has-text-align-center {
+  margin-left: auto !important;
+}
+
+.standard-grid, .wp-block-cover__inner-container {
   display: grid;
-  gap: 0 1rem;
+  gap: 0 1rem !important;
   grid-template-columns: [full-start] calc(50vw - 720px) [main-start] minmax(0, 1fr) [main-end] calc(50vw - 720px) [full-end];
   margin: 0 auto;
 }
 @media (min-width: 1344px) {
-  .standard-grid {
+  .standard-grid, .wp-block-cover__inner-container {
     gap: 0 1.5rem;
   }
 }
 
-.standard-grid > * {
+.standard-grid > *, .wp-block-cover__inner-container > * {
   grid-column: main;
 }
 
@@ -905,10 +961,18 @@ div.wp-block-buttons div.wp-block-button.is-style-outline .wp-block-button__link
   max-width: 960px;
 }
 
+.wp-block[data-align=center] .wp-block-separator {
+  margin: 1.5rem auto !important;
+}
+
 .wp-block-post-title a {
   text-decoration: none;
 }
 
 .is-reusable {
   max-width: none !important;
+}
+
+.wp-block-acf-share-page {
+  margin: 0 !important;
 }

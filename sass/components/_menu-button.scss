@@ -1,7 +1,11 @@
-$menu_line_color: #000;
+$menu_line_color: #fff;
 $menu_line_height: 2px;
 
 .menu-button{
+  top: 24px;
+  @include grid-media($nav) {
+    display: none;
+  }
   .menu-toggle {
       background: transparent;
       border: none;
@@ -13,7 +17,8 @@ $menu_line_height: 2px;
       width: 48px;
       transition: all .25s ease-out;
       z-index: 100;
-      &:hover, &:active, &:focus { background: rgba(0,0,0, .5); border: none; outline: none; }
+      top: -8px;
+      &:hover, &:active, &:focus {  background: rgba(255,255,255, .25); border: none; outline: none; }
     }
     .menu-toggle .menu-button {
       transform: translateY(-1px);
