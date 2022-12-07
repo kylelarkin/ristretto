@@ -45,12 +45,3 @@ function ristretto_enqueue_init() {
   wp_enqueue_style('ristretto-screen');
  }
 add_action('wp_enqueue_scripts', 'ristretto_enqueue_init', 15);
-
-
-// Add Data Attribute for FontAwesome Pseudo Elements
-function add_data_attribute($tag, $handle) {
-  if ( 'fontawesome' !== $handle )
-   return $tag;
-  return str_replace( ' src', ' data-search-pseudo-elements defer src', $tag );
-}
-add_filter('script_loader_tag', 'add_data_attribute', 10, 2);
