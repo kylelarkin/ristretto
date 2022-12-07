@@ -568,6 +568,14 @@
       "oAP" : "\/lib\/blocks.php",
       "oF" : 0
     },
+    "\/lib\/customizer.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/lib\/customizer.php",
+      "oF" : 0
+    },
     "\/lib\/editor.php" : {
       "cB" : 0,
       "ft" : 8192,

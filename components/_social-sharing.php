@@ -5,7 +5,7 @@
   </a>
   
   <!-- Sharingbutton E-Mail -->
-  <a href="mailto:?subject=Recent%20Article%20from%20the%20IARA%20Project%20&amp;body=<?php echo get_permalink(); ?>" target="_self" rel="noopener" aria-label="Share by E-Mail">
+  <a href="mailto:?subject=Recent%20Articl%20&amp;body=<?php echo get_permalink(); ?>" target="_self" rel="noopener" aria-label="Share by E-Mail">
     <span class="fas fa-envelope" title="Share Via Email"></span>
   </a>
   
