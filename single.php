@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-  <main class="standard-grid">
+  <main>
     
     <?php if(have_posts()) : while(have_posts()) : the_post(); // start loop ?>
   
-      <article>
+      <article class="standard-grid">
     
         <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
