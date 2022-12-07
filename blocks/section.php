@@ -20,17 +20,23 @@ $className = 'section';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
+if ( !empty( $block['backgroundColor']) ) {
+  $className .= ' has-background';
+  $className .= ' has-' . $block['backgroundColor'] . '-background-color';
+}
+if ( !empty( $block['textColor'] ) ) {
+  $className .= ' has-text-color';
+  $className .= ' has-' . $block['textColor'] . '-color';
+}
 if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
-}
-if( !empty($block['padding']) ) {
-    $className .= ' padding' . $block['padding'];
 }
 //background fields
 $backgroundIMG = get_field('background_image');
 $size = 'full';
 $parallax = get_field('parallax');
-$gradient = get_field('gradient');
+$header = get_field('is_this_section_a_page_header');
+$removePadding = get_field('remove_padding');
 $grid_columns = get_field('inner_grid_columns');
 
 //border fields
@@ -38,67 +44,66 @@ $borders = get_field('border_locations');
 $borderColor = get_field('border_color_color_picker');
 
 if( $parallax ) {
-    $className .= ' jarallax';
+  $className .= ' jarallax';
+}
+
+if($header) {
+  $className .= ' header-section';
+}
+
+if($removePadding) {
+  $className .= ' remove-padding';
 }
 
 //check for background image and setup variable
 if($backgroundIMG) {
-    $backgroundIMG = wp_get_attachment_image_src($backgroundIMG, $size);
-}
-
-if($backgroundColor) {
-    $className .= ' has-' . $backgroundColor . '-background-color has-background';
+  $backgroundIMG = wp_get_attachment_image_src($backgroundIMG, $size);
+  $className .= ' bgimg';
 }
 
 if($parallax) {
-    $className .= ' parallax';
-}
-
-if($gradient){
-    $className .= ' gradient';
+  $className .= ' parallax';
 }
 
 //border colors
 if($borders) {
-    $className .= ' has-' . $borderColor . '-border';
+  $className .= ' has-' . $borderColor . '-border';
 }
 
 //check for borders
 if( $borders && in_array('Bottom', $borders) ) {
-    $className .= ' border-bottom';
+  $className .= ' border-bottom';
 }
 if( $borders && in_array('Top', $borders) ) {
-    $className .= ' border-top';
+  $className .= ' border-top';
 }
 if( $borders && in_array('Left', $borders) ) {
-    $className .= ' border-left';
+  $className .= ' border-left';
 }
 if( $borders && in_array('Right', $borders) ) {
-    $className .= ' border-right';
+  $className .= ' border-right';
 }
 
 ?>
 
 <style>
-    <?php echo '#' . esc_attr($id); ?> {
-        <?php if($backgroundIMG) { echo 'background-image: url(' . $backgroundIMG['0'] . ') !important;'; } ?>
-        background-position: center;
-        background-size: cover;
-    }
+  <?php echo '#' . esc_attr($id); ?> {
+    <?php if($backgroundIMG) { echo 'background-image: url(' . $backgroundIMG['0'] . ') !important;'; } ?>
+    background-position: center;
+    background-size: cover;
+  }
 </style>
 
 <div id="<?php echo esc_attr($id); ?>" <?php if($parallax) echo 'data-jarallax '; ?> class="<?php echo esc_attr($className); ?> standard-grid"  >
-
-    <div class="section-inner <?php echo $grid_columns;?>-columns">
-      <?php
-      $template = array(
-          array( 'core/paragraph', array(
-              'placeholder' => 'Text goes here...',
-          ) ),
-      );
-      echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $template ) ) . '" />';
-      ?>
-    </div>
-    
+  <div class="section-inner <?php echo $grid_columns;?>-columns">
+    <?php
+    $template = array(
+      array( 'core/paragraph', array(
+        'placeholder' => 'Text goes here...',
+      ) ),
+    );
+    echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $template ) ) . '" />';
+    ?>
+  </div>
 </div>
 
