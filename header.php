@@ -20,18 +20,19 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header class="body--header" role="banner">
-		<div class="inner">
-			<h6 class="logo"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>"><?php bloginfo('title'); ?></a></h6>
-			<nav class="nav--secondary" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'secondary-header-menu', 'container' => false) ); ?>
-			</nav>
-			<div id="search-button"><span class="fas fa-search"></span></div>
-			<?php include( locate_template('components/_search-form.php') ); ?>
-			<nav class="nav--primary" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary-header-menu', 'container' => false) ); ?>
-			</nav>
-		</div>
+	<a href="#main-content" class="visually-hidden" title="skip to main content">Skip to main content</a>
+
+	<header class="body--header standard-grid" role="banner">		
+		<h6 class="logo"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>"><?php bloginfo('title'); ?></a></h6>
+		<nav class="nav--secondary" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'secondary-header-menu', 'container' => false) ); ?>
+		</nav>
+		<div id="search-button"><a href="#0" title="Search the <?php bloginfo('title'); ?> website"><span class="fas fa-search"></span></a></div>
+		<?php include( locate_template('components/_search-form.php') ); ?>
+		<?php //include( locate_template('components/_menu-button.php') ); ?>
+		<nav class="nav--primary" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary-header-menu', 'container' => false) ); ?>
+		</nav>
 	</header>
   
 	<section class="body--wrapper" role="main">
