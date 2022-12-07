@@ -4,8 +4,8 @@ window.FontAwesomeConfig = searchPseudoElements: true
 # Document Ready
 jQuery(document).ready ($) ->
   # AOS
-  #Object Fit Image Polyfill for IE11
   AOS.init();
+  #Object Fit Image Polyfill for IE11
   objectFitImages()
   
   # Mobile Menu Toggle
@@ -34,3 +34,12 @@ jQuery(document).ready ($) ->
 #   mq = window.matchMedia('(min-width: 900px)')
 #   mq.addListener WidthChange
 #   WidthChange mq
+
+jQuery(window).on 'scroll', ->
+  AOS.refreshHard()
+  
+#setup parallax settings
+jQuery(window).on 'load', ->
+  jarallax document.querySelectorAll('.jarallax, .has-parallax'), 
+    speed: 0.2
+    imgPosition: 'center bottom'

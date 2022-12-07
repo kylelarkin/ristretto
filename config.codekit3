@@ -278,6 +278,14 @@
       "oAP" : "\/header.php",
       "oF" : 0
     },
+    "\/home.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/home.php",
+      "oF" : 0
+    },
     "\/img\/wp-login-logo-ristretto.png" : {
       "ft" : 32768,
       "iS" : 13975,
