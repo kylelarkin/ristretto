@@ -513,9 +513,11 @@ h6 {
 
 p {
   font-size: 17px;
-  line-height: 1.4;
-  margin: 0 0 1em 0;
-  max-width: 65rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  max-width: 60rem;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
 }
 @media (min-width: 320px) {
   p {
@@ -672,14 +674,14 @@ nav ul a {
 }
 
 div.wp-block-buttons div.wp-block-button .wp-block-button__link:not(.has-text-color) {
-  color: #000000;
+  color: #ffffff;
 }
 div.wp-block-buttons div.wp-block-button .wp-block-button__link:not(.has-background) {
-  background-color: #999;
+  background-color: #000000;
 }
 div.wp-block-buttons div.wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
-  color: #000000;
-  border-color: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 div.wp-block-buttons div.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background-color) {
   background: transparent;
@@ -689,25 +691,32 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-.standard-grid {
+.standard-grid, #tribe-events-pg-template, .tribe-events {
   display: grid;
-  gap: 1rem;
+  gap: 0 1.5rem;
   grid-template-columns: [full-start] calc(50vw - 720px) [main-start] minmax(0, 1fr) [main-end] calc(50vw - 720px) [full-end];
 }
 @media (min-width: 1344px) {
-  .standard-grid {
-    gap: 1.5rem;
+  .standard-grid, #tribe-events-pg-template, .tribe-events {
+    gap: 0 1.5rem;
   }
 }
+.standard-grid.tooltipster-base, #tribe-events-pg-template.tooltipster-base, .tribe-events.tooltipster-base {
+  display: block !important;
+}
 
-.standard-grid > * {
+.standard-grid > *, #tribe-events-pg-template > *, .tribe-events > * {
   grid-column: main;
 }
 
-.r-editior-note {
+.alignfull {
+  grid-column: full;
+}
+
+.r-editor-note {
   display: none;
 }
 
@@ -715,51 +724,255 @@ body {
 * apply custom color pallet
 **/
 .has-white-color {
-  color: #000000;
+  color: #ffffff;
+}
+.has-white-color h1, .has-white-color h2, .has-white-color h3, .has-white-color h4, .has-white-color h5, .has-white-color h6 {
+  color: #ffffff;
+}
+
+.is-style-outline .has-white-color {
+  border-color: #ffffff !important;
+}
+.is-style-outline .has-white-color:hover {
+  background-color: #ffffff !important;
 }
 
 .has-white-background-color {
+  background-color: #ffffff;
+  position: relative;
+}
+.has-white-background-color.section:after {
+  content: " ";
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  left: 0;
+  top: 0;
+}
+.has-white-background-color.wp-block-button__link {
+  border: 2px solid #ffffff;
+}
+.has-white-background-color.wp-block-button__link:hover {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+.has-white-background-color a[href^="tel:"] {
+  color: #ffffff;
+}
+.has-white-background-color .is-style-border-left {
+  border-color: #fff;
+}
+
+.has-black-color {
+  color: #000000;
+}
+.has-black-color h1, .has-black-color h2, .has-black-color h3, .has-black-color h4, .has-black-color h5, .has-black-color h6 {
+  color: #000000;
+}
+
+.is-style-outline .has-black-color {
+  border-color: #000000 !important;
+}
+.is-style-outline .has-black-color:hover {
+  background-color: #000000 !important;
+}
+
+.has-black-background-color {
   background-color: #000000;
+  position: relative;
 }
-
-.has-gray-dark-color {
-  color: #999;
+.has-black-background-color.section:after {
+  content: " ";
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  left: 0;
+  top: 0;
 }
-
-.has-gray-dark-background-color {
-  background-color: #999;
+.has-black-background-color.wp-block-button__link {
+  border: 2px solid #000000;
 }
-
-.has-gray-color {
-  color: #ccc;
+.has-black-background-color.wp-block-button__link:hover {
+  background-color: transparent !important;
+  color: #000000 !important;
 }
-
-.has-gray-background-color {
-  background-color: #ccc;
+.has-black-background-color a[href^="tel:"] {
+  color: #ffffff;
+}
+.has-black-background-color .is-style-border-left {
+  border-color: #fff;
 }
 
 .has-gray-light-color {
   color: #f2f2f2;
 }
+.has-gray-light-color h1, .has-gray-light-color h2, .has-gray-light-color h3, .has-gray-light-color h4, .has-gray-light-color h5, .has-gray-light-color h6 {
+  color: #f2f2f2;
+}
+
+.is-style-outline .has-gray-light-color {
+  border-color: #f2f2f2 !important;
+}
+.is-style-outline .has-gray-light-color:hover {
+  background-color: #f2f2f2 !important;
+}
 
 .has-gray-light-background-color {
   background-color: #f2f2f2;
+  position: relative;
 }
-
-.has-black-color {
+.has-gray-light-background-color.section:after {
+  content: " ";
+  background-color: #f2f2f2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  left: 0;
+  top: 0;
+}
+.has-gray-light-background-color.wp-block-button__link {
+  border: 2px solid #f2f2f2;
+}
+.has-gray-light-background-color.wp-block-button__link:hover {
+  background-color: transparent !important;
+  color: #f2f2f2 !important;
+}
+.has-gray-light-background-color a[href^="tel:"] {
   color: #ffffff;
 }
+.has-gray-light-background-color .is-style-border-left {
+  border-color: #fff;
+}
 
-.has-black-background-color {
-  background-color: #ffffff;
+.has-gray-color {
+  color: #ccc;
+}
+.has-gray-color h1, .has-gray-color h2, .has-gray-color h3, .has-gray-color h4, .has-gray-color h5, .has-gray-color h6 {
+  color: #ccc;
+}
+
+.is-style-outline .has-gray-color {
+  border-color: #ccc !important;
+}
+.is-style-outline .has-gray-color:hover {
+  background-color: #ccc !important;
+}
+
+.has-gray-background-color {
+  background-color: #ccc;
+  position: relative;
+}
+.has-gray-background-color.section:after {
+  content: " ";
+  background-color: #ccc;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  left: 0;
+  top: 0;
+}
+.has-gray-background-color.wp-block-button__link {
+  border: 2px solid #ccc;
+}
+.has-gray-background-color.wp-block-button__link:hover {
+  background-color: transparent !important;
+  color: #ccc !important;
+}
+.has-gray-background-color a[href^="tel:"] {
+  color: #ffffff;
+}
+.has-gray-background-color .is-style-border-left {
+  border-color: #fff;
+}
+
+.has-gray-dark-color {
+  color: #999;
+}
+.has-gray-dark-color h1, .has-gray-dark-color h2, .has-gray-dark-color h3, .has-gray-dark-color h4, .has-gray-dark-color h5, .has-gray-dark-color h6 {
+  color: #999;
+}
+
+.is-style-outline .has-gray-dark-color {
+  border-color: #999 !important;
+}
+.is-style-outline .has-gray-dark-color:hover {
+  background-color: #999 !important;
+}
+
+.has-gray-dark-background-color {
+  background-color: #999;
+  position: relative;
+}
+.has-gray-dark-background-color.section:after {
+  content: " ";
+  background-color: #999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  left: 0;
+  top: 0;
+}
+.has-gray-dark-background-color.wp-block-button__link {
+  border: 2px solid #999;
+}
+.has-gray-dark-background-color.wp-block-button__link:hover {
+  background-color: transparent !important;
+  color: #999 !important;
+}
+.has-gray-dark-background-color a[href^="tel:"] {
+  color: #ffffff;
+}
+.has-gray-dark-background-color .is-style-border-left {
+  border-color: #fff;
 }
 
 .has-transparent-color {
   color: transparent;
 }
+.has-transparent-color h1, .has-transparent-color h2, .has-transparent-color h3, .has-transparent-color h4, .has-transparent-color h5, .has-transparent-color h6 {
+  color: transparent;
+}
+
+.is-style-outline .has-transparent-color {
+  border-color: transparent !important;
+}
+.is-style-outline .has-transparent-color:hover {
+  background-color: transparent !important;
+}
 
 .has-transparent-background-color {
   background-color: transparent;
+  position: relative;
+}
+.has-transparent-background-color.section:after {
+  content: " ";
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  left: 0;
+  top: 0;
+}
+.has-transparent-background-color.wp-block-button__link {
+  border: 2px solid transparent;
+}
+.has-transparent-background-color.wp-block-button__link:hover {
+  background-color: transparent !important;
+  color: transparent !important;
+}
+.has-transparent-background-color a[href^="tel:"] {
+  color: #ffffff;
+}
+.has-transparent-background-color .is-style-border-left {
+  border-color: #fff;
 }
 
 header.body--header::after {

@@ -10,6 +10,14 @@
 //     'label' => __('Small Body'),
 //   )
 // );
+// cover styles
+register_block_style(
+  'core/cover',
+  array(
+    'name' => 'header',
+    'label' => __('Header'),
+  )
+);
 
 
 
@@ -21,9 +29,9 @@ function ristretto_block_category( $categories, $post ) {
   return array_merge(
     array(
       array(
-        'slug' => 'rl-artists',
-        'title' => __( 'Artist Blocks', 'ristretto' ),
-        'icon' => 'art'
+        'slug' => 'project-blocks',
+        'title' => __( 'Site Blocks', 'ristretto' ),
+        'icon' => 'layout'
       ),
     ),
     $categories
@@ -91,12 +99,30 @@ function ristretto_init_block_types() {
         'title'             => __('Featured News'),
         'render_template'   => 'blocks/featured-news.php',
         'enqueue_style'     => get_template_directory_uri() . '/blocks/css/featured-news.css',
-        'category'          => 'iara-news',
+        // 'category'          => 'iara-news',
         'align'             => 'full',
         'icon'              => 'star-filled',
         'keywords'          => array( 'featured', 'news' ),
         'supports'          => array( 
           'jsx' 	 => true,
+          'align'  => true,
+          'anchor' => true,
+        )
+      )
+    );
+    
+    acf_register_block_type(
+      array(
+        'name'              => 'share-page',
+        'title'             => __('Share this Page'),
+        'render_template'   => 'blocks/share-page.php',
+        'enqueue_style'     => get_template_directory_uri() . '/blocks/css/share-page.css',
+        // 'category'          => 'iara-blocks',
+        'align'             => 'full',
+        'icon'              => 'share-alt2',
+        'keywords'          => array( 'return', 'button' ),
+        'supports'          => array( 
+          'jsx' 	 => false,
           'align'  => true,
           'anchor' => true,
         )

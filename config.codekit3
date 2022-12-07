@@ -81,6 +81,18 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/blocks\/css\/share-page.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/css\/share-page-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/blocks\/sass\/block.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -111,12 +123,35 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/blocks\/sass\/share-page.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/css\/share-page.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/blocks\/section.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/blocks\/section.php",
+      "oF" : 0
+    },
+    "\/blocks\/share-page.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/share-page.php",
       "oF" : 0
     },
     "\/comments.php" : {
@@ -149,6 +184,14 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/components\/_search-form.php",
+      "oF" : 0
+    },
+    "\/components\/_social-sharing.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/_social-sharing.php",
       "oF" : 0
     },
     "\/css\/.gitkeep" : {
@@ -694,6 +737,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/sass\/css\/_post-nav.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/sass\/components\/_social-sharing.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/css\/_social-sharing.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

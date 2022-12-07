@@ -183,9 +183,11 @@ h6 {
 
 p {
   font-size: 17px;
-  line-height: 1.4;
-  margin: 0 0 1em 0;
-  max-width: 65rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  max-width: 60rem;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
 }
 @media (min-width: 320px) {
   p {
@@ -230,14 +232,14 @@ nav ul a {
 }
 
 div.wp-block-buttons div.wp-block-button .wp-block-button__link:not(.has-text-color) {
-  color: #000000;
+  color: #ffffff;
 }
 div.wp-block-buttons div.wp-block-button .wp-block-button__link:not(.has-background) {
-  background-color: #999;
+  background-color: #000000;
 }
 div.wp-block-buttons div.wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
-  color: #000000;
-  border-color: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 div.wp-block-buttons div.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background-color) {
   background: transparent;

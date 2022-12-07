@@ -16,26 +16,18 @@ body{
 		display: block !important;
 	}
 }
- 
-.standard-grid > * {
-  grid-column: main;
+.standard-grid > *, #tribe-events-pg-template > *, .tribe-events > * {
+	grid-column: main;
 }
 
-//hide editor notes
-.r-editior-note {
-  display: none;
+.alignfull {
+	grid-column: full;
 }
 
-/**
-* apply custom color pallet
-**/
-@each $name, $color in $colors {
-
-	.has-#{$name}-color {
-		color: $color;
-	}
-
-	.has-#{$name}-background-color {
-		background-color: $color;
-	}
+// Hide editor notes
+.r-editor-note {
+	display: none;
 }
+
+//pull mixin of sitewide gutenberg color palette 
+@include color-palette;

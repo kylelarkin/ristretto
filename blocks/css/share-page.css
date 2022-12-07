@@ -1,0 +1,76 @@
+/* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
+* {
+  box-sizing: border-box;
+}
+
+body, select, input, textarea {
+  color: #333;
+}
+
+::-moz-selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+
+a:link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+ins {
+  background-color: #ccc;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ccc;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.editor-styles-wrapper .share-page, .share-page {
+  margin: 0 !important;
+}
+.editor-styles-wrapper .share-page .social-sharing, .share-page .social-sharing {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.editor-styles-wrapper .share-page .social-sharing a, .share-page .social-sharing a {
+  align-items: center;
+  border-radius: 100%;
+  display: grid;
+  font-size: 1.3125rem;
+  justify-content: start;
+  text-decoration: none;
+  width: 31.5px;
+  height: 31.5px;
+  position: relative;
+}
+.editor-styles-wrapper .share-page .social-sharing a:after, .share-page .social-sharing a:after {
+  border-radius: 25px;
+  content: " ";
+  height: 44px;
+  left: -12px;
+  position: absolute;
+  transition: background-color 0.25s ease-in-out;
+  width: 44px;
+  z-index: 0;
+}
+.editor-styles-wrapper .share-page .social-sharing a:hover, .editor-styles-wrapper .share-page .social-sharing a:focus, .share-page .social-sharing a:hover, .share-page .social-sharing a:focus {
+  background-color: transparent;
+}
+.editor-styles-wrapper .share-page .social-sharing a:hover:after, .editor-styles-wrapper .share-page .social-sharing a:focus:after, .share-page .social-sharing a:hover:after, .share-page .social-sharing a:focus:after {
+  background-color: rgba(205, 93, 187, 0.5);
+}
+.editor-styles-wrapper .share-page .social-sharing a svg, .share-page .social-sharing a svg {
+  z-index: 10;
+}

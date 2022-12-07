@@ -1,0 +1,44 @@
+@import '../../sass/framework/ristretto';
+@import '../../sass/framework/variables';
+@import '../../sass/framework/mixins';
+@import '../../sass/framework/grid';
+
+.editor-styles-wrapper .share-page, .share-page {
+  margin: 0 !important;
+ .social-sharing {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    a {
+      align-items: center;
+      border-radius: 100%;
+      display: grid;
+      font-size: rem(21);
+      justify-content: start;
+      text-decoration: none;
+      width: 31.5px;
+      height: 31.5px;
+      position: relative;
+      &:after {
+        border-radius: 25px;
+        content: ' ';
+        height:44px;
+        left: -12px;
+        position: absolute;
+        transition: background-color .25s ease-in-out;
+        width: 44px;
+        z-index: 0;
+      }
+      &:hover, &:focus {
+        background-color: transparent;
+        &:after {
+          background-color: rgba(205, 93, 187, .5);
+        }
+      }
+      svg {
+        z-index: 10;
+      }
+    }
+  }
+}
+
