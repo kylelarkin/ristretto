@@ -17,7 +17,7 @@ function ristretto_enqueue_gutenberg() {
   wp_register_style( 'ristretto-gutenberg-fonts', '//use.typekit.net/tay1nbp.css' );
   wp_enqueue_style( 'ristretto-gutenberg-fonts' );
   // Font Awesome for Editor
-  wp_register_script( 'fontawesome', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/all.min.js', null, null, true );
+  wp_register_script( 'fontawesome', '//kit.fontawesome.com/xxxxxxxxxx.js', null, null, true );
   wp_enqueue_script('fontawesome');
 }
 add_action( 'enqueue_block_editor_assets', 'ristretto_enqueue_gutenberg' );
@@ -30,6 +30,25 @@ function ristretto_wide_images() {
   add_theme_support( 'align-wide' );
 }
 add_action( 'after_setup_theme', 'ristretto_wide_images' );
+
+/**
+* Some blocks can have padding controls. This is off by default, and requires the theme to opt in by declaring support:
+*/
+add_theme_support( 'custom-spacing' );
+
+/*
+* Use this setting to enable the following Global Styles settings:
+  border: color, radius, style, width
+  color: link
+  spacing: blockGap, margin, padding
+  typography: lineHeight
+*/
+add_theme_support( 'appearance-tools' );
+
+/*
+* remove default block patterns
+*/
+remove_theme_support( 'core-block-patterns' );
 
 /**
  * Customize Gutenberg color palette

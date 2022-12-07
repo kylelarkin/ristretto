@@ -51,20 +51,54 @@ function ristretto_init_block_types() {
         'category'          => 'design',
         'align'             => 'full',
         'icon'              => 'align-wide',
-        'keywords'          => array( 'section' ),
+        'keywords'          => array( 'section', 'layout' ),
+        'supports'          => array( 
+          'jsx' 	 => true,
+          'align'  => true,
+          'alignWide' => true,
+          'anchor' => true,
+          'color' => array(
+            'background' => true,
+            'border' => true,
+            // 'link' => true,
+          ),
+          'spacing'           => array(
+            'margin'   => true,
+            // 'padding'  => true,
+            'blockGap' => true,
+          ),
+          // 'experimentalBorder' => array(
+          //   'color' => true,
+          //   'radius' => true,
+          //   'style' => true,
+          //   'width' => true,
+          // )
+        ),
+        'attributes' => array(
+          // 'style' => array(
+          //   'margin' => '12px',
+          //   'padding' => array(
+          //     'top' => '0',
+          //   )
+          // )
+        )
+      )
+    );
+    
+    acf_register_block_type(
+      array(
+        'name'              => 'featured-news',
+        'title'             => __('Featured News'),
+        'render_template'   => 'blocks/featured-news.php',
+        'enqueue_style'     => get_template_directory_uri() . '/blocks/css/featured-news.css',
+        'category'          => 'iara-news',
+        'align'             => 'full',
+        'icon'              => 'star-filled',
+        'keywords'          => array( 'featured', 'news' ),
         'supports'          => array( 
           'jsx' 	 => true,
           'align'  => true,
           'anchor' => true,
-          'color' => array(
-            'background' => false
-          ),
-          'experimentalBorder' => array(
-            'color' => true,
-            'radius' => true,
-            'style' => true,
-            'width' => true,
-          )
         )
       )
     );

@@ -11,7 +11,7 @@ foreach (glob(dirname(__FILE__) . '/lib/' . '*.php') as $filename) {
  */
 function ristretto_enqueue_init() {
   // Register Scripts
-  wp_register_script( 'fontawesome', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/fontawesome-all.min.js', null, null, true );
+  wp_register_script( 'fontawesome', '//kit.fontawesome.com/xxxxxxxxxx.js', null, null, true );
   wp_register_script( 'aos', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/aos/dist/aos.js', null, null, true );
   wp_register_script( 'object-fit-images', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/ofi.min.js', null, null, true );
   wp_register_script( 'jarallax', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/jarallax/dist/jarallax.min.js', array('jquery'), null, true );

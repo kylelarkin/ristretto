@@ -23,6 +23,9 @@ if( !empty($block['className']) ) {
 if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
+if( !empty($block['padding']) ) {
+    $className .= ' padding' . $block['padding'];
+}
 //background fields
 $backgroundIMG = get_field('background_image');
 $size = 'full';
