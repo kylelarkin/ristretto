@@ -1,11 +1,8 @@
 
 @mixin color-palette {
-	/**
-	* apply custom color pallet
-	**/
 	@each $name, $color in $colors {
-	
-.has-#{$name}-color {
+
+		.has-#{$name}-color {
 			color: $color;
 			h1, h2, h3, h4, h5, h6 {
 				color: $color;
@@ -20,7 +17,7 @@
 				}
 			}
 		}
-	
+
 		.has-#{$name}-background-color {
 			background-color: $color;
 			position: relative;
@@ -44,8 +41,7 @@
 				}
 			}
 			a[href^="tel:"] {
-				$default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
-				color: $default;
+				color: $pink;
 			}
 			.is-style-border-left {
 				border-color: #fff;

@@ -6,6 +6,7 @@ $large-breakpoint:  1024px;
 $xl-breakpoint: 1344px;
 $nav-small-breakpoint: 640px;
 $nav-breakpoint: 768px;
+$col-breakpoint: 600px;
 
 $v-small:         '(min-width: #{$v-small-breakpoint})';
 $pre-small-only:  '(max-width: #{$small-breakpoint - 1})';
@@ -22,3 +23,4 @@ $medium-only:     '(min-width: #{$medium-breakpoint}) and (max-width: #{$large-b
 $pre-large-only:  '(max-width: #{$large-breakpoint - 1})' ;
 $large:           '(min-width: #{$large-breakpoint})';
 $xl:              '(min-width: #{$xl-breakpoint})';
+$col:              '(min-width: #{$col-breakpoint})';

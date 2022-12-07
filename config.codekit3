@@ -728,6 +728,36 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/sass\/blocks\/_wp-block-columns.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/css\/_wp-block-columns.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/sass\/blocks\/_wp-block-table.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/css\/_wp-block-table.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/sass\/components\/_menu-button.scss" : {
       "aP" : 1,
       "bl" : 0,

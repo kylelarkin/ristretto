@@ -1,6 +1,12 @@
 div.wp-block-buttons {
+  
   div.wp-block-button {
+    margin-top: 1rem;
+    @include color-palette;
     .wp-block-button__link {
+      //@include button;
+      padding: .55rem 2rem;
+      transition: all .25s ease-in-out;
       //default if text and background has not been changed
       &:not(.has-text-color) {
         $default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
@@ -9,19 +15,46 @@ div.wp-block-buttons {
       &:not(.has-background) {
         $defaultbg: nth( nth( $colors, 2 ), 2 ); // second color in $colors array
         background-color: $defaultbg;
+        border: 2px solid $defaultbg;
+        &:hover, &:focus {
+          background-color: transparent;
+          color: $defaultbg;
+          outline: 0;
+        }
       }
     }
     &.is-style-outline {
       .wp-block-button__link {
+        transition: all .25s ease-in-out;
         &:not(.has-text-color) {
-          $default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
-          color: $default;
+          $default: nth( nth( $colors, 2 ), 2 ); // first color in $colors array
           border-color: $default;
+          color: $default;
         }
-        &:not(.has-background-color) {
+        &:not(.has-background) {
           background: transparent;
+        }
+        &:hover, &:focus {
+          &:not(.has-background) {
+            $defaultbg: nth( nth( $colors, 2 ), 2 ); // second color in $colors array
+            background-color: $defaultbg;
+            color: #fff;
+            outline: 0;
+          }
+        }
+        &.has-white-color {
+          &:hover, &:focus {
+            $default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
+            background-color: #fff !important;
+            color: $default;
+            outline: 0;
+          }
         }
       }
     }
   }
+}
+
+.wp-block-buttons + p {
+  margin-top: 2rem;
 }

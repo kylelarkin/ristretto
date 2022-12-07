@@ -67,29 +67,34 @@ add_theme_support( 'editor-font-sizes', array(
  */
 add_theme_support( 'editor-color-palette', array(
   array(
-    'name'  => __( 'Red', 'ristretto' ),
-    'slug'  => 'red',
-    'color' => '#ff0000',
-  ),
-  array(
     'name'  => __( 'White', 'ristretto' ),
     'slug'  => 'white',
-    'color' => '#ffffff',
+    'color' => '#fff',
+  ),
+  array(
+    'name'  => __( 'Teal', 'ristretto' ),
+    'slug'  => 'teal',
+    'color' => '#1BA39C',
   ),
   array(
     'name'  => __( 'Black', 'ristretto' ),
     'slug'  => 'black',
-    'color' => '#000000',
+    'color' => '#000',
   ),
   array(
-    'name'  => __( 'Gray Dark', 'ristretto' ),
-    'slug'  => 'gray-dark',
-    'color' => '#565656',
-  ),
-  array(
-    'name'  => __( 'Gray Light', 'ristretto' ),
+    'name'  => __( 'Light Gray', 'ristretto' ),
     'slug'  => 'gray-light',
     'color' => '#f2f2f2',
+  ),
+  array(
+    'name'  => __( 'Dark Gray', 'ristretto' ),
+    'slug'  => 'gray-dark',
+    'color' => '#999',
+  ),
+  array(
+    'name'  => __( 'Transparent', 'ristretto' ),
+    'slug'  => 'transparent',
+    'color' => 'transparent',
   ),
 
 ) );

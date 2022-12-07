@@ -30,4 +30,50 @@ body{
 }
 
 //pull mixin of sitewide gutenberg color palette 
-@include color-palette;
+@each $name, $color in $colors {
+	.has-#{$name}-color {
+		color: $color;
+		h1, h2, h3, h4, h5, h6 {
+			color: $color;
+		}
+	}
+	
+	.is-style-outline {
+		.has-#{$name}-color {
+			border-color: $color !important;
+			&:hover {
+				background-color: $color !important;
+			}
+		}
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+		position: relative;
+		&.section {
+			&:after {
+				content: ' ';
+				background-color: $color;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				opacity: .85;
+				left: 0;
+				top: 0;
+			}
+		}
+		&.wp-block-button__link {
+			border: 2px solid $color;
+			&:hover {
+				background-color: transparent !important;
+				color: $color !important;
+			}
+		}
+		a[href^="tel:"] {
+			color: $pink;
+		}
+		.is-style-border-left {
+			border-color: #fff;
+		}
+	}
+}

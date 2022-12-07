@@ -10,15 +10,6 @@
 //     'label' => __('Small Body'),
 //   )
 // );
-// cover styles
-register_block_style(
-  'core/cover',
-  array(
-    'name' => 'header',
-    'label' => __('Header'),
-  )
-);
-
 
 
 // =========================================================

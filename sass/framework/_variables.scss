@@ -23,9 +23,13 @@ $button-color: $link-color;
 
 $ani_speed: 250ms;
 
+//
+// these colors should match the color palette defined in editor.php otherwise color picker won't work properly
+//
 $colors: (
   'white': #ffffff, //this should be the default button text & border color
-  'black': #000000, //this should be the default background color of button
+  'teal': #1BA39C, //this should be the default background color of button
+  'black': #000000,
   'gray-light': $gray-light,  
   'gray': $gray,
   'gray-dark': $gray-dark,

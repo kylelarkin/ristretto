@@ -8,12 +8,12 @@
 // -------------------------------------------------
 // Framework
 // ---------------------------------------------- */
+@import 'framework/grid';
+@import 'framework/mixins';
 @import 'framework/reset';
 @import 'framework/ristretto';
-@import 'framework/variables';
-@import 'framework/mixins';
 @import 'framework/typography';
-@import 'framework/grid';
+@import 'framework/variables';
 
 // -------------------------------------------------
 // Components
@@ -21,21 +21,23 @@
 @import 'components/menu-button';
 @import 'components/post-nav';
 @import 'components/video-embed';
+@import 'components/social-sharing';
 
 // -------------------------------------------------
 // Block Overrides
 // ---------------------------------------------- */
 @import 'blocks/wp-block-buttons';
+@import 'blocks/wp-block-table';
+@import 'blocks/wp-block-columns';
 
 // -------------------------------------------------
 // Layout
 // ---------------------------------------------- */
 @import 'layout/default';
-@import 'layout/header';
 @import 'layout/footer';
-
+@import 'layout/header';
 // -------------------------------------------------
 // Views
 // ---------------------------------------------- */
-@import 'views/front-page';
 @import 'views/404';
+@import 'views/front-page';
