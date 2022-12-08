@@ -22,7 +22,7 @@ function ristretto_enqueue_init() {
   
   // Enqueue Scripts
   wp_enqueue_script('aos');
-  wp_enqueue_script('fontawesome');
+ // wp_enqueue_script('fontawesome');
   wp_enqueue_script('jarallax');
   wp_enqueue_script('lity');
   wp_enqueue_script('object-fit-images');
@@ -45,3 +45,10 @@ function ristretto_enqueue_init() {
   wp_enqueue_style('ristretto-screen');
  }
 add_action('wp_enqueue_scripts', 'ristretto_enqueue_init', 15);
+
+
+
+function register_acf_blocks() {
+    register_block_type( '/blocks/section' );
+}
+add_action( 'init', 'register_acf_blocks', 5 );

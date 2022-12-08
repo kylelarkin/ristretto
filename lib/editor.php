@@ -18,7 +18,7 @@ function ristretto_enqueue_gutenberg() {
   wp_enqueue_style( 'ristretto-gutenberg-fonts' );
   // Font Awesome for Editor
   wp_register_script( 'fontawesome', '//kit.fontawesome.com/xxxxxxxxxx.js', null, null, true );
-  wp_enqueue_script('fontawesome');
+  //wp_enqueue_script('fontawesome');
 }
 add_action( 'enqueue_block_editor_assets', 'ristretto_enqueue_gutenberg' );
 
