@@ -88,12 +88,46 @@ function ristretto_register_theme_customizer( $wp_customize ) {
 					return ! is_404();
 			},
 	) );
-	// Add a control to upload the search background iamge
+	// Add a control to upload the 404 background iamge
 	$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, '404_background_image',
 		array(
 		'label' => '404 Background Image',
 		'settings' => 'ristretto_404',
 		'section' => 'ristretto_404',
+		) 
+	) );
+	
+	
+	// Add site logo Section
+	$wp_customize->add_section('ristretto_logo', array(
+		'title' => 'Logo',
+		'description' => '',
+		'priority' => 120,
+		'panel' => 'ristretto_info',
+	));
+	// add a setting for the site logo
+	$wp_customize->add_setting('ristretto_logo');
+	// $wp_customize->add_control( 'not_found_link', array(
+	// 		'section'  => 'ristretto_404',
+	// 		'settings' => array(),
+	// 		'label' => '404 Page Template',
+	// 		'type' => 'button',
+	// 		'priority' => 1,
+	// 		'input_attrs'  => array(
+	// 				'value' => __( 'Click to Load Preview' ),
+	// 				'class' => 'button button-secondary',
+	// 				'onclick' => 'wp.customize.previewer.previewUrl.set( "/not-found-" + String( Math.random() ) + "/" );',
+	// 		),
+	// 		'active_callback' => function() {
+	// 				return ! is_404();
+	// 		},
+	// ) );
+	// Add a control to upload site logo
+	$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'logo_image',
+		array(
+		'label' => 'Site Logo',
+		'settings' => 'ristretto_logo',
+		'section' => 'ristretto_logo',
 		) 
 	) );
 

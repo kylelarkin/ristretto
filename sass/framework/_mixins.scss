@@ -1,3 +1,6 @@
+@mixin transition {
+	transition: all $ani_speed ease-in-out;
+}
 
 @mixin color-palette {
 	@each $name, $color in $colors {

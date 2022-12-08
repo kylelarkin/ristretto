@@ -23,7 +23,16 @@
 	<a href="#main-content" class="visually-hidden" title="skip to main content">Skip to main content</a>
 
 	<header class="body--header standard-grid" role="banner">		
-		<h6 class="logo"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>"><?php bloginfo('title'); ?></a></h6>
+		<h6 class="logo">
+			<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>">
+				<?php $logo = get_theme_mod('ristretto_logo');
+				if($logo): ?>
+					<?= wp_get_attachment_image( $logo, 'medium' ); ?>
+				<?php else:
+					bloginfo('title'); ?>
+				<?php endif; ?>
+			</a>
+		</h6>
 		<nav class="nav--secondary" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'secondary-header-menu', 'container' => false) ); ?>
 		</nav>
