@@ -323,25 +323,15 @@
       "oAP" : "\/index.php",
       "oF" : 0
     },
-    "\/js\/app.coffee" : {
-      "ft" : 32,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/js\/dist\/app.js",
-      "oF" : 2,
-      "oS" : 0,
-      "tS" : 1
-    },
     "\/js\/app.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/js\/min\/app-min.js",
-      "oF" : 0,
-      "sC" : 3,
+      "oAP" : "\/js\/dist\/app-min.js",
+      "oF" : 2,
+      "sC" : 0,
       "tS" : 0
     },
     "\/js\/dist\/aos.js" : {
@@ -352,18 +342,18 @@
       "oA" : 0,
       "oAP" : "\/js\/dist\/min\/aos-min.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
-    "\/js\/dist\/app.js" : {
+    "\/js\/dist\/app-min.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/js\/dist\/min\/app-min.js",
+      "oAP" : "\/js\/dist\/app-min-min.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/js\/dist\/fontawesome-all.min.js" : {
@@ -374,7 +364,7 @@
       "oA" : 1,
       "oAP" : "\/js\/dist\/min\/fontawesome-all.min-min.js",
       "oF" : 1,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/js\/dist\/ofi.min.js" : {
@@ -385,7 +375,7 @@
       "oA" : 0,
       "oAP" : "\/js\/dist\/min\/ofi.min-min.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/js\/slick\/ajax-loader.gif" : {
@@ -505,7 +495,7 @@
       "oA" : 0,
       "oAP" : "\/js\/slick\/min\/slick-min.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/js\/slick\/slick.less" : {
@@ -534,7 +524,7 @@
       "oA" : 0,
       "oAP" : "\/js\/slick\/min\/slick.min-min.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/js\/slick\/slick.scss" : {
@@ -2461,7 +2451,7 @@
       "bundleFormat" : 0,
       "minifierStyle" : 1,
       "sourceMapStyle" : 0,
-      "syntaxCheckerStyle" : 3,
+      "syntaxCheckerStyle" : 0,
       "transpilerStyle" : 0
     },
     "languageDefaultsJSON" : {
