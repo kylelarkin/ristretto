@@ -6,6 +6,7 @@
             "key": "field_612861ea6074d",
             "label": "Background",
             "name": "",
+            "aria-label": "",
             "type": "accordion",
             "instructions": "",
             "required": 0,
@@ -23,6 +24,7 @@
             "key": "field_6152412ecb5da",
             "label": "Background Image",
             "name": "background_image",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -49,6 +51,7 @@
             "key": "field_615240bccb5d9",
             "label": "Overlay",
             "name": "background_color",
+            "aria-label": "",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -70,12 +73,13 @@
             "key": "field_61523ea4cb5d8",
             "label": "Parallax",
             "name": "parallax",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": 50,
                 "class": "",
                 "id": ""
             },
@@ -89,6 +93,7 @@
             "key": "field_6128630060752",
             "label": "Borders",
             "name": "",
+            "aria-label": "",
             "type": "accordion",
             "instructions": "",
             "required": 0,
@@ -106,6 +111,7 @@
             "key": "field_615241b3cb5dc",
             "label": "Border Location(s)",
             "name": "border_locations",
+            "aria-label": "",
             "type": "checkbox",
             "instructions": "",
             "required": 0,
@@ -132,6 +138,7 @@
             "key": "field_615241d7b0a3c",
             "label": "Border",
             "name": "border_color",
+            "aria-label": "",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -151,6 +158,7 @@
             "key": "field_6156a889d625b",
             "label": "Layout",
             "name": "",
+            "aria-label": "",
             "type": "accordion",
             "instructions": "",
             "required": 0,
@@ -168,6 +176,7 @@
             "key": "field_6156a8a2d625c",
             "label": "Inner Grid Columns",
             "name": "inner_grid_columns",
+            "aria-label": "",
             "type": "button_group",
             "instructions": "",
             "required": 0,
@@ -178,10 +187,10 @@
                 "id": ""
             },
             "choices": {
-                "one": "1",
-                "two": "2",
-                "three": "3",
-                "four": "4"
+                "one": 1,
+                "two": 2,
+                "three": 3,
+                "four": 4
             },
             "allow_null": 0,
             "default_value": 1,
@@ -192,6 +201,7 @@
             "key": "field_6327eff6e91e5",
             "label": "Is this section a page header?",
             "name": "is_this_section_a_page_header",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -211,6 +221,7 @@
             "key": "field_6327f017e91e6",
             "label": "Remove Padding",
             "name": "remove_padding",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -232,7 +243,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/section"
+                "value": "ristretto\/section"
             }
         ]
     ],
@@ -245,5 +256,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1665098998
+    "modified": 1670904804
 }

@@ -132,7 +132,7 @@ function ristretto_register_theme_customizer( $wp_customize ) {
 	) );
 
 
-	// // Add control
+	// Add control
 	// $wp_customize->add_control( new WP_Customize_Control(
 	//   $wp_customize,
 	//   'social_media',

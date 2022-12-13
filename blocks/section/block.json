@@ -1,0 +1,24 @@
+{
+	"align": "full",
+	"category": "formatting",
+	"description": "A custom section block.",
+	"icon": "align-wide",
+	"keywords": ["section", "layout"],
+	"name": "ristretto/section",
+	"style": [ "file:./section.css" ],
+	"title": "Section",
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "section.php"
+	},
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"color": {
+			"background": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	}
+}

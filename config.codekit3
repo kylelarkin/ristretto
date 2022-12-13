@@ -41,14 +41,6 @@
       "oO" : 0,
       "oS" : 1
     },
-    "\/acf-json\/group_63920d493d2bc.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/acf-json\/group_63920d493d2bc-min.json",
-      "oF" : 0,
-      "oO" : 0,
-      "oS" : 1
-    },
     "\/acf-json\/group_633676a478e69.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -57,66 +49,35 @@
       "oO" : 0,
       "oS" : 1
     },
-    "\/blocks\/block.php" : {
+    "\/blocks\/featured-news\/block.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/blocks\/featured-news\/block-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/blocks\/featured-news\/section.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/featured-news\/section-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/blocks\/featured-news\/section.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/blocks\/block.php",
+      "oAP" : "\/blocks\/featured-news\/section.php",
       "oF" : 0
     },
-    "\/blocks\/css\/block.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/block-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/section.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/section-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/share-page.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/share-page-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/sass\/block.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/block.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/blocks\/sass\/section.scss" : {
+    "\/blocks\/featured-news\/section.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -131,7 +92,70 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/blocks\/sass\/share-page.scss" : {
+    "\/blocks\/section\/block.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/blocks\/section\/block-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/blocks\/section\/section.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/section\/section-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/blocks\/section\/section.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/section\/section.php",
+      "oF" : 0
+    },
+    "\/blocks\/section\/section.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/css\/section.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/blocks\/share-page\/share-page.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/share-page\/share-page-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/blocks\/share-page\/share-page.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/share-page\/share-page.php",
+      "oF" : 0
+    },
+    "\/blocks\/share-page\/share-page.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -145,22 +169,6 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/blocks\/section.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/section.php",
-      "oF" : 0
-    },
-    "\/blocks\/share-page.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/share-page.php",
-      "oF" : 0
     },
     "\/comments.php" : {
       "cB" : 0,
@@ -582,14 +590,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/lib\/customizer.php",
-      "oF" : 0
-    },
-    "\/lib\/dashboard.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/lib\/dashboard.php",
       "oF" : 0
     },
     "\/lib\/editor.php" : {

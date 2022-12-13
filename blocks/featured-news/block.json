@@ -1,0 +1,17 @@
+{
+	"align": "full",
+	"category": "featured-content",
+	"description": "A block to feature important or recent NACC news.",
+	"icon": "star-filled",
+	"keywords": ["news", "posts", "featured", "press"],
+	"name": "ristretto/featured-news",
+	"style": [ "file:./featured-news.css" ],
+	"title": "Featured News",
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "featured-news.php"
+	},
+	"supports": {
+		"anchor": true
+	}
+}

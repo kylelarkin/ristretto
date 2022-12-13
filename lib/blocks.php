@@ -1,8 +1,103 @@
-<?php
-// =========================================================
-//   Register Core Ristretto Blocks Styles
-// =========================================================
-//paragraph styles
+<?php 
+/**
+ * Blocks
+ *
+ * @package      ristrettoClient
+ * @author       ristrettoWP
+ * @since        1.0.0
+ * @license      GPL-2.0+
+ **/
+
+// namespace ristretto\Blocks;
+
+/**
+ * Load Blocks
+ */
+function load_blocks() {
+  $theme  = wp_get_theme();
+  $blocks = get_blocks();
+  foreach( $blocks as $block ) {
+    if ( file_exists( get_template_directory() . '/blocks/' . $block . '/block.json' ) ) {
+      register_block_type( get_template_directory() . '/blocks/' . $block . '/block.json' );
+      wp_register_style( 'block-' . $block, get_template_directory_uri() . '/blocks/' . $block . '/style.css', null, $theme->get( 'Version' ) );
+
+      if ( file_exists( get_template_directory() . '/blocks/' . $block . '/init.php' ) ) {
+        include_once get_template_directory() . '/blocks/' . $block . '/init.php';
+      }
+    }
+  }
+}
+add_action( 'init', __NAMESPACE__ . '\load_blocks', 5 );
+
+/**
+ * Load ACF field groups for blocks
+ */
+// function load_acf_field_group( $paths ) {
+//   $blocks = get_blocks();
+//   foreach( $blocks as $block ) {
+//     $paths[] = get_template_directory() . '/blocks/' . $block;
+//   }
+//   return $paths;
+// }
+// add_filter( 'acf/settings/load_json', __NAMESPACE__ . '\load_acf_field_group' );
+
+/**
+ * Get Blocks
+ */
+function get_blocks() {
+  $theme   = wp_get_theme();
+  $blocks  = get_option( 'ristretto_blocks' );
+  $version = get_option( 'ristretto_blocks_version' );
+  if ( empty( $blocks ) || version_compare( $theme->get( 'Version' ), $version ) || ( function_exists( 'wp_get_environment_type' ) && 'production' !== wp_get_environment_type() ) ) {
+    $blocks = scandir( get_template_directory() . '/blocks/' );
+    $blocks = array_values( array_diff( $blocks, array( '..', '.', '.DS_Store', '_base-block' ) ) );
+
+    update_option( 'ristretto_blocks', $blocks );
+    update_option( 'ristretto_blocks_version', $theme->get( 'Version' ) );
+  }
+  return $blocks;
+}
+
+/**
+ * Block categories
+ *
+ * @since 1.0.0
+ */
+function block_categories( $categories ) {
+
+  // Check to see if we already have a ristrettoWP category
+  $include = true;
+  foreach( $categories as $category ) {
+    if( 'ristrettowp' === $category['slug'] ) {
+      $include = false;
+    }
+  }
+
+  if( $include ) {
+    $categories = array_merge(
+      $categories,
+      [
+        [
+          'slug'  => 'featured-content',
+          'title' => __( 'Featured Content', 'ristretto' ),
+        ],
+        [
+          'slug'  => 'test',
+          'title' => __( 'Test', 'ristretto' ),
+        ]
+      ]
+    );
+  }
+
+  return $categories;
+}
+add_filter( 'block_categories_all', __NAMESPACE__ . '\block_categories' );
+
+/**
+ * Block styles
+ *
+ * @since 1.0.0
+ */
 // register_block_style(
 //   'core/paragraph',
 //   array(
@@ -10,161 +105,3 @@
 //     'label' => __('Small Body'),
 //   )
 // );
-
-
-// =========================================================
-//   Register Block Category
-// =========================================================
-function ristretto_block_category( $categories, $post ) {
-
-  return array_merge(
-    array(
-      array(
-        'slug' => 'project-blocks',
-        'title' => __( 'Site Blocks', 'ristretto' ),
-        'icon' => 'layout'
-      ),
-    ),
-    $categories
-  );
-}
-//add_filter( 'block_categories_all', 'ristretto_block_category', 10, 2 );
-
-
-
-// =========================================================
-//   Register CNF Blocks
-// =========================================================
-function ristretto_init_block_types() {
-    // Check function exists.
-    if( function_exists('acf_register_block_type') ) {
-    //
-    //layout blocks
-    //
-    acf_register_block_type(
-      array(
-        'name'              => 'section',
-        'title'             => __('Section'),
-        'render_template'   => 'blocks/section.php',
-        'enqueue_style'     => get_template_directory_uri() . '/blocks/css/section.css',
-        'category'          => 'design',
-        'align'             => 'full',
-        'icon'              => 'align-wide',
-        'keywords'          => array( 'section', 'layout' ),
-        'supports'          => array( 
-          'jsx' 	 => true,
-          'align'  => true,
-          'alignWide' => true,
-          'anchor' => true,
-          'color' => array(
-            'background' => true,
-            'border' => true,
-            // 'link' => true,
-          ),
-          'spacing'           => array(
-            'margin'   => true,
-            // 'padding'  => true,
-            'blockGap' => true,
-          ),
-          // 'experimentalBorder' => array(
-          //   'color' => true,
-          //   'radius' => true,
-          //   'style' => true,
-          //   'width' => true,
-          // )
-        ),
-        'attributes' => array(
-          // 'style' => array(
-          //   'margin' => '12px',
-          //   'padding' => array(
-          //     'top' => '0',
-          //   )
-          // )
-        )
-      )
-    );
-    
-    acf_register_block_type(
-      array(
-        'name'              => 'featured-news',
-        'title'             => __('Featured News'),
-        'render_template'   => 'blocks/featured-news.php',
-        'enqueue_style'     => get_template_directory_uri() . '/blocks/css/featured-news.css',
-        // 'category'          => 'ristretto-news',
-        'align'             => 'full',
-        'icon'              => 'star-filled',
-        'keywords'          => array( 'featured', 'news' ),
-        'supports'          => array( 
-          'jsx' 	 => true,
-          'align'  => true,
-          'anchor' => true,
-        )
-      )
-    );
-    
-    acf_register_block_type(
-      array(
-        'name'              => 'share-page',
-        'title'             => __('Share this Page'),
-        'render_template'   => 'blocks/share-page.php',
-        'enqueue_style'     => get_template_directory_uri() . '/blocks/css/share-page.css',
-        // 'category'          => 'ristretto-blocks',
-        'align'             => 'full',
-        'icon'              => 'share-alt2',
-        'keywords'          => array( 'return', 'button' ),
-        'supports'          => array( 
-          'jsx' 	 => false,
-          'align'  => true,
-          'anchor' => true,
-        )
-      )
-    );
-    
-    //
-    //artist blocks
-    //
-    // acf_register_block_type(
-    //   array(
-    //     'name'              => 'artist-contact',
-    //     'title'             => __('Artist Contact Details'),
-    //     'description'       => __('Artist\'s contact information and website.'),
-    //     'category'          => 'rl-artists',
-    //     'icon'              => 'admin-users',
-    //     'keywords'          => array('artist', 'contact', 'website', 'url', 'people'),
-    //     'post_types'        => array('artist'),
-    //     'mode'              => 'preview',
-    //     // 'align'             => 'full',
-    //     // 'align_text'        => 'left',
-    //     // 'align_content'     => 'center',
-    //     'render_template'   => 'blocks/artist-contact.php',
-    //     'enqueue_style'     => get_template_directory_uri() . '/blocks/css/artist-contact.css',
-    //     // 'enqueue_script'    => get_template_directory_uri() . '/blocks/js/artist-contact.js',
-    //     'enqueue_assets'    => function(){
-    //       wp_enqueue_style( 'block-artist-contact', get_template_directory_uri() . '/blocks/css/artist-contact.css' );
-    //       // wp_enqueue_script( 'block-artist-contact', get_template_directory_uri() . '/blocks/js/artist-contact.js', array('jquery'), '', true );
-    //     },
-    //     'supports'          => array(
-    //       'align'  => false,
-    //       // 'align' => array( 'left', 'right', 'full' ),
-    //       'align_text' => false,
-    //       'align_content' => false,
-    //       'full_height' => false,
-    //       'mode' => 'false',
-    //       'multiple' => 'false',
-    //       // 'example'  => array(
-    //       //   'attributes' => array(
-    //       //       'mode' => 'preview',
-    //       //       'data' => array(
-    //       //         'testimonial'   => "Your testimonial text here",
-    //       //         'author'        => "John Smith"
-    //       //       )
-    //       //   )
-    //       // ),
-    //       'jsx' 	 => false,
-    //       'anchor' => true,
-    //     )
-    //   )
-    // );
-  }
-}
-add_action('acf/init', 'ristretto_init_block_types');

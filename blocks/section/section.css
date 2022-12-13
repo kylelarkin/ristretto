@@ -1,0 +1,220 @@
+/* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
+* {
+  box-sizing: border-box;
+}
+
+body, select, input, textarea {
+  color: #333;
+}
+
+::-moz-selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+
+a:link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+ins {
+  background-color: #ccc;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ccc;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.section {
+  grid-column: full;
+  padding: 2rem 0 2rem 0;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .section {
+    scroll-margin-top: 109px;
+    padding: 3.8rem 0;
+  }
+}
+.section.parallax {
+  background-attachment: fixed;
+  background-size: 200%;
+}
+.section.remove-padding {
+  padding: 0 !important;
+}
+.section.remove-padding p:last-child {
+  margin: 0;
+}
+.section.border-top {
+  border-top: 2px solid white;
+  padding-top: 23px !important;
+}
+.section.border-bottom {
+  border-bottom: 2px solid white;
+  padding-bottom: 23px !important;
+}
+.section.border-left {
+  border-left: 2px solid white;
+  padding-left: 23px !important;
+}
+.section.border-right {
+  border-right: 2px solid white;
+  padding-right: 23px !important;
+}
+.section.header-section {
+  padding-top: 215px !important;
+}
+@media (min-width: 768px) {
+  .section.header-section {
+    padding-top: 260p !important;
+  }
+}
+.section .section-inner .wp-block-columns:last-child {
+  margin-bottom: 0;
+}
+.section .section-inner > h2:first-child, .section .section-inner > h3:first-child {
+  margin-top: 0;
+}
+.section .two-columns {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .section .two-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+.section .three-columns {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .section .three-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section .three-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.section .four-columns {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .section .four-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section .four-columns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.section * {
+  z-index: 10;
+}
+.section:not(.has-background) {
+  background-color: transparent !important;
+}
+.section #jarallax-container-0, .section #jarallax-container-1, .section #jarallax-container-2, .section #jarallax-container-3, .section #jarallax-container-4, .section #jarallax-container-5, .section #jarallax-container-6 {
+  grid-column: full;
+}
+.section .slider-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 8000px;
+  width: 100%;
+}
+
+.section .section {
+  display: flex;
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .section .section {
+    padding: 3rem;
+  }
+}
+.section .section .section-inner {
+  flex-grow: 1;
+}
+
+.fancy + .section:before {
+  opacity: 15;
+}
+
+.editor-styles-wrapper .section {
+  padding: 4.3rem 0 3.3rem 0;
+  grid-template-columns: [full-start] calc(50vw - 820px) [main-start] minmax(0, 1fr) [main-end] calc(50vw - 820px) [full-end];
+}
+.editor-styles-wrapper .two-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .editor-styles-wrapper .two-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+.editor-styles-wrapper .three-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .editor-styles-wrapper .three-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .editor-styles-wrapper .three-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.editor-styles-wrapper .four-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .editor-styles-wrapper .four-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .editor-styles-wrapper .four-columns > .block-editor-inner-blocks .block-editor-block-list__layout {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.editor-styles-wrapper .section .section {
+  display: flex;
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .editor-styles-wrapper .section .section {
+    padding: 3rem;
+  }
+}
+.editor-styles-wrapper .section .section .section-inner {
+  flex-grow: 1;
+}
