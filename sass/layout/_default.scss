@@ -19,7 +19,7 @@ body{
 .standard-grid > *, #tribe-events-pg-template > *, .tribe-events > * {
 	grid-column: main;
 }
-
+ 
 .alignfull {
 	grid-column: full;
 }
@@ -29,51 +29,31 @@ body{
 	display: none;
 }
 
-//pull mixin of sitewide gutenberg color palette 
-@each $name, $color in $colors {
-	.has-#{$name}-color {
-		color: $color;
-		h1, h2, h3, h4, h5, h6 {
-			color: $color;
-		}
-	}
-	
-	.is-style-outline {
-		.has-#{$name}-color {
-			border-color: $color !important;
-			&:hover {
-				background-color: $color !important;
-			}
-		}
-	}
-
-	.has-#{$name}-background-color {
-		background-color: $color;
-		position: relative;
-		&.section {
-			&:after {
-				content: ' ';
-				background-color: $color;
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				opacity: .85;
-				left: 0;
-				top: 0;
-			}
-		}
-		&.wp-block-button__link {
-			border: 2px solid $color;
-			&:hover {
-				background-color: transparent !important;
-				color: $color !important;
-			}
-		}
-		a[href^="tel:"] {
-			color: $pink;
-		}
-		.is-style-border-left {
-			border-color: #fff;
-		}
+.visually-hidden {
+	background-color: $gray-dark;
+	font-family: $body-font;
+	font-weight: 600;
+	font-size: rem(13);
+	line-height: 20px;
+	letter-spacing: 0.05em;
+	padding: .125rem .5rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	position: absolute;
+	left: -999px;
+	width:1px;
+	height: 1px;
+	top: auto;
+	border-bottom: 1px solid $heading-color;
+	&:focus {
+		height: auto;
+		width: 100%;
+		position: static;
+		margin: auto;
+		color: #fff;
 	}
 }
+
+//pull mixin of sitewide gutenberg color palette 
+@include color-palette;
