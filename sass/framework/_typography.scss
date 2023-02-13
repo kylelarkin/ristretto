@@ -20,7 +20,7 @@ a {
 		color: $link-hover;
 		text-decoration-thickness: 2px;
 	}
-	nav & {
+	nav &, #wpadminbar & {
 		text-decoration: none;
 
 		&:hover, &:active {

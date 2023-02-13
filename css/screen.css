@@ -427,10 +427,10 @@ a:hover, a:focus {
   color: #000;
   text-decoration-thickness: 2px;
 }
-nav a {
+nav a, #wpadminbar a {
   text-decoration: none;
 }
-nav a:hover, nav a:active {
+nav a:hover, nav a:active, #wpadminbar a:hover, #wpadminbar a:active {
   text-decoration: none;
 }
 
