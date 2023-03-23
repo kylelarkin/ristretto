@@ -1,0 +1,83 @@
+@import '../../sass/framework/ristretto';
+@import '../../sass/framework/variables';
+@import '../../sass/framework/mixins';
+@import '../../sass/framework/grid';
+
+a.card {
+  @include a-reset;
+  @include wavetrans(#fff, $blue-accent);
+  &:hover {
+    border-color: $blue-accent;
+  }
+  &:focus {
+    // border-color: $blue-accent;
+    border-color: $blue;
+    outline: 0;
+    border-radius: 0;
+  }
+}
+
+.card, .editor-styles-wrapper .card {
+  
+  border: 2px solid $gray-light;
+  grid-column: revert !important;
+  padding: 1rem;
+
+  
+  h2 {
+    font-family: $heading-font;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .32px;
+  }
+  p {
+    font-size: rem(13);
+  }
+  
+  //images, no border
+  &.is-style-image {
+    @include a-reset;
+    @include transition;
+    border-color: transparent;
+    display: block;
+    padding: 0;
+    &:focus {
+      border-color: $blue-accent;
+    }
+    &:hover {
+      border-color: transparent;
+      figure img, {
+        opacity: .8;
+      }
+
+    }
+    &:after {
+      display: none !important;
+    }
+    &:before {
+      display: none !important;
+    }
+    figure {
+      @include transition;
+      max-width: 250px;
+      margin: 0 auto;
+      padding: 1rem;
+      img {
+        @include transition;
+      }
+    }
+    span {
+      @include transition;
+    }
+  }
+}
+
+.editor-styles-wrapper .card {
+  max-width: 100%;
+  figure {
+    max-width: 100%;
+    img {
+      max-width: 100%;
+    }
+  }
+}

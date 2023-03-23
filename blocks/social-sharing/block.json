@@ -1,0 +1,18 @@
+{
+	"align": "full",
+	"category": "formatting",
+	"description": "Let visitors share this page on their social media.",
+	"icon": "share",
+	"keywords": ["social media", "social", "share", "email", "tweet", "like"],
+	"name": "ristretto/social-sharing",
+	"style": [ "file:./social-sharing.css" ],
+	"title": "Share This Page",
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "social-sharing.php"
+	},
+	"supports": {
+		"anchor": true
+		
+	}
+}

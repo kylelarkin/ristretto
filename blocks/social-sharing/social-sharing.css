@@ -1,0 +1,151 @@
+/* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
+* {
+  box-sizing: border-box;
+}
+
+body, select, input, textarea {
+  color: #333;
+}
+
+::-moz-selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+
+a:link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+ins {
+  background-color: #ccc;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ccc;
+  color: #000;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/***
+*
+* Headings
+*
+***/
+/***
+*
+* Paragraphs
+*
+***/
+/***
+*
+* Blocks and Components
+*
+***/
+/***
+*
+* WooCommerce Specific
+*
+***/
+/***
+*
+* Base Mixins
+*
+***/
+/***
+*
+* Headings
+*
+***/
+/***
+*
+* Paragraphs
+*
+***/
+/***
+*
+* Blocks and Components
+*
+***/
+/***
+*
+* WooCommerce Specific
+*
+***/
+/***
+*
+* Base Mixins
+*
+***/
+.editor-styles-wrapper .block-social-sharing, .block-social-sharing {
+  margin: 0 !important;
+}
+.editor-styles-wrapper .block-social-sharing h6, .block-social-sharing h6 {
+  font-size: 15px;
+  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+@media (min-width: 393px) {
+  .editor-styles-wrapper .block-social-sharing h6, .block-social-sharing h6 {
+    font-size: calc(15px + 1 * (100vw - 393px) / 1047);
+  }
+}
+@media (min-width: 1440px) {
+  .editor-styles-wrapper .block-social-sharing h6, .block-social-sharing h6 {
+    font-size: 16px;
+  }
+}
+.editor-styles-wrapper .block-social-sharing .social-sharing, .block-social-sharing .social-sharing {
+  display: flex;
+  gap: 2rem;
+  margin: 0.7rem 3rem 0 0rem;
+}
+@media (min-width: 720px) {
+  .editor-styles-wrapper .block-social-sharing .social-sharing, .block-social-sharing .social-sharing {
+    margin: 0.7rem 3rem 0 -0.77rem;
+  }
+}
+.editor-styles-wrapper .block-social-sharing a, .block-social-sharing a {
+  background-image: none;
+  display: inline-block;
+  border-radius: 12px;
+  color: #F7630E;
+  display: grid;
+  font-size: 1.3125rem;
+  height: 31.5px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  width: 31.5px;
+  align-items: center;
+}
+.editor-styles-wrapper .block-social-sharing a:after, .block-social-sharing a:after {
+  display: none;
+}
+@media (min-width: 720px) {
+  .editor-styles-wrapper .block-social-sharing a, .block-social-sharing a {
+    height: 44px;
+    justify-content: center;
+    width: 44px;
+  }
+}
+@media (min-width: 720px) {
+  .editor-styles-wrapper .block-social-sharing a:hover, .editor-styles-wrapper .block-social-sharing a:focus, .block-social-sharing a:hover, .block-social-sharing a:focus {
+    background-color: rgba(1, 67, 115, 0.25);
+    color: #014373;
+    outline: 0;
+    color: #00508B;
+  }
+}

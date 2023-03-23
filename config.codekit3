@@ -7,7 +7,7 @@
       "uuidString" : "9E350C24-7153-46D2-86B7-2393A399A36E"
     }
   ],
-  "creatorBuild" : "34448",
+  "creatorBuild" : "34472",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -33,6 +33,14 @@
       "oAP" : "\/404.php",
       "oF" : 0
     },
+    "\/acf-json\/group_63d9a00b747b3.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63d9a00b747b3-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
     "\/acf-json\/group_6127f75b3a728.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -48,6 +56,49 @@
       "oF" : 0,
       "oO" : 0,
       "oS" : 1
+    },
+    "\/blocks\/card\/block.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/blocks\/card\/block-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/blocks\/card\/card.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/card\/card-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/blocks\/card\/card.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/card\/card.php",
+      "oF" : 0
+    },
+    "\/blocks\/card\/card.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/css\/card.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
     },
     "\/blocks\/featured-news\/block.json" : {
       "ft" : 524288,
@@ -135,7 +186,15 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/blocks\/share-page\/share-page.css" : {
+    "\/blocks\/social-sharing\/block.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/blocks\/social-sharing\/block-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/blocks\/social-sharing\/social-sharing.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -143,19 +202,19 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/blocks\/share-page\/share-page-min.css",
+      "oAP" : "\/blocks\/social-sharing\/social-sharing-min.css",
       "oF" : 0,
       "pg" : 0
     },
-    "\/blocks\/share-page\/share-page.php" : {
+    "\/blocks\/social-sharing\/social-sharing.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/blocks\/share-page\/share-page.php",
+      "oAP" : "\/blocks\/social-sharing\/social-sharing.php",
       "oF" : 0
     },
-    "\/blocks\/share-page\/share-page.scss" : {
+    "\/blocks\/social-sharing\/social-sharing.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -164,7 +223,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/blocks\/css\/share-page.css",
+      "oAP" : "\/blocks\/css\/social-sharing.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -628,6 +687,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/lib\/options_pages.php",
+      "oF" : 0
+    },
+    "\/lib\/query-loops.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/lib\/query-loops.php",
       "oF" : 0
     },
     "\/lib\/template_redirects.php" : {
@@ -2699,6 +2766,7 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
+    "rollupTreeshakingModuleSideEffects" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,

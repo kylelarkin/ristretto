@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Featured Page Block Template.
+ * Social Sharing Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -10,19 +10,19 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'share-page-' . $block['id'];
+$id = 'block-social-sharing-' . $block['id'];
 if( !empty($block['anchor']) ) {
-    $id = $block['anchor'];
+		$id = $block['anchor'];
 }
 
 // Create class attribute allowing for custom "className", "align", "background" values.
-$className = 'share-page';
+$className = 'block-social-sharing';
 
 if( !empty($block['className']) ) {
-    $className .= ' ' . $block['className'];
+		$className .= ' ' . $block['className'];
 }
 if( !empty($block['align']) ) {
-    $className .= ' align' . $block['align'];
+		$className .= ' align' . $block['align'];
 }
 if ( !empty( $block['backgroundColor'] ) ) {
 	$className .= 'has-background';
@@ -36,7 +36,6 @@ if ( !empty( $block['textColor'] ) ) {
 ?>
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-  <h2 class="is-style-all-caps">Share this page</h2>
-  <?php include( locate_template('components/_social-sharing.php') ); ?>
+  <h6>Share</h6>
+	<?php include(locate_template('/components/_social-sharing.php')); ?>
 </div>
-

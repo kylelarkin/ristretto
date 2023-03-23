@@ -1,0 +1,30 @@
+{
+	"align": "full",
+	"category": "formatting",
+	"description": "A custom card block.",
+	"icon": "align-wide",
+	"keywords": ["card", "layout"],
+	"name": "ristretto/card",
+	"style": [ "file:./card.css" ],
+	"title": "Card",
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "card.php"
+	},
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"color": {
+			"background": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	}
+}

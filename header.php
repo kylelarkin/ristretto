@@ -25,9 +25,12 @@
 	<header class="body--header standard-grid" role="banner">		
 		<h6 class="logo">
 			<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>">
-				<?php $logo = get_theme_mod('ristretto_logo');
-				if($logo): ?>
-					<?= wp_get_attachment_image( $logo, 'medium' ); ?>
+				<?php $logo = get_theme_mod('ristretto_header_logo');
+				if($logo): 
+					$header_logo = wp_get_attachment_image( $logo, 'large' );
+					echo $header_logo;
+				?>
+					
 				<?php else:
 					bloginfo('title'); ?>
 				<?php endif; ?>

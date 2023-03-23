@@ -8,6 +8,11 @@ function ristretto_register_theme_customizer( $wp_customize ) {
 			'description'    => __( 'All the things you need to know about ristretto.', 'ristretto' ),
 	) );
 	// Add section.
+	$wp_customize->add_section( 'ristretto_footer' , array(
+			'title'    => __('Site Footer','ristretto'),
+			'panel'    => 'ristretto_info',
+			'priority' => 140
+	) );
 	$wp_customize->add_section( 'social_media' , array(
 			'title'    => __('Social Media','ristretto'),
 			'panel'    => 'ristretto_info',
@@ -39,13 +44,19 @@ function ristretto_register_theme_customizer( $wp_customize ) {
 		'default'           => __( 'https://twitter.com', 'ristretto' ),
 		'sanitize_callback' => 'sanitize_text'
 	) );
-	$wp_customize->add_setting( 'youtube_link', array(
-		'default'           => __( 'https://youtube.com', 'ristretto' ),
+	$wp_customize->add_setting( 'linkedin_link', array(
+		'default'           => __( 'https://linkedin.com', 'ristretto' ),
+		'sanitize_callback' => 'sanitize_text'
+	) );
+	$wp_customize->add_setting( 'instagram_link', array(
+		'default'           => __( 'https://instagram.com', 'ristretto' ),
 		'sanitize_callback' => 'sanitize_text'
 	) );
 	$wp_customize->add_setting('ristretto_search');
 	$wp_customize->add_setting('ristretto_404');
-	$wp_customize->add_setting('ristretto_logo');
+	$wp_customize->add_setting('ristretto_header_logo');
+	$wp_customize->add_setting('ristretto_footer_logo');
+
 	// Add control
 	$wp_customize->add_control( new WP_Customize_Control(
 		$wp_customize,
@@ -71,18 +82,28 @@ function ristretto_register_theme_customizer( $wp_customize ) {
 	);  
 	$wp_customize->add_control( new WP_Customize_Control(
 		$wp_customize,
-		'youtube_link_control',
+		'linkedin_link_control',
 			array(
-				'label'    => __( 'Youtube', 'ristretto' ),
+				'label'    => __( 'LinkedIn', 'ristretto' ),
 				'section'  => 'social_media',
-				'settings' => 'youtube_link',
+				'settings' => 'linkedin_link',
+				'type'     => 'text'
+			)
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'instagram_link_control',
+			array(
+				'label'    => __( 'Instagram', 'ristretto' ),
+				'section'  => 'social_media',
+				'settings' => 'instagram_link',
 				'type'     => 'text'
 			)
 		)
 	);
 	$wp_customize->add_control( new WP_Customize_Media_Control( 
-			$wp_customize, 
-			'search_background_image',
+			$wp_customize, 'search_background_image',
 			array(
 			'label' => 'Search Background Image',
 			'settings' => 'ristretto_search',
@@ -137,21 +158,12 @@ function ristretto_register_theme_customizer( $wp_customize ) {
 		$wp_customize, 'header_logo_image',
 			array(
 			'label' => 'Header Logo',
-			'settings' => 'ristretto_logo',
+			'settings' => 'ristretto_header_logo',
 			'section' => 'ristretto_logo',
 			) 
 		) 
 	);
 	
-	$wp_customize->add_control( new WP_Customize_Media_Control( 		
-		$wp_customize, 'footer_logo_image',
-			array(
-			'label' => 'Footer Logo',
-			'settings' => 'ristretto_logo',
-			'section' => 'ristretto_logo',
-			) 
-		) 
-	);
 
 	// Sanitize text
 	function sanitize_text( $text ) {
