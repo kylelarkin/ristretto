@@ -3,6 +3,8 @@
 @import "framework/typography";
 @import "framework/variables";
 @import "blocks/_wp-block-buttons";
+@import "blocks/_wp-block-cover";
+@import "blocks/_wp-block-columns";
 
 
 // -------------------------------------------------
@@ -28,20 +30,20 @@
 }
 
 // Core Block Styles
-[data-align="right"] {
-  figure {
-    float: right;
-    margin-left: 1.5rem;
-    max-width: 50%;
-  }
-}
-[data-align="left"] {
-  figure {
-    float: left;
-    margin-right: 1.5rem;
-    max-width: 45%;
-  }
-}
+// [data-align="right"] {
+//   figure {
+//     float: right;
+//     margin-left: 1.5rem;
+//     max-width: 50%;
+//   }
+// }
+// [data-align="left"] {
+//   figure {
+//     float: left;
+//     margin-right: 1.5rem;
+//     max-width: 45%;
+//   }
+// }
 
 h1, h2, h3 {
   width: 100%;
@@ -50,6 +52,7 @@ h1, h2, h3 {
 
 p {
   margin-left: 0 !important;
+  width: 100%;
 }
 
 .has-text-align-center {
@@ -75,7 +78,7 @@ p {
   display: block;
 }
 
-// apply border to 
+// apply border to selected blocks
 .block-editor-block-list__block.wp-block.is-selected {
     border: 1px dashed #ccc;
 }
@@ -98,6 +101,43 @@ p {
       margin: 1.5rem auto !important;
     }
   }
+  //cover block alignment of inners
+  .wp-block-cover {
+    span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    display: relative;
+    .wp-block-cover__inner-container {
+      width: 100% !important;
+    }
+  }
+  .standard-grid .wp-block-cover .wp-block-cover__inner-container {
+    grid-template-columns: [full-start] .5rem [main-start] minmax(0, 1fr) [main-end] .5rem [full-end];
+  }
+  .wp-block {
+    .wp-block-column .wp-block-column {
+      margin: 0 auto !important;
+    }
+  }
+  
+  //column block width
+  .wp-block-columns {
+    max-width: 100%;
+  }
+  
+  //seperator
+  .wp-block {
+     &:not([data-align=center]) {
+       hr.wp-block-separator {
+          margin-left: 0;
+        }
+     }
+     hr.wp-block-separator {
+      margin: 2.5rem 0;
+     }
+   }
   
 // -------------------------------------------------
 // WP Editor Styles

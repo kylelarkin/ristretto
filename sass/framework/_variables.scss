@@ -35,3 +35,4 @@ $colors: (
   'gray-dark': $gray-dark,
   'transparent': transparent,
 );
+$primary: nth( nth( $colors, 1 ), 2 ); // first color in $colors array

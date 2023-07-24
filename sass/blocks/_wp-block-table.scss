@@ -14,19 +14,28 @@
   }
   
   table {
-    border: 1px solid darken($gray-light, 5%);
+    border: 1px solid darken(#B6BECC, 5%);
+  }
+  thead {
+    border-color: $gray-dark;
   }
   th {
-    background: darken($gray-light, 5%);
+    background-color: #B6BECC;
     padding: .5rem;
     text-align: left;
+    border: 0;
   }
   td {
     border: 1px solid $gray-light;
-    @include fluid-type(font-size, 320px, 1280px, 17px, 20px);
+    @include fluid-type(font-size, 320px, 1280px, 14px, 16px);
     padding: .5rem;
   }
-  tfoot td {
-    border-top: 2px solid $gray-dark;
+  tfoot, tfoot td {
+    border-top: 2px solid $gray-dark !important;
+  }
+  figcaption.wp-element-caption {
+    padding: .5rem 0;
+    font-size: rem(14);
+    font-style: italic;
   }
 }

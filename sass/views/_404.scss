@@ -1,3 +1,83 @@
 body.error404 {
- 
+  background-color:  rgba(38, 76, 136, 0.9);
+  position: relative;
+  &:before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 185px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-position: right bottom;
+    mix-blend-mode: multiply;
+    background-repeat: no-repeat;
+  }
+  
+  main {
+    z-index: 10;
+    position: relative;
+    margin-bottom: 8rem;
+    margin-top: 16rem;
+    max-width: 58rem;
+    
+    h1 {
+      color: #fff;
+      margin-bottom: 3rem;
+    }
+    
+    p {
+      color: #fff;
+    }
+    
+    .search-form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-content: center;
+      align-items: center;
+      max-width: 58rem;
+      label {
+        position: relative;
+        z-index: 0;
+      }
+      
+      
+      input.search-bar-input {
+        font-size: 1rem;
+        color: #818181;
+        letter-spacing: 0.16px;
+        border: 2px solid transparent;
+        padding-left: 1.5rem;
+        height: 44px !important;
+        width: 100%;
+        &::placeholder {
+          font-family: $body-font;
+          text-transform: capitalize;
+          font-style: italic;
+          font-weight: 300;
+          font-size: rem(17);
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      input.search-submit {
+        font-family: $heading-font;
+        height: 100%;
+        border: 0;
+        font-size: rem(13);
+        font-weight: 900;
+        text-transform: uppercase;
+        padding: 0 1.6rem;
+        cursor: pointer;
+        letter-spacing: 1px;
+        @include transition;
+        &:hover {
+          filter: brightness(110%);
+        }
+      }
+    }
+    
+  }
+  
 }

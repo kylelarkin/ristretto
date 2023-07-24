@@ -102,7 +102,7 @@ if( $borders && in_array('Right', $borders) ) {
         'placeholder' => 'Text goes here...',
       ) ),
     );
-    echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $template ) ) . '" />';
+    echo '<InnerBlocks  template="' . esc_attr( wp_json_encode( $template ) ) . '"/>';
     ?>
   </div>
 </div>

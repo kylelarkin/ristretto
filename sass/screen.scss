@@ -14,21 +14,27 @@
 @import 'framework/ristretto';
 @import 'framework/typography';
 @import 'framework/variables';
-
+// -------------------------------------------------
+// Login
+// ---------------------------------------------- */
+@import 'login/login';
 // -------------------------------------------------
 // Components
 // ---------------------------------------------- */
 @import 'components/menu-button';
 @import 'components/post-nav';
-@import 'components/video-embed';
+@import 'components/search-form';
 @import 'components/social-sharing';
+@import 'components/video-embed';
 
 // -------------------------------------------------
 // Block Overrides
 // ---------------------------------------------- */
 @import 'blocks/wp-block-buttons';
-@import 'blocks/wp-block-table';
 @import 'blocks/wp-block-columns';
+@import 'blocks/wp-block-table';
+@import 'blocks/wp-block-image';
+@import 'blocks/wp-block-cover';
 
 // -------------------------------------------------
 // Layout
@@ -41,3 +47,4 @@
 // ---------------------------------------------- */
 @import 'views/404';
 @import 'views/front-page';
+@import 'views/search';

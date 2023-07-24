@@ -1,0 +1,53 @@
+/* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
+* {
+  box-sizing: border-box;
+}
+
+body, select, input, textarea {
+  color: #333;
+}
+
+::-moz-selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+
+a:link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+ins {
+  background-color: #ccc;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ccc;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.editor-styles-wrapper .block-social-sharing, .block-social-sharing {
+  display: flex;
+  gap: 1rem;
+}
+.editor-styles-wrapper .block-social-sharing a, .block-social-sharing a {
+  text-decoration: none;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+}
+.editor-styles-wrapper .block-social-sharing a:hover, .block-social-sharing a:hover {
+  margin-top: -2px;
+}
+.editor-styles-wrapper .block-social-sharing a path, .block-social-sharing a path {
+  color: #fff;
+}

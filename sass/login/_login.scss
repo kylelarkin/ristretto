@@ -2,8 +2,7 @@
 @import '../framework/variables';
 
 body.login {
-  background: $purple;
-  
+  background: $primary;
   div#login h1 a {
       background: url('../img/wp-login-logo-ristretto.png') no-repeat 0 0;
       background-size: contain;

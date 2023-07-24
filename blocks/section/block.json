@@ -11,6 +11,12 @@
 			"mode": "preview",
 			"renderTemplate": "section.php"
 	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	},
 	"supports": {
 		"align": true,
 		"anchor": true,
