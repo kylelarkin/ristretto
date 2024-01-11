@@ -5,7 +5,7 @@ body{
 	overflow-x: hidden;
 }
 
-.standard-grid, #tribe-events-pg-template, .tribe-events {
+.standard-grid, .wp-block-cover, #tribe-events-pg-template, .tribe-events {
 	display: grid;
 	gap: 0 1.5rem;
 	grid-template-columns: [full-start] calc(50vw - 720px) [main-start] minmax(0, 1fr) [main-end] calc(50vw - 720px) [full-end];
@@ -16,7 +16,7 @@ body{
 		display: block !important;
 	}
 }
-.standard-grid > *, #tribe-events-pg-template > *, .tribe-events > * {
+.standard-grid > *, .wp-block-cover__inner-container, #tribe-events-pg-template > *, .tribe-events > * {
 	grid-column: main;
 }
  
@@ -30,7 +30,7 @@ body{
 }
 
 .visually-hidden {
-	background-color: $gray-dark;
+	background-color: $gray40;
 	font-family: $body-font;
 	font-weight: 600;
 	font-size: rem(13);

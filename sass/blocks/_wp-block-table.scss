@@ -3,13 +3,13 @@
   
   &.is-style-stripes {
     tbody tr:nth-child(odd) {
-      background: $gray-light;
+      background: $gray10;
     }
     td {
-      border: 1px solid $gray-light;
+      border: 1px solid $gray10;
     }
     tfoot td {
-      border-top: 2px solid $gray-dark;
+      border-top: 2px solid $gray40;
     }
   }
   
@@ -17,7 +17,7 @@
     border: 1px solid darken(#B6BECC, 5%);
   }
   thead {
-    border-color: $gray-dark;
+    border-color: $gray40;
   }
   th {
     background-color: #B6BECC;
@@ -26,12 +26,12 @@
     border: 0;
   }
   td {
-    border: 1px solid $gray-light;
-    @include fluid-type(font-size, 320px, 1280px, 14px, 16px);
+    border: 1px solid $gray10;
+    @include fluid-unit(font-size, 320px, 1280px, 14px, 16px);
     padding: .5rem;
   }
   tfoot, tfoot td {
-    border-top: 2px solid $gray-dark !important;
+    border-top: 2px solid $gray40 !important;
   }
   figcaption.wp-element-caption {
     padding: .5rem 0;

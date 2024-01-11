@@ -1,6 +1,6 @@
 <?php
  /**
-	* Default Article Template
+	* Default Page Template
 	*/
  function ristretto_register_template() {
  

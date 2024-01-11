@@ -28,7 +28,7 @@ a {
 	}
 }
 h1 {
-	@include fluid-type(font-size, 320px, 1280px, 30px, 50px);
+	@include fluid-unit(font-size, 320px, 1280px, 30px, 50px);
 	color: $heading-color;
 	font-family: $heading-font;
 	font-weight: 500;
@@ -36,7 +36,7 @@ h1 {
 	margin-bottom: .75rem;
 }
 h2 {
-	@include fluid-type(font-size, 320px, 1280px, 28px, 36px);
+	@include fluid-unit(font-size, 320px, 1280px, 28px, 36px);
 	color: $heading-color;
 	font-family: $heading-font;
 	font-weight: 500;
@@ -44,7 +44,7 @@ h2 {
 	margin: 2rem 0 .5rem;
 }
 h3 {
-	@include fluid-type(font-size, 320px, 1280px, 20px, 26px);
+	@include fluid-unit(font-size, 320px, 1280px, 20px, 26px);
 	color: $heading-color;
 	font-family: $heading-font;
 	font-weight: 700;
@@ -52,7 +52,7 @@ h3 {
 	margin: 1.5rem 0 .5rem;
 }
 h4 {
-	@include fluid-type(font-size, 320px, 1280px, 18px, 22px);
+	@include fluid-unit(font-size, 320px, 1280px, 18px, 22px);
 	color: $heading-color;
 	font-family: $body-font;
 	font-weight: 700;
@@ -60,7 +60,7 @@ h4 {
 	margin: 1.25rem 0 .5rem;
 }
 h5 {
-	@include fluid-type(font-size, 320px, 1280px, 17px, 20px);
+	@include fluid-unit(font-size, 320px, 1280px, 17px, 20px);
 	color: $heading-color;
 	font-family: $body-font;
 	font-weight: 700;
@@ -68,7 +68,7 @@ h5 {
 	margin: 1rem 0 .5rem;
 }
 h6 {
-	@include fluid-type(font-size, 320px, 1280px, 16px, 18px);
+	@include fluid-unit(font-size, 320px, 1280px, 16px, 18px);
 	color: $heading-color;
 	font-family: $body-font;
 	font-weight: 700;
@@ -76,23 +76,51 @@ h6 {
 	margin: 1rem 0 .5rem;
 }
 p, .has-default-font-size {
-	@include fluid-type(font-size, 320px, 1280px, 17px, 20px);
+	@include fluid-unit(font-size, 320px, 1280px, 17px, 20px);
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	line-height: 1.5;
 	margin: 0 0 1rem 0;
 	max-width: 60rem;
 }
+p:empty {
+  display: none;
+}
 .has-small-font-size {
-	@include fluid-type(font-size, 320px, 1280px, 13px, 16px);
+  // font-size: 12px !important;
+  // @include grid-media($small) {
+  //   font-size: calc(12px + 2 * (100vw - 320px) / 960) !important;
+  // }
+  // @include grid-media($xl) {
+  //   font-size: 1rem !important;
+  // }
 }
 .has-default-font-size {
-@include fluid-type(font-size, 320px, 1280px, 15px, 18px);
+  // font-size: rem(18);
+}
+.has-medium-font-size {
+  // font-size: rem(18) !important;
+  // @include grid-media($small) {
+  //   font-size: calc(18px + 2 * (100vw - 320px) / 960) !important;
+  // }
+  // font-size: rem(20) !important;
 }
 .has-large-font-size {
-@include fluid-type(font-size, 320px, 1280px, 18px, 24px);
+  // font-size: rem(20) !important;
+  // @include grid-media($medium) {
+  //   font-size: calc(20px + 4 * (100vw - 320px) / 960) !important;
+  // }
+  // @include grid-media($large) {
+  //   font-size: rem(24) !important;
+  // }
 }
 .has-xlarge-font-size {
-@include fluid-type(font-size, 320px, 1280px, 24px, 36px);
+  // font-size: rem(24) !important;
+  // @include grid-media($small) {
+  //   font-size: calc(24px + 4 * (100vw - 320px) / 960) !important;
+  // }
+  // @include grid-media($large) {
+  //   font-size: rem(28) !important;
+  // }
 }
 
 em, i {

@@ -100,29 +100,32 @@ add_theme_support( 'editor-color-palette', array(
 ) );
 
 /**
- * ACF Radio Color Palette
- * @link https://www.advancedcustomfields.com/resources/acf-load_field/
- * @link https://www.advancedcustomfields.com/resources/dynamically-populate-a-select-fields-choices/
- * @link https://whiteleydesigns.com/create-a-gutenberg-like-color-picker-with-advanced-custom-fields
- *
- * Dynamically populates any ACF field with wd_text_color Field Name with custom color palette
- *
-*/
-add_filter('acf/load_field/name=color_picker', 'wd_acf_dynamic_colors_load');
-function wd_acf_dynamic_colors_load( $field ) {
-  // get array of colors created using editor-color-palette
-  $colors = get_theme_support( 'editor-color-palette' );
-  // if this array is empty, continue
-  if( ! empty( $colors ) ) {
-    // loop over each color and create option
-    foreach( $colors[0] as $color ) {
-      $field['choices'][ $color['slug'] ] = $color['name'];
-    }
-  }
-  return $field;
-}
-
-function color_picker_styles() {
-  wp_enqueue_style( 'admin-styles', get_stylesheet_directory_uri().'/css/admin-styles.css' );
-}
-//add_action( 'admin_enqueue_scripts', 'color_picker_styles' );
+ * Customize Gutenberg gradient color palette
+ */
+// add_theme_support(
+//     'editor-gradient-presets',
+//     array(
+//         array(
+//             'name'     => esc_attr__( 'Beige Linear Gradient', 'ristretto' ),
+//             'gradient' => 'linear-gradient(171deg, #E8E1D9 0%, rgba(247, 246, 244, 0.10) 100%)',
+//             'slug'     => 'beige-linear-gradient'
+//         ),
+// 
+//         array(
+//             'name'     => esc_attr__( 'Light Blue Linear Gradient', 'ristretto' ),
+//             'gradient' => 'linear-gradient(0deg, #D9E8F2 0%, rgba(247, 246, 244, 0.10))',
+//             'slug'     =>  'light-blue-linear-gradient',
+//         ),
+// 
+//         array(
+//             'name'     => esc_attr__( 'Blue Linear Gradient', 'ristretto' ),
+//             'gradient' => 'linear-gradient(136deg, #00407B 0%, #086DC2 100%)',
+//             'slug'     => 'blue-linear-gradient',
+//         ),
+//         array(
+//             'name'     => esc_attr__( 'Dark Blue Linear Gradient', 'ristretto' ),
+//             'gradient' => 'linear-gradient(136deg, #16205B 0%, #578BF0 100%)',
+//             'slug'     => 'dark-blue-linear-gradient',
+//         ),
+//     )
+// );

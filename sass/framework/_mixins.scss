@@ -2,6 +2,28 @@
 	transition: all $ani_speed ease-in-out;
 }
 
+@mixin primary-button($bgColor, $textColor) {
+  background-color: $bgColor;
+  border-radius: 24px;
+  border: 0;
+  color: $textColor;
+  cursor: pointer;
+  text-align: center;
+  font-family: $body-font;
+  font-size: rem(12);
+  font-weight: 800;
+  letter-spacing: 0.36px;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: .7rem 2rem .6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .25s ease;
+  &:hover {
+    
+  }
+}
+
 @mixin color-palette {
 	@each $name, $color in $colors {
 

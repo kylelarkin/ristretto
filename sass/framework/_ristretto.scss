@@ -108,7 +108,7 @@ $remBaseFontSize: 16;
 }
 
 // Fluid Type with CSS Locks
-@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+@mixin fluid-unit($properties, $min-vw, $max-vw, $min-value, $max-value) {
   @each $property in $properties {
     #{$property}: $min-value;
   }

@@ -114,3 +114,51 @@ function fixed_img_caption_shortcode($attr, $content = null) {
 	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '" style="width: ' . $width . 'px">'
 	. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
+
+/**
+ * Ristretto Nice Date
+ */
+function ristretto_nice_date_range($start_date = '', $end_date = '', $all_day = '') {
+  $pretty_time = '';
+  $date_range = '';
+  $start_date = strtotime($start_date);
+  $end_date = strtotime($end_date);
+  // If only one date, or dates are the same set to FULL verbose date
+  if ( empty($start_date) || empty($end_date) || ( date('FjY',$start_date) == date('FjY',$end_date) ) ) { // FjY == accounts for same day, different time
+      $start_date_pretty = date( 'F j, Y', $start_date );
+      $end_date_pretty = date( 'F j, Y', $end_date );
+  } else {
+    // Setup basic dates
+    $start_date_pretty = date( 'F j', $start_date );
+    $end_date_pretty = date( 'j, Y', $end_date );
+    // If years differ add suffix and year to start_date
+    if ( date('Y',$start_date) != date('Y',$end_date) ) {
+        $start_date_pretty .= date( ', Y', $start_date );
+    }
+    // If months differ add suffix and year to end_date
+    if ( date('F',$start_date) != date('F',$end_date) ) {
+      $end_date_pretty = date( 'F ', $end_date) . $end_date_pretty;
+    }
+  }
+  // build date_range return string
+  if( ! empty( $start_date ) ) {
+    $date_range .= $start_date_pretty;
+  }
+  // check if there is an end date and append if not identical
+  if( ! empty( $end_date ) ) {
+    if( $end_date_pretty != $start_date_pretty ) {
+      $date_range .= '&ndash;' . $end_date_pretty;
+    }
+  }
+  if( false == $all_day ){
+    if( date( 'F jS, Y', $start_date ) == date( 'F jS, Y', $end_date ) ){
+      $pretty_time = date('g:ia', $start_date) . '&ndash;' . date('g:ia', $end_date);
+    }if( !$end_date ){
+      $pretty_time = date('g:ia', $start_date);
+    }
+  }
+  if( '' != $pretty_time ){
+    $date_range .= '<span class="event-item--time">' . $pretty_time . '</span>';
+  }
+  return $date_range;
+}

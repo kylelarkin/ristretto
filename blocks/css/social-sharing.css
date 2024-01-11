@@ -8,13 +8,13 @@ body, select, input, textarea {
 }
 
 ::-moz-selection {
-  background: #ccc;
+  background: #FFF0D2;
   color: #000;
   text-shadow: none;
 }
 
 ::selection {
-  background: #ccc;
+  background: #FFF0D2;
   color: #000;
   text-shadow: none;
 }
@@ -24,13 +24,13 @@ a:link {
 }
 
 ins {
-  background-color: #ccc;
+  background-color: #FFF0D2;
   color: #000;
   text-decoration: none;
 }
 
 mark {
-  background-color: #ccc;
+  background-color: #FFF0D2;
   color: #000;
   font-style: italic;
   font-weight: bold;

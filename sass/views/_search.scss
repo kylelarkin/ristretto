@@ -112,7 +112,7 @@ body.search {
     }
     
     h2 {
-      @include fluid-type(font-size, 320px, 1280px, 22px, 26px);
+      @include fluid-unit(font-size, 320px, 1280px, 22px, 26px);
       margin-bottom: 1rem;
       margin: 0;
       text-transform: uppercase;
