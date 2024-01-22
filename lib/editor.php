@@ -14,10 +14,10 @@ add_action( 'init', 'ristretto_add_editor_styles' );
 
 function ristretto_enqueue_gutenberg() {
   // Enqueue Typekit for Editor.
-  wp_register_style( 'ristretto-gutenberg-fonts', '//use.typekit.net/tay1nbp.css' );
+  wp_register_style( 'ristretto-gutenberg-fonts', '//use.typekit.net/vbl0nii.css' );
   wp_enqueue_style( 'ristretto-gutenberg-fonts' );
   // Font Awesome for Editor
-  wp_register_script( 'fontawesome', '//kit.fontawesome.com/xxxxxxxxxx.js', null, null, true );
+  wp_register_script( 'fontawesome', '//kit.fontawesome.com/c20d1ab028.js', null, null, true );
   //wp_enqueue_script('fontawesome');
 }
 add_action( 'enqueue_block_editor_assets', 'ristretto_enqueue_gutenberg' );

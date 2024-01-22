@@ -1,21 +1,39 @@
 // -------------------------------------------------
 // Ristretto Variables
 // ---------------------------------------------- */
-$heading-font: Helvetica, Arial, sans-serif;
-$body-font: Helvetica, Arial, sans-serif;
+//Roc Grotesk 500
+$heading-font: "roc-grotesk-condensed", Helvetica, Arial, sans-serif;
+//Aktiv Grotesk 300, 500, 700
+$body-font: "aktiv-grotesk", Helvetica, Arial, sans-serif;
 
+$white: #fff;
 $gray10: #f2f2f2;
-$gray20: #ccc;
-$gray30: #999;
+$gray20: #B0B7B7;
+$gray30: #767676;
+$gray40: #444;
+$gray50: #2D1D1B;
+$black: #000;
 
-$green: #9ee500;
-$pink: #ec008b;
+$red10: #DC593E;
+$red20: #CA3E22;
+$red30: #9A3021;
+$red40: #2D1D1B;
+
+$blue: #3B5564;
+
+$tan10: #F4F1EC;
+$tan20: #E5DFD6;
+$tan30: #D3C7BD;
+
+$gold10: #FFF0D2;
+$gold20: #FFC062;
+$gold30: #D68000;
 
 $body-color: #555;
 $heading-color: #333;
-$warning-color: red;
+$warning-color: $red20;
 $highlight-color: #ccc;
-$link-color: #333;
+$link-color: $red20;
 $link-hover: #000;
 
 $label-color: $body-color;
@@ -30,9 +48,9 @@ $colors: (
   'white': #ffffff, //this should be the default button text & border color
   'teal': #1BA39C, //this should be the default background color of button
   'black': #000000,
-  'gray-light': $gray-light,  
-  'gray': $gray,
-  'gray-dark': $gray-dark,
+  'gray-light': $gray10,  
+  'gray': $gray30,
+  'gray-dark': $gray40,
   'transparent': transparent,
 );
 $primary: nth( nth( $colors, 1 ), 2 ); // first color in $colors array

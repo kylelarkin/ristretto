@@ -2,6 +2,10 @@
 	transition: all $ani_speed ease-in-out;
 }
 
+@mixin maxwidth {
+  max-width: 880px;
+}
+
 @mixin primary-button($bgColor, $textColor) {
   background-color: $bgColor;
   border-radius: 24px;

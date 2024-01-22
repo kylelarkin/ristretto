@@ -98,10 +98,18 @@ add_filter( 'block_categories_all', __NAMESPACE__ . '\block_categories' );
  *
  * @since 1.0.0
  */
-// register_block_style(
-//   'core/paragraph',
-//   array(
-//     'name' => 'small-body',
-//     'label' => __('Small Body'),
-//   )
-// );
+register_block_style(
+  'core/paragraph',
+  array(
+    'name' => 'eyebrow',
+    'label' => __('Eyebrow'),
+  )
+);
+
+register_block_style(
+  'core/heading',
+  array(
+    'name' => 'highlight',
+    'label' => __('Highlight'),
+  )
+);

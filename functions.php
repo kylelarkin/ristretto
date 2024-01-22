@@ -14,7 +14,7 @@ function ristretto_enqueue_init() {
   $theme_version = $theme->get( 'Version' );
   // Register Scripts
   wp_register_script( 'aos', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/aos/dist/aos.js', null, null, true );
-  wp_register_script( 'fontawesome', '//kit.fontawesome.com/xxxxxxxxxx.js', null, null, true );
+  wp_register_script( 'fontawesome', '//kit.fontawesome.com/c20d1ab028.js', null, null, true );
   wp_register_script( 'jarallax', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/jarallax/dist/jarallax.min.js', array('jquery'), null, true );
   wp_register_script( 'lity', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/lity/dist/lity.min.js', array('jquery'), null, true );
   wp_register_script( 'object-fit-images', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/ofi.min.js', null, null, true );
@@ -36,7 +36,7 @@ function ristretto_enqueue_init() {
   wp_register_style( 'aos-styles', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/aos/dist/aos.css', array(), null, 'all' );
   wp_register_style( 'lity-css', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/lity/dist/lity.min.css', array(), null, 'all' );
   wp_register_style( 'tiny-slider-css', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/tiny-slider.css', array(), null, 'all' );
-  wp_register_style( 'typekit', '//use.typekit.net/cgn2aav.css', array(), null, 'all' );
+  wp_register_style( 'typekit', '//use.typekit.net/vbl0nii.css', array(), null, 'all' );
   wp_register_style( 'ristretto-screen', get_bloginfo( 'stylesheet_directory' ) . '/css/screen.css', array(), $theme_version, 'all' );
   
   // Enqueue Styles
