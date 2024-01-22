@@ -3,9 +3,11 @@
   @include fluid-unit(margin-bottom, 320px, 1280px, 24px, 37px);
   padding: 0;
   @include maxwidth;
+  text-align: unset;
   blockquote {
     border-top: 3px solid $gray40;
     border-bottom: 2px solid #ddd;
+    @include fluid-unit(padding-bottom, 320px, 1280px, 27px, 18px);
     @include fluid-unit(padding-top, 320px, 1280px, 48px, 31px);
     p {
       @include fluid-unit(font-size, 320px, 1280px, 30px, 46px);
@@ -19,6 +21,7 @@
       text-align: left;
       text-transform: uppercase;
       z-index: 10;
+      margin: 0;
       &:before {
         content: url(../img/start-quote.svg);
         left: 0;
@@ -27,7 +30,14 @@
       }
     }
     cite {
-      text-align: left;
+      @include fluid-unit(padding-left, 320px, 1280px, 55px, 80px);
+      font-family: $body-font;
+      font-size: rem(14);
+      color: $gray30;
+      font-weight: 400;
+      &:before {
+        content: '– ';
+      }
     }
   }
 }

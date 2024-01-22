@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
 * {
   box-sizing: border-box;
@@ -547,8 +548,11 @@ ol {
   margin: 1em 0 1em 1.1em;
   padding: 0;
 }
-ol ol {
+ol ol, ol ul {
   margin: 0 0 0 1.1em;
+}
+ol li::marker {
+  font-size: 1rem;
 }
 
 ul {
@@ -558,6 +562,11 @@ ul {
 }
 ul ul {
   margin: 0 0 0 1.1em;
+}
+ul li::marker {
+  font-size: 0.75rem;
+  margin-top: -2px;
+  line-height: 1.6;
 }
 nav ul {
   list-style: none;
@@ -570,11 +579,12 @@ nav ul a {
 
 li {
   font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.125rem;
+  font-weight: 300;
   letter-spacing: 0.02em;
   line-height: 1.6;
   max-width: 58rem;
+  vertical-align: middle;
 }
 
 .is-style-eyebrow {
@@ -801,6 +811,7 @@ form.searchform #search-close {
   margin-bottom: 24px;
   padding: 0;
   max-width: 880px;
+  text-align: unset;
 }
 @media (min-width: 320px) {
   .wp-block-pullquote {
@@ -825,7 +836,18 @@ form.searchform #search-close {
 .wp-block-pullquote blockquote {
   border-top: 3px solid #444;
   border-bottom: 2px solid #ddd;
+  padding-bottom: 27px;
   padding-top: 48px;
+}
+@media (min-width: 320px) {
+  .wp-block-pullquote blockquote {
+    padding-bottom: calc(27px + -9 * (100vw - 320px) / 960);
+  }
+}
+@media (min-width: 1280px) {
+  .wp-block-pullquote blockquote {
+    padding-bottom: 18px;
+  }
 }
 @media (min-width: 320px) {
   .wp-block-pullquote blockquote {
@@ -849,6 +871,7 @@ form.searchform #search-close {
   text-align: left;
   text-transform: uppercase;
   z-index: 10;
+  margin: 0;
 }
 @media (min-width: 320px) {
   .wp-block-pullquote blockquote p {
@@ -877,7 +900,24 @@ form.searchform #search-close {
   z-index: -1;
 }
 .wp-block-pullquote blockquote cite {
-  text-align: left;
+  padding-left: 55px;
+  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  color: #767676;
+  font-weight: 400;
+}
+@media (min-width: 320px) {
+  .wp-block-pullquote blockquote cite {
+    padding-left: calc(55px + 25 * (100vw - 320px) / 960);
+  }
+}
+@media (min-width: 1280px) {
+  .wp-block-pullquote blockquote cite {
+    padding-left: 80px;
+  }
+}
+.wp-block-pullquote blockquote cite:before {
+  content: "– ";
 }
 
 div.wp-block-buttons div.wp-block-button {

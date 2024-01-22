@@ -323,8 +323,11 @@ ol {
   margin: 1em 0 1em 1.1em;
   padding: 0;
 }
-ol ol {
+ol ol, ol ul {
   margin: 0 0 0 1.1em;
+}
+ol li::marker {
+  font-size: 1rem;
 }
 
 ul {
@@ -334,6 +337,11 @@ ul {
 }
 ul ul {
   margin: 0 0 0 1.1em;
+}
+ul li::marker {
+  font-size: 0.75rem;
+  margin-top: -2px;
+  line-height: 1.6;
 }
 nav ul {
   list-style: none;
@@ -346,11 +354,12 @@ nav ul a {
 
 li {
   font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.125rem;
+  font-weight: 300;
   letter-spacing: 0.02em;
   line-height: 1.6;
   max-width: 58rem;
+  vertical-align: middle;
 }
 
 .is-style-eyebrow {

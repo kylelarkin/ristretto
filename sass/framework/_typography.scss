@@ -178,8 +178,13 @@ strong, b {
 ol {
   margin: 1em 0 1em 1.1em;
   padding: 0;
-  ol {
+  ol, ul {
     margin: 0 0 0 1.1em;
+  }
+  li {
+    &::marker {
+      font-size: rem(16);
+    }
   }
 }
 ul {
@@ -188,6 +193,13 @@ ul {
   padding: 0;
   ul {
     margin: 0 0 0 1.1em;
+  }
+  li {
+    &::marker {
+      font-size: rem(12);
+      margin-top: -2px;
+      line-height: 1.6;
+    }
   }
   // remove styling for nav ul's
   nav & {
@@ -198,11 +210,12 @@ ul {
 
 li {
   font-family: $body-font;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: rem(18);
+  font-weight: 300;
   letter-spacing: 0.02em;
   line-height: 1.6;
   max-width: 58rem;
+  vertical-align: middle;
 }
 
 .is-style-eyebrow {
