@@ -38,6 +38,9 @@ add_theme_support( 'appearance-tools' );
 /* remove default block patterns */
 remove_theme_support( 'core-block-patterns' );
 
+/** Add border support */
+add_theme_support( 'border' );
+
 /**
 * Editor Font Sizes
 */
