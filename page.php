@@ -1,6 +1,6 @@
 <?php get_header(); ?>
   
-  <main class="standard-grid">
+  <main class="is-layout-constrained">
     
     <?php if(have_posts()) : while(have_posts()) : the_post(); // start loop ?>
     

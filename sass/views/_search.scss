@@ -32,9 +32,8 @@ body.search {
   }
   .search-intro {
     display: grid;
-    gap: .8rem;
-    margin: 16rem 0 5.3rem;
-    max-width: 38.06rem;
+    gap: 1rem;
+    margin: 16rem 0 5rem;
     h1 {
       color: #fff;
     }
@@ -44,7 +43,7 @@ body.search {
       font-family: $heading-font;
       font-weight: 900;
       font-size: 1rem;
-      letter-spacing: 0.48px;
+      letter-spacing: 0.5px;
     }
     
     .search-page-search-form {

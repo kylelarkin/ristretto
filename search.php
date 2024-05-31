@@ -8,7 +8,7 @@
 	} ?>
 	</div>
 
-	<main class="standard-grid" data-jarallax >
+	<main class="is-layout-constrained" data-jarallax >
 		
 
 		<div class="search-intro">

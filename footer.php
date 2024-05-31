@@ -2,13 +2,11 @@
 
 	<?php if (!defined('ABSPATH')) exit;	?>
   
-	<footer class="body--footer standard-grid">
-		<div class="inner">
-			<nav class="body--footer--nav">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary-footer-menu-location', 'container' => false) ); ?>
-			</nav>
-			<p>&copy; <?php echo date("Y"); ?> Client Name</p>
-		</div>
+	<footer class="body--footer is-layout-constrained">
+		<nav class="body--footer--nav">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary-footer-menu-location', 'container' => false) ); ?>
+		</nav>
+		<p>&copy; <?php echo date("Y "); bloginfo('site_title'); ?></p>
 	</footer>
 
 	<?php wp_footer(); // required don't remove ?>

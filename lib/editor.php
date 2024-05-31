@@ -15,19 +15,20 @@ add_action( 'init', 'ristretto_add_editor_styles' );
 function ristretto_enqueue_gutenberg() {
   // Enqueue Typekit for Editor.
   wp_register_style( 'ristretto-gutenberg-fonts', '//use.typekit.net/vbl0nii.css' );
+  // wp_register_style( 'tiny-slider-css', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/tiny-slider.css', array(), null, 'all' );
   wp_enqueue_style( 'ristretto-gutenberg-fonts' );
+  // wp_enqueue_style( 'tiny-slider-css' );
   // Font Awesome for Editor
   wp_register_script( 'fontawesome', '//kit.fontawesome.com/c20d1ab028.js', null, null, true );
-  //wp_enqueue_script('fontawesome');
+  wp_register_script( 'editor-tiny-slider', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/min/tiny-slider.js', null, null, true );
+  // wp_enqueue_script('editor-tiny-slider');
+  // wp_enqueue_script('fontawesome');
 }
 add_action( 'enqueue_block_editor_assets', 'ristretto_enqueue_gutenberg' );
 
 
 /* Add Wide Image Support for Gutenberg */
-function ristretto_wide_images() {
-  add_theme_support( 'align-wide' );
-}
-add_action( 'after_setup_theme', 'ristretto_wide_images' );
+add_theme_support( 'align-wide' );
 
 /* Some blocks can have padding controls. This is off by default, and requires the theme to opt in by declaring support: */
 add_theme_support( 'custom-spacing' );
@@ -35,31 +36,37 @@ add_theme_support( 'custom-spacing' );
 /* Use this setting to enable the following Global Styles settings: */
 add_theme_support( 'appearance-tools' );
 
-/* remove default block patterns */
-remove_theme_support( 'core-block-patterns' );
-
-/** Add border support */
+/* Add border support */
 add_theme_support( 'border' );
+
+/* Add responsive embed support */
+add_theme_support( 'responsive-embeds' );
+
+/* Add link color support */
+add_theme_support( 'link-color' );
+
+/* Remove default block patterns */
+remove_theme_support( 'core-block-patterns' );
 
 /**
 * Editor Font Sizes
 */
 add_theme_support( 'editor-font-sizes', array(
   array(
-    'name'      => __( 'Small', 'ea_genesis_child' ),
-    'shortName' => __( 'S', 'ea_genesis_child' ),
+    'name'      => __( 'Small', 'ristretto' ),
+    'shortName' => __( 'S', 'ristretto' ),
     'size'      => 18,
     'slug'      => 'small'
   ),
   array(
-    'name'      => __( 'Default', 'ea_genesis_child' ),
-    'shortName' => __( 'D', 'ea_genesis_child' ),
+    'name'      => __( 'Default', 'ristretto' ),
+    'shortName' => __( 'D', 'ristretto' ),
     'size'      => 20,
     'slug'      => 'default'
   ),
   array(
-    'name'      => __( 'Large', 'ea_genesis_child' ),
-    'shortName' => __( 'L', 'ea_genesis_child' ),
+    'name'      => __( 'Large', 'ristretto' ),
+    'shortName' => __( 'L', 'ristretto' ),
     'size'      => 28,
     'slug'      => 'large'
   ),

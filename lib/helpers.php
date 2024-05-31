@@ -17,6 +17,15 @@ if (!function_exists('ristretto_page_name')) {
 add_filter( 'body_class', 'ristretto_page_name' );
 
 /**
+ Get a reusable block with just it's ID 
+ */
+function ristretto_reusable_blocks($reusableID) {
+  $reuseable_block = get_post($reusableID);
+  $reuseable_block_content = apply_filters( 'the_content', $reuseable_block->post_content);
+  echo $reuseable_block_content;
+}
+
+/**
  * Truncate a string to desired length without breaking words.
  */
 if (!function_exists('truncate')) {
@@ -63,56 +72,6 @@ if (!function_exists('slugify')) {
 	function slugify($string) {
 		return sanitize_title_with_dashes($string);
 	}
-}
-
-/**
- * Get everything you could want about a featured image
- */
-if (!function_exists('get_featured_image')) {
-	function get_featured_image($id = null) {
-		if (!$id) {
-			global $post;
-			$id = $post->ID;
-
-			if (!$id) return false;
-		}
-		return wp_prepare_attachment_for_js( get_post_thumbnail_id( $id ) );
-	}
-}
-
-/**
- * Remove inline width from WP Image Captions from (http://wp-snippets.com/remove-wp-caption-inline-style-width-in-wordpress-3-4-and-up/)
- */
-add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
-add_shortcode('caption', 'fixed_img_caption_shortcode');
-function fixed_img_caption_shortcode($attr, $content = null) {
-	// New-style shortcode with the caption inside the shortcode with the link and image tags.
-	if ( ! isset( $attr['caption'] ) ) {
-		if ( preg_match( '#((?:<a [^>]+>\s*)?<img [^>]+>(?:\s*</a>)?)(.*)#is', $content, $matches ) ) {
-			$content = $matches[1];
-			$attr['caption'] = trim( $matches[2] );
-		}
-	}
-
-	// Allow plugins/themes to override the default caption template.
-	$output = apply_filters('img_caption_shortcode', '', $attr, $content);
-	if ( $output != '' )
-		return $output;
-
-	extract(shortcode_atts(array(
-		'id'	=> '',
-		'align'	=> 'alignnone',
-		'width'	=> '',
-		'caption' => ''
-	), $attr));
-
-	if ( 1 > (int) $width || empty($caption) )
-		return $content;
-
-	if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
-
-	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '" style="width: ' . $width . 'px">'
-	. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
 
 /**

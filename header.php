@@ -22,7 +22,7 @@
 <body <?php body_class(); ?>>
 	<a href="#main-content" class="visually-hidden" title="skip to main content">Skip to main content</a>
 
-	<header class="body--header standard-grid" role="banner">		
+	<header class="is-layout-constrained" role="banner">		
 		<h6 class="logo">
 			<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>">
 				<?php $logo = get_theme_mod('ristretto_header_logo');

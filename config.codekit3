@@ -7,7 +7,7 @@
       "uuidString" : "9E350C24-7153-46D2-86B7-2393A399A36E"
     }
   ],
-  "creatorBuild" : "34564",
+  "creatorBuild" : "34576",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -395,14 +395,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/header.php",
-      "oF" : 0
-    },
-    "\/home.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/home.php",
       "oF" : 0
     },
     "\/img\/start-quote.svg" : {
@@ -990,21 +982,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/sass\/components\/_video-embed.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/sass\/css\/_video-embed.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
     "\/sass\/editor-style.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1327,10 +1304,18 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/style-min.css",
-      "oF" : 0,
+      "oF" : 1,
       "pg" : 0
+    },
+    "\/theme.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/theme-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
     }
   },
   "hooks" : [
@@ -1341,7 +1326,7 @@
   },
   "projectAttributes" : {
     "creationDate" : 615274050.29661906,
-    "displayValue" : "Shelterforce",
+    "displayValue" : "Ristretto Core",
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets-verd",
     "iconImageWasSetByUser" : 1
@@ -2606,7 +2591,7 @@
       }
     },
     "esLintSourceType" : 0,
-    "externalServerAddress" : "https:\/\/shelterforce.local",
+    "externalServerAddress" : "https:\/\/gs3.local",
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",

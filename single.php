@@ -4,7 +4,9 @@
     
     <?php if(have_posts()) : while(have_posts()) : the_post(); // start loop ?>
   
-      <article class="standard-grid">
+      <article class="is-layout-constrained">
+        
+        <h1><?php the_title(); ?></h1>
     
         <?php the_content(); ?>
     
