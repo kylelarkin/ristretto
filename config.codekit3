@@ -7,7 +7,7 @@
       "uuidString" : "9E350C24-7153-46D2-86B7-2393A399A36E"
     }
   ],
-  "creatorBuild" : "34576",
+  "creatorBuild" : "34590",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -65,73 +65,6 @@
       "oO" : 0,
       "oS" : 1
     },
-    "\/blocks\/card\/block.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/blocks\/card\/block-min.json",
-      "oF" : 0,
-      "oO" : 0,
-      "oS" : 1
-    },
-    "\/blocks\/card\/card.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/card\/card-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/card\/card.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/card\/card.php",
-      "oF" : 0
-    },
-    "\/blocks\/card\/card.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/card.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/blocks\/css\/card.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/card-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/css\/section.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/section-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/blocks\/css\/social-sharing.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -143,92 +76,6 @@
       "oAP" : "\/blocks\/css\/social-sharing-min.css",
       "oF" : 0,
       "pg" : 0
-    },
-    "\/blocks\/featured-news\/block.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/blocks\/featured-news\/block-min.json",
-      "oF" : 0,
-      "oO" : 0,
-      "oS" : 1
-    },
-    "\/blocks\/featured-news\/section.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/featured-news\/section-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/featured-news\/section.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/featured-news\/section.php",
-      "oF" : 0
-    },
-    "\/blocks\/featured-news\/section.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/section.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/blocks\/section\/block.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/blocks\/section\/block-min.json",
-      "oF" : 0,
-      "oO" : 0,
-      "oS" : 1
-    },
-    "\/blocks\/section\/section.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/section\/section-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/blocks\/section\/section.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/section\/section.php",
-      "oF" : 0
-    },
-    "\/blocks\/section\/section.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/blocks\/css\/section.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
     },
     "\/blocks\/social-sharing\/block.json" : {
       "ft" : 524288,
@@ -340,7 +187,7 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/css\/editor-style-min.css",
       "oF" : 0,
       "pg" : 0
@@ -727,22 +574,6 @@
       "oAP" : "\/lib\/initialize_theme.php",
       "oF" : 0
     },
-    "\/lib\/options_pages.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/lib\/options_pages.php",
-      "oF" : 0
-    },
-    "\/lib\/query-loops.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/lib\/query-loops.php",
-      "oF" : 0
-    },
     "\/lib\/template_redirects.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -831,96 +662,6 @@
       "pME" : 1,
       "rFN" : 0,
       "uCM" : 0
-    },
-    "\/sass\/blocks\/_wp-block-buttons.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/sass\/css\/_wp-block-buttons.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/sass\/blocks\/_wp-block-columns.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/sass\/css\/_wp-block-columns.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/sass\/blocks\/_wp-block-cover.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/sass\/css\/_wp-block-cover.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/sass\/blocks\/_wp-block-image.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/sass\/css\/_wp-block-image.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/sass\/blocks\/_wp-block-pullquote.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/sass\/css\/_wp-block-pullquote.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/sass\/blocks\/_wp-block-table.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/sass\/css\/_wp-block-table.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
     },
     "\/sass\/components\/_menu-button.scss" : {
       "aP" : 1,
@@ -1169,10 +910,10 @@
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
-      "ma" : 1,
+      "ma" : 0,
       "oA" : 0,
       "oAP" : "\/css\/screen.css",
-      "oF" : 2,
+      "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
@@ -1187,21 +928,6 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/sass\/css\/_facetwp.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/sass\/vendor_overrides\/_gravityforms.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/sass\/css\/_gravityforms.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -1326,7 +1052,7 @@
   },
   "projectAttributes" : {
     "creationDate" : 615274050.29661906,
-    "displayValue" : "Ristretto Core",
+    "displayValue" : "Ristretto",
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets-verd",
     "iconImageWasSetByUser" : 1
@@ -1829,10 +1555,6 @@
         "active" : 0,
         "optionString" : "{'before': true, 'after': true, 'overrides': {}}"
       },
-      "line-comment-position" : {
-        "active" : 0,
-        "optionString" : "{'position': 'above'}"
-      },
       "linebreak-style" : {
         "active" : 0,
         "optionString" : "'unix'"
@@ -1884,10 +1606,6 @@
       "max-statements-per-line" : {
         "active" : 0,
         "optionString" : "{'max': 1}"
-      },
-      "multiline-comment-style" : {
-        "active" : 0,
-        "optionString" : "'starred-block'"
       },
       "multiline-ternary" : {
         "active" : 0,
@@ -2030,7 +1748,8 @@
         "active" : 0
       },
       "no-extra-boolean-cast" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'enforceForInnerExpressions': false}"
       },
       "no-extra-label" : {
         "active" : 0
@@ -2115,7 +1834,8 @@
         "optionString" : "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
       },
       "no-misleading-character-class" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'allowEscape': false}"
       },
       "no-mixed-operators" : {
         "active" : 0,
@@ -2483,7 +2203,8 @@
         "active" : 0
       },
       "require-unicode-regexp" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'requireFlag': 'u'}"
       },
       "require-yield" : {
         "active" : 1
@@ -2913,6 +2634,7 @@
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
+    "tsJSXFragmentFactory" : "Fragment",
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,

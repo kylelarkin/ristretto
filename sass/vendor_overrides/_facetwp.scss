@@ -22,7 +22,6 @@ div.facetwp-facet {
     display: flex;
     justify-content: center;
     button.facetwp-load-more {
-      // @include primary-button($orange, #fff);
       &.facetwpwp-hidden {
         display: none !important;
       }

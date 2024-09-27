@@ -1,17 +1,10 @@
 <?php get_header(); ?>
-
-  <main>
     
     <?php if(have_posts()) : while(have_posts()) : the_post(); // start loop ?>
-  
-      <article class="is-layout-constrained">
         
         <h1><?php the_title(); ?></h1>
-    
         <?php the_content(); ?>
-    
-      </article>
-  
+
     <?php endwhile; endif; // end loop ?>
     
     <!-- <nav role="navigation" class="post-nav">
@@ -23,8 +16,6 @@
       </div>
     </nav> -->
   
-  </main>
-
   <?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>

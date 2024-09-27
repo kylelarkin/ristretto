@@ -5,25 +5,6 @@ body{
 	overflow-x: hidden;
 }
 
-.standard-grid, .wp-block-cover, #tribe-events-pg-template, .tribe-events {
-	display: grid;
-	gap: 0 1.5rem;
-	grid-template-columns: [full-start] calc(50vw - 720px) [main-start] minmax(0, 1fr) [main-end] calc(50vw - 720px) [full-end];
-	@include grid-media($xl) {
-		gap: 0 1.5rem ;
-	}
-	&.tooltipster-base {
-		display: block !important;
-	}
-}
-.standard-grid > *, .wp-block-cover__inner-container, #tribe-events-pg-template > *, .tribe-events > * {
-	grid-column: main;
-}
- 
-.alignfull {
-	grid-column: full;
-}
-
 // Hide editor notes
 .r-editor-note {
 	display: none;
@@ -54,6 +35,3 @@ body{
 		color: #fff;
 	}
 }
-
-//pull mixin of sitewide gutenberg color palette 
-@include color-palette;

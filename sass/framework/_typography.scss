@@ -26,142 +26,106 @@ a {
     }
   }
 }
-h1 {
-  @include fluid-unit(font-size, 320px, 1280px, 40px, 46px);
-  color: $heading-color;
-  font-family: $heading-font;
-  font-weight: 500;
-  letter-spacing: 2px;
-  line-height: 1.04;
-  @include fluid-unit(margin-bottom, 320px, 1280px, rem(12), rem(20));
-  text-transform: uppercase;
-  @include maxwidth;
-}
-
-h2 {
-  @include fluid-unit(font-size, 320px, 1280px, 30px, 36px);
-  color: $heading-color;
-  font-family: $heading-font;
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin: 0 0 .5rem;
-  text-transform: uppercase;
-  @include maxwidth;
-}
-
-* + h2 {
-  @include fluid-unit(margin-top, 320px, 1280px, 36px, 46px);
-}
-
-h3 {
-  @include fluid-unit(font-size, 320px, 1280px, 26px, 28px);
-  color: $heading-color;
-  font-family: $body-font;
-  font-weight: 300;
-  margin: 0 0 .5rem;
-  @include maxwidth;
-}
-
-* + h3 {
-  @include fluid-unit(margin-top, 320px, 1280px, 32px, 56px);
-}
-
-h4 {
-  font-size: rem(20);
-  color: $heading-color;
-  font-family: $body-font;
-  font-weight: 700;
-  line-height: 1.3;
-  margin: 0 0 rem(12);
-  text-transform: uppercase;
-  @include maxwidth;
-}
-
-* + h4 {
-  @include fluid-unit(margin-top, 320px, 1280px, 35px, 40px);
-}
-
-h5 {
-  font-size: rem(20);
-  color: $heading-color;
-  font-family: $heading-font;
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin: 0 0 .5rem;
-  text-transform: uppercase;
-  @include maxwidth;
-}
-
-* + h5 {
-  @include fluid-unit(margin-top, 320px, 1280px, 36px, 38px);
-}
-
-h6 {
-  color: $heading-color;
-  font-family: $body-font;
-  font-size: rem(12);
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1.3;
-  margin: 0 0 rem(11);
-  text-transform: uppercase;
-  @include maxwidth;
-}
-
-* + h6 {
-  @include fluid-unit(margin-top, 320px, 1280px, 35px, 28px);
-}
-
-p, .has-default-font-size {
-  @include fluid-unit(font-size, 320px, 1280px, 17px, 18px);
-  font-feature-settings: 'pnum' on, 'lnum' on;
-  font-weight: 300;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  line-height: 1.6;
-  margin: 0 0 rem(20) 0;
-  @include maxwidth;
-}
+// h1 {
+//   @include fluid-unit(font-size, 320px, 1280px, 40px, 46px);
+//   color: $heading-color;
+//   font-family: $heading-font;
+//   font-weight: 500;
+//   letter-spacing: 2px;
+//   line-height: 1.04;
+//   @include fluid-unit(margin-bottom, 320px, 1280px, rem(12), rem(20));
+//   text-transform: uppercase;
+//   @include maxwidth;
+// }
+// 
+// h2 {
+//   @include fluid-unit(font-size, 320px, 1280px, 30px, 36px);
+//   color: $heading-color;
+//   font-family: $heading-font;
+//   font-weight: 500;
+//   letter-spacing: 1px;
+//   margin: 0 0 .5rem;
+//   text-transform: uppercase;
+//   @include maxwidth;
+// }
+// 
+// * + h2 {
+//   @include fluid-unit(margin-top, 320px, 1280px, 36px, 46px);
+// }
+// 
+// h3 {
+//   @include fluid-unit(font-size, 320px, 1280px, 26px, 28px);
+//   color: $heading-color;
+//   font-family: $body-font;
+//   font-weight: 300;
+//   margin: 0 0 .5rem;
+//   @include maxwidth;
+// }
+// 
+// * + h3 {
+//   @include fluid-unit(margin-top, 320px, 1280px, 32px, 56px);
+// }
+// 
+// h4 {
+//   font-size: rem(20);
+//   color: $heading-color;
+//   font-family: $body-font;
+//   font-weight: 700;
+//   line-height: 1.3;
+//   margin: 0 0 rem(12);
+//   text-transform: uppercase;
+//   @include maxwidth;
+// }
+// 
+// * + h4 {
+//   @include fluid-unit(margin-top, 320px, 1280px, 35px, 40px);
+// }
+// 
+// h5 {
+//   font-size: rem(20);
+//   color: $heading-color;
+//   font-family: $heading-font;
+//   font-weight: 500;
+//   letter-spacing: 1px;
+//   margin: 0 0 .5rem;
+//   text-transform: uppercase;
+//   @include maxwidth;
+// }
+// 
+// * + h5 {
+//   @include fluid-unit(margin-top, 320px, 1280px, 36px, 38px);
+// }
+// 
+// h6 {
+//   color: $heading-color;
+//   font-family: $body-font;
+//   font-size: rem(12);
+//   font-weight: 700;
+//   letter-spacing: 1px;
+//   line-height: 1.3;
+//   margin: 0 0 rem(11);
+//   text-transform: uppercase;
+//   @include maxwidth;
+// }
+// 
+// * + h6 {
+//   @include fluid-unit(margin-top, 320px, 1280px, 35px, 28px);
+// }
+// 
+// p, .has-default-font-size {
+//   @include fluid-unit(font-size, 320px, 1280px, 17px, 18px);
+//   font-feature-settings: 'pnum' on, 'lnum' on;
+//   font-weight: 300;
+//   letter-spacing: 1px;
+//   line-height: 1.5;
+//   line-height: 1.6;
+//   margin: 0 0 rem(20) 0;
+//   @include maxwidth;
+// }
 p:empty {
   display: none;
 }
-.has-small-font-size {
-  // font-size: 12px !important;
-  // @include grid-media($small) {
-  //   font-size: calc(12px + 2 * (100vw - 320px) / 960) !important;
-  // }
-  // @include grid-media($xl) {
-  //   font-size: 1rem !important;
-  // }
-}
-.has-default-font-size {
-  // font-size: rem(18);
-}
-.has-medium-font-size {
-  // font-size: rem(18) !important;
-  // @include grid-media($small) {
-  //   font-size: calc(18px + 2 * (100vw - 320px) / 960) !important;
-  // }
-  // font-size: rem(20) !important;
-}
-.has-large-font-size {
-  // font-size: rem(20) !important;
-  // @include grid-media($medium) {
-  //   font-size: calc(20px + 4 * (100vw - 320px) / 960) !important;
-  // }
-  // @include grid-media($large) {
-  //   font-size: rem(24) !important;
-  // }
-}
-.has-xlarge-font-size {
-  // font-size: rem(24) !important;
-  // @include grid-media($small) {
-  //   font-size: calc(24px + 4 * (100vw - 320px) / 960) !important;
-  // }
-  // @include grid-media($large) {
-  //   font-size: rem(28) !important;
-  // }
-}
+
 
 em, i {
   font-style: italic;
@@ -216,13 +180,4 @@ li {
   line-height: 1.6;
   max-width: 58rem;
   vertical-align: middle;
-}
-
-.is-style-eyebrow {
-  font-family: $body-font;
-  font-size: rem(14);
-  font-weight: 700;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-  margin: 0 0 rem(5);
 }

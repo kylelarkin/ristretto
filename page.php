@@ -1,13 +1,9 @@
 <?php get_header(); ?>
+
+  <?php if(have_posts()) : while(have_posts()) : the_post(); // start loop ?>
   
-  <main class="is-layout-constrained">
+    <?php the_content(); ?>
     
-    <?php if(have_posts()) : while(have_posts()) : the_post(); // start loop ?>
-    
-      <?php the_content(); ?>
-      
-    <?php endwhile; endif; // end loop ?>
-    
-  </main>
+  <?php endwhile; endif; // end loop ?>
 
 <?php get_footer(); ?>

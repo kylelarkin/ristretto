@@ -23,4 +23,5 @@ $medium-only:     '(min-width: #{$medium-breakpoint}) and (max-width: #{$large-b
 $pre-large-only:  '(max-width: #{$large-breakpoint - 1})' ;
 $large:           '(min-width: #{$large-breakpoint})';
 $xl:              '(min-width: #{$xl-breakpoint})';
+$pre-col-only:  '(max-width: #{$col-breakpoint - 1})' ;
 $col:             '(min-width: #{$col-breakpoint})';
