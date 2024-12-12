@@ -1,3 +1,44 @@
+/*
+  Modern CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
 /* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
 * {
   box-sizing: border-box;
@@ -8,13 +49,13 @@ body, select, input, textarea {
 }
 
 ::-moz-selection {
-  background: #ccc;
+  background: #00ABB3;
   color: #000;
   text-shadow: none;
 }
 
 ::selection {
-  background: #ccc;
+  background: #00ABB3;
   color: #000;
   text-shadow: none;
 }
@@ -23,105 +64,11 @@ a:link {
   -webkit-tap-highlight-color: transparent;
 }
 
-ins {
-  background-color: #ccc;
-  color: #000;
-  text-decoration: none;
-}
-
-mark {
-  background-color: #ccc;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.gform_wrapper.gravity-theme h2.gform_title {
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-.gform_wrapper.gravity-theme p.gform_required_legend {
-  font-size: 0.9375rem;
-  color: #555;
-}
-.gform_wrapper.gravity-theme label, .gform_wrapper.gravity-theme legend {
-  font-family: "roc-grotesk-condensed", Helvetica, Arial, sans-serif;
-  color: #555;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.gform_wrapper.gravity-theme label span.gfield_required, .gform_wrapper.gravity-theme label span.gfield_required.gfield_required_asterisk, .gform_wrapper.gravity-theme legend span.gfield_required, .gform_wrapper.gravity-theme legend span.gfield_required.gfield_required_asterisk {
-  color: #555;
-  position: relative;
-  font-size: 1rem;
-}
-.gform_wrapper.gravity-theme input, .gform_wrapper.gravity-theme textarea {
-  border: 1px solid #000;
-  border-radius: 12px;
-}
-.gform_wrapper.gravity-theme input[type=radio], .gform_wrapper.gravity-theme textarea[type=radio] {
-  -webkit-appearance: radio;
-  margin-right: 0.125rem;
-  border-color: #555;
-}
-.gform_wrapper.gravity-theme .gfield_radio label {
+body {
   font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  text-transform: none;
-  font-weight: 400;
-  color: #555;
-}
-.gform_wrapper.gravity-theme fieldset.gfield--type-checkbox label, .gform_wrapper.gravity-theme fieldset.gfield--type-name label {
-  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  text-transform: none;
-  font-weight: 400;
-  font-size: 0.875rem;
-}
-.gform_wrapper.gravity-theme .ginput_container_select select {
-  border-radius: 10px;
-  padding-right: 1rem;
-}
-.gform_wrapper.gravity-theme .ginput_container_fileupload input {
-  border: 0;
-  border-radius: 0;
-}
-.gform_wrapper.gravity-theme .gfield_description {
-  font-size: 0.8125rem;
-  font-style: italic;
-}
-.gform_wrapper.gravity-theme .gform_footer input[type=submit] {
-  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 800;
+  font-size: 100%;
   line-height: 1.5;
-  letter-spacing: 0.36px;
-  text-transform: uppercase;
-  padding: 0.7rem 2rem 0.6rem;
-  border-radius: 50px;
-  background-color: #555;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-.gform_wrapper.gravity-theme .gform_footer input[type=submit]:hover {
-  transform: scale(1.0125);
-}
-.gform_wrapper.gravity-theme .gsection_title {
-  color: #555;
-  text-transform: uppercase;
-  font-size: 20px;
-}
-@media (min-width: 320px) {
-  .gform_wrapper.gravity-theme .gsection_title {
-    font-size: calc(20px + 2 * (100vw - 320px) / 960);
-  }
-}
-@media (min-width: 1280px) {
-  .gform_wrapper.gravity-theme .gsection_title {
-    font-size: 22px;
-  }
+  font-display: swap;
 }
 
 div.facetwp-facet {
@@ -194,7 +141,7 @@ div.facetwp-facet.facetwp-facet-search .facetwp-icon:before {
   display: none;
 }
 div.facetwp-facet.facetwp-facet-search .facetwp-icon svg {
-  color: #3B5564;
+  color: #00ABB3;
 }
 div.facetwp-facet.facetwp-facet-search input {
   border-radius: 24px;
@@ -222,186 +169,12 @@ p + .facetwp-facet {
   margin-top: -12px;
 }
 
-/*
-  Modern CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-}
-
-html, body {
-  height: 100%;
-  -webkit-text-size-adjust: none;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
-  font: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-#root, #__next {
-  isolation: isolate;
-}
-
-/* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
-* {
-  box-sizing: border-box;
-}
-
-body, select, input, textarea {
-  color: #333;
-}
-
-::-moz-selection {
-  background: #ccc;
-  color: #000;
-  text-shadow: none;
-}
-
-::selection {
-  background: #ccc;
-  color: #000;
-  text-shadow: none;
-}
-
-a:link {
-  -webkit-tap-highlight-color: transparent;
-}
-
-ins {
-  background-color: #ccc;
-  color: #000;
-  text-decoration: none;
-}
-
-mark {
-  background-color: #ccc;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-body {
-  color: #555;
-  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  font-weight: 300;
-  line-height: 1.5;
-  font-display: swap;
-}
-
-a {
-  color: #CA3E22;
-  text-decoration-color: #CA3E22;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  transition: all 0.25s ease-out;
-}
-a:hover, a:focus {
-  color: #000;
-  text-decoration-thickness: 2px;
-}
-nav a, #wpadminbar a {
-  text-decoration: none;
-}
-nav a:hover, nav a:active, #wpadminbar a:hover, #wpadminbar a:active {
-  text-decoration: none;
-}
-
-p:empty {
-  display: none;
-}
-
-em, i {
-  font-style: italic;
-}
-em strong, em b, i strong, i b {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: bold;
-}
-strong em, strong i, b em, b i {
-  font-weight: bold;
-}
-
-ol {
-  margin: 1em 0 1em 1.1em;
-  padding: 0;
-}
-ol ol, ol ul {
-  margin: 0 0 0 1.1em;
-}
-ol li::marker {
-  font-size: 1rem;
-}
-
-ul {
-  list-style: disc;
-  margin: 1em 0 1.5em 2em;
-  padding: 0;
-}
-ul ul {
-  margin: 0 0 0 1.1em;
-}
-ul li::marker {
-  font-size: 0.75rem;
-  margin-top: -2px;
-  line-height: 1.6;
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-nav ul a {
-  text-decoration: none;
-}
-
-li {
-  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  font-size: 1.125rem;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.6;
-  max-width: 58rem;
-  vertical-align: middle;
-}
-
-body.login {
-  background: #ffffff;
-}
 body.login div#login h1 a {
   background: url("../img/wp-login-logo-ristretto.png") no-repeat 0 0;
   background-size: contain;
   margin: 0 0 0 23px;
   width: 274px;
 }
-body.login #nav a, body.login #backtoblog a {
-  color: #fff;
-}
-
 .menu-button {
   top: 24px;
 }
@@ -490,7 +263,7 @@ body.login #nav a, body.login #backtoblog a {
   float: right;
 }
 .post-nav .fa {
-  color: #CA3E22;
+  color: #00ABB3;
   position: relative;
   top: 0px;
   right: -2px;
@@ -556,7 +329,7 @@ form.searchform input.search-input {
   }
 }
 form.searchform input.search-input:focus {
-  border: 1px solid #ffffff;
+  border: 1px solid #00ABB3;
   outline: 0;
 }
 form.searchform #search-close {
@@ -577,6 +350,10 @@ form.searchform #search-close {
 }
 .social-sharing a path {
   color: #fff;
+}
+
+.wp-block-embed {
+  clear: both;
 }
 
 body {
@@ -766,9 +543,6 @@ body.search .search-background picture {
   width: 100%;
 }
 body.search .search-background picture img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  font-family: "object-fit: $default;";
   -o-object-position: center right;
      object-position: center right;
   width: 100%;

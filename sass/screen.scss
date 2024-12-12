@@ -1,24 +1,24 @@
 @charset 'utf-8';
 
 // -------------------------------------------------
-// Vendor Overrides
-// ---------------------------------------------- */
-@import 'vendor_overrides/gravityforms';
-@import 'vendor_overrides/facetwp';
-
-// -------------------------------------------------
 // Framework
 // ---------------------------------------------- */
-@import 'framework/grid';
-@import 'framework/mixins';
 @import 'framework/reset';
+@import 'framework/grid';
 @import 'framework/ristretto';
 @import 'framework/typography';
 @import 'framework/variables';
+
+// -------------------------------------------------
+// Vendor Overrides
+// ---------------------------------------------- */
+@import 'vendor_overrides/facetwp';
+
 // -------------------------------------------------
 // Login
 // ---------------------------------------------- */
 @import 'login/login';
+
 // -------------------------------------------------
 // Components
 // ---------------------------------------------- */
@@ -30,7 +30,7 @@
 // -------------------------------------------------
 // Block Overrides
 // ---------------------------------------------- */
-
+@import 'wp_blocks/embed';
 
 // -------------------------------------------------
 // Layout

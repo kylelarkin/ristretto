@@ -14,43 +14,21 @@ $gray40: #444;
 $gray50: #2D1D1B;
 $black: #000;
 
-$red10: #DC593E;
-$red20: #CA3E22;
-$red30: #9A3021;
-$red40: #2D1D1B;
-
-$blue: #3B5564;
-
-$tan10: #F4F1EC;
-$tan20: #E5DFD6;
-$tan30: #D3C7BD;
-
-$gold10: #FFF0D2;
-$gold20: #FFC062;
-$gold30: #D68000;
+$blue: #00ABB3;
 
 $body-color: #555;
 $heading-color: #333;
-$warning-color: $red20;
-$highlight-color: #ccc;
-$link-color: $red20;
+
+$primary: $blue;
+
+$warning-color: $blue;
+
+$highlight-color: $blue;
+
+$link-color: $blue;
 $link-hover: #000;
 
 $label-color: $body-color;
 $button-color: $link-color;
 
 $ani_speed: 250ms;
-
-//
-// these colors should match the color palette defined in editor.php otherwise color picker won't work properly
-//
-$colors: (
-  'white': #ffffff, //this should be the default button text & border color
-  'teal': #1BA39C, //this should be the default background color of button
-  'black': #000000,
-  'gray-light': $gray10,  
-  'gray': $gray30,
-  'gray-dark': $gray40,
-  'transparent': transparent,
-);
-$primary: nth( nth( $colors, 1 ), 2 ); // first color in $colors array

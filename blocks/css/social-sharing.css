@@ -8,32 +8,19 @@ body, select, input, textarea {
 }
 
 ::-moz-selection {
-  background: #ccc;
+  background: #00ABB3;
   color: #000;
   text-shadow: none;
 }
 
 ::selection {
-  background: #ccc;
+  background: #00ABB3;
   color: #000;
   text-shadow: none;
 }
 
 a:link {
   -webkit-tap-highlight-color: transparent;
-}
-
-ins {
-  background-color: #ccc;
-  color: #000;
-  text-decoration: none;
-}
-
-mark {
-  background-color: #ccc;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
 }
 
 .editor-styles-wrapper .block-social-sharing, .block-social-sharing {

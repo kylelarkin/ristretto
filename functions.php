@@ -15,8 +15,6 @@ function ristretto_enqueue_init() {
   // Register Scripts
   wp_register_script( 'aos', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/aos/dist/aos.js', null, null, true );
   wp_register_script( 'jarallax', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/jarallax/dist/jarallax.min.js', array('jquery'), null, true );
-  wp_register_script( 'object-fit-images', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/ofi.min.js', null, null, true );
-  wp_register_script( 'object-fit', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/ofi.min.js', array('jquery'), null, true );
   wp_register_script( 'fontawesome', '//kit.fontawesome.com/ce9172c803.js', null, null, true );
   wp_register_script( 'lity', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/lity/dist/lity.min.js', array('jquery'), null, true );
   wp_register_script( 'tiny-slider', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/min/tiny-slider.js', null, null, true );
@@ -25,9 +23,7 @@ function ristretto_enqueue_init() {
   // Enqueue Scripts
   wp_enqueue_script('aos');
   wp_enqueue_script('jarallax');
-  wp_enqueue_script('object-fit-images');
-  wp_enqueue_script('object-fit');
-  // wp_enqueue_script('fontawesome');
+  wp_enqueue_script('fontawesome');
   // wp_enqueue_script('lity');
   // wp_enqueue_script('tiny-slider');
   wp_enqueue_script('ristretto-app');

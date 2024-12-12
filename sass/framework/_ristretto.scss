@@ -23,31 +23,14 @@ body,select,input,textarea {
   color:#333;
 }
 // Custom text-selection colors (remove any text shadows:twitter.com/miketaylr/status/12228805301)
-::-moz-selection {
-  background:$highlight-color;
-  color:#000;
-  text-shadow:none;
-}
 ::selection {
   background:$highlight-color;
   color:#000;
   text-shadow:none;
 }
-// j.mp/webkit-tap-highlight-color
+
 a:link {
   -webkit-tap-highlight-color: transparent;
-}
-ins {
-  background-color:$highlight-color;
-  color:#000;
-  text-decoration:none;
-
-}
-mark {
-  background-color:$highlight-color;
-  color:#000;
-  font-style:italic;
-  font-weight:bold;
 }
 
 
@@ -60,6 +43,14 @@ mark {
   list-style: none;
   margin: 0;
   padding-left: 0;
+}
+
+@mixin transition {
+  transition: all $ani_speed ease-in-out;
+}
+
+@mixin maxwidth {
+  max-width: 880px;
 }
 
 // Hyphenation (FF compatible)
@@ -130,14 +121,3 @@ $remBaseFontSize: 16;
   }
   @return $number;
 }
-
-//object fit
-@mixin objectfit($default: 'cover') {
-	object-fit: $default;
-	font-family: 'object-fit: $default;'
-}
-
-// -------------------------------------------------
-// Project-specific Mixins
-// ---------------------------------------------- */
-@import "mixins";

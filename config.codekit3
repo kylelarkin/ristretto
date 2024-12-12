@@ -7,7 +7,7 @@
       "uuidString" : "9E350C24-7153-46D2-86B7-2393A399A36E"
     }
   ],
-  "creatorBuild" : "34590",
+  "creatorBuild" : "34592",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -32,38 +32,6 @@
       "oA" : 0,
       "oAP" : "\/404.php",
       "oF" : 0
-    },
-    "\/acf-json\/group_63d9a00b747b3.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/acf-json\/group_63d9a00b747b3-min.json",
-      "oF" : 0,
-      "oO" : 0,
-      "oS" : 1
-    },
-    "\/acf-json\/group_6127f75b3a728.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/acf-json\/group_6127f75b3a728-min.json",
-      "oF" : 0,
-      "oO" : 0,
-      "oS" : 1
-    },
-    "\/acf-json\/group_633676a478e69.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/acf-json\/group_633676a478e69-min.json",
-      "oF" : 0,
-      "oO" : 0,
-      "oS" : 1
-    },
-    "\/acf-json\/post_type_6569126aacf77.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/acf-json\/post_type_6569126aacf77-min.json",
-      "oF" : 0,
-      "oO" : 0,
-      "oS" : 1
     },
     "\/blocks\/css\/social-sharing.css" : {
       "aP" : 1,
@@ -189,6 +157,18 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/css\/editor-style-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/css\/login.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/css\/login-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -502,14 +482,6 @@
       "oAP" : "\/lib\/admin.php",
       "oF" : 0
     },
-    "\/lib\/block_patterns.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/lib\/block_patterns.php",
-      "oF" : 0
-    },
     "\/lib\/block_templates.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -540,14 +512,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/lib\/editor.php",
-      "oF" : 0
-    },
-    "\/lib\/formatting.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/lib\/formatting.php",
       "oF" : 0
     },
     "\/lib\/helpers.php" : {
@@ -753,21 +717,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/sass\/framework\/_mixins.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/sass\/css\/_mixins.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
     "\/sass\/framework\/_reset.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -873,7 +822,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/sass\/login\/_login.scss" : {
+    "\/sass\/login\/login.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -881,9 +830,9 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/sass\/css\/_login.css",
-      "oF" : 0,
+      "oA" : 0,
+      "oAP" : "\/css\/login.css",
+      "oF" : 3,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
@@ -985,6 +934,21 @@
       "oA" : 0,
       "oAP" : "\/sass\/views\/.gitkeep",
       "oF" : 0
+    },
+    "\/sass\/wp_blocks\/_embed.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/css\/_embed.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
     },
     "\/screenshot.png" : {
       "ft" : 32768,

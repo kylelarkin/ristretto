@@ -9,9 +9,9 @@
     <span class="fas fa-envelope" title="Share Via Email"></span>
   </a>
   
-  <!-- Sharingbutton Twitter -->
-  <a href="https://twitter.com/intent/tweet/?text=<?php echo urlencode_deep( get_the_title() ); ?>&amp;url=<?php echo urlencode_deep( get_permalink() ); ?>" target="_blank" rel="noopener" aria-label="Share on Twitter">
-    <span class="fab fa-twitter" title="Share Via Twitter"></span>
+  <!-- Sharingbutton Bluesky -->
+  <a href="https://bsky.app/intent/compose/?text=<?php echo urlencode_deep( get_the_title() ); ?>:%20<?php echo urlencode_deep( get_permalink() ); ?>" target="_blank" rel="noopener" aria-label="Share on Bluesky">
+    <span class="fab fa-bluesky" title="Share Via Bluesky"></span>
   </a>
   
   <!-- Sharingbutton Facebook -->

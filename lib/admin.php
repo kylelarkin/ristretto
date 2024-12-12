@@ -9,7 +9,7 @@ define( 'DISALLOW_FILE_EDIT', true );
  */
 function ristretto_login_logo() {
 
-  wp_register_style( 'login-style', get_bloginfo( 'stylesheet_directory' ) . '/css/_login.css', array(), null, 'all' );
+  wp_register_style( 'login-style', get_bloginfo( 'stylesheet_directory' ) . '/css/login.css', array(), null, 'all' );
   wp_enqueue_style('login-style');
   
 }
