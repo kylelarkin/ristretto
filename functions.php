@@ -17,7 +17,7 @@ function ristretto_enqueue_init() {
   wp_register_script( 'jarallax', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/jarallax/dist/jarallax.min.js', array('jquery'), null, true );
   wp_register_script( 'object-fit-images', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/ofi.min.js', null, null, true );
   wp_register_script( 'object-fit', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/ofi.min.js', array('jquery'), null, true );
-  wp_register_script( 'fontawesome', '//kit.fontawesome.com/c20d1ab028.js', null, null, true );
+  wp_register_script( 'fontawesome', '//kit.fontawesome.com/ce9172c803.js', null, null, true );
   wp_register_script( 'lity', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/lity/dist/lity.min.js', array('jquery'), null, true );
   wp_register_script( 'tiny-slider', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/min/tiny-slider.js', null, null, true );
   wp_register_script( 'ristretto-app', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/app-min.js', array('jquery'), $theme_version, true );
