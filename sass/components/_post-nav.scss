@@ -1,5 +1,7 @@
+@use '../framework' as *;
+
 .post-nav {
-	border-top: 1px solid $gray10;
+	border-top: 1px solid $gray-10;
 	font-family: $heading-font;
 	font-size: rem(14);
 	letter-spacing: 1px;

@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 footer.body--footer {
 	@include clearfix;
   // Add Margin to for Sticky Footer

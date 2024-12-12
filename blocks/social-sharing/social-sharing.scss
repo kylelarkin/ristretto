@@ -1,6 +1,4 @@
-@import '../../sass/framework/ristretto';
-@import '../../sass/framework/variables';
-@import '../../sass/framework/grid';
+@use '../sass/framework' as *;
 
 .editor-styles-wrapper .block-social-sharing, .block-social-sharing {
   display: flex;

@@ -1,5 +1,4 @@
-
-@import '../framework/variables';
+@use '../framework' as *;
 
 body.login {
   // background: $primary;

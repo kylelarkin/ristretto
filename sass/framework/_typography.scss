@@ -1,3 +1,7 @@
+@use 'grid' as *;
+@use 'variables' as *;
+@use 'ristretto' as *;
+
 // -------------------------------------------------
 // Ristretto Typography + Standard Element Defaults
 // ---------------------------------------------- */
@@ -6,4 +10,8 @@ body {
   font-size: 100%;
   line-height: 1.5;
   font-display: swap;
+}
+
+nav ul {
+  @include ul-reset;
 }

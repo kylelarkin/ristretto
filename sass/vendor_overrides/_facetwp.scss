@@ -1,7 +1,9 @@
+@use '../framework' as *;
+
 div.facetwp-facet {
   margin: 0;
   input, select {
-    border: 2px solid $gray10;
+    border: 2px solid $gray-10;
     padding: 0.5rem 0.5rem 0.5rem 1rem;
     width: 100%;
     height: 44px;
@@ -9,12 +11,12 @@ div.facetwp-facet {
     -webkit-appearance: none;
     &:focus {
       outline: 0;
-      background-color: $gray10;
+      background-color: $gray-10;
     }
   }
   select, input::placeholder {
     font-size: rem(15);
-    color: $gray30;
+    color: $gray-30;
     letter-spacing: .45px;
   }
   &.facetwp-type-pager {
@@ -67,7 +69,7 @@ div.facetwp-facet {
         display: none;
       }
       svg {
-        color: $blue;
+        color: $blue-50;
       }
     }
     input {
@@ -80,13 +82,13 @@ div.facetwp-facet {
     
     &:after {
       @include transition;
-      color: $gray30;
+      color: $gray-30;
       content: "\f0d7";
       font: var(--fa-font-solid);
       display: none;
     }
     svg {
-      color: $gray30;
+      color: $gray-30;
       position: absolute;
       right: 1rem;
       top: .8rem;

@@ -1,15 +1,8 @@
 /* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
 @use "sass:math";
 
-// -------------------------------------------------
-// Ristretto Bourbon Imports
-// ---------------------------------------------- */
-@import "grid";
-
-// -------------------------------------------------
-// Ristretto Variables
-// ---------------------------------------------- */
-@import "variables";
+@use 'grid' as *;
+@use 'variables' as *;
 
 // -------------------------------------------------
 // Ristretto Resets

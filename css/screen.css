@@ -71,6 +71,12 @@ body {
   font-display: swap;
 }
 
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
 div.facetwp-facet {
   margin: 0;
 }

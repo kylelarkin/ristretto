@@ -1,46 +1,37 @@
 @charset 'utf-8';
 
 // -------------------------------------------------
-// Framework
-// ---------------------------------------------- */
-@import 'framework/reset';
-@import 'framework/grid';
-@import 'framework/ristretto';
-@import 'framework/typography';
-@import 'framework/variables';
-
-// -------------------------------------------------
 // Vendor Overrides
 // ---------------------------------------------- */
-@import 'vendor_overrides/facetwp';
+@use 'vendor_overrides/facetwp';
 
 // -------------------------------------------------
 // Login
 // ---------------------------------------------- */
-@import 'login/login';
+@use 'login/login';
 
 // -------------------------------------------------
 // Components
 // ---------------------------------------------- */
-@import 'components/menu-button';
-@import 'components/post-nav';
-@import 'components/search-form';
-@import 'components/social-sharing';
+@use 'components/menu-button';
+@use 'components/post-nav';
+@use 'components/search-form';
+@use 'components/social-sharing';
 
 // -------------------------------------------------
 // Block Overrides
 // ---------------------------------------------- */
-@import 'wp_blocks/embed';
+@use 'wp_blocks/embed';
 
 // -------------------------------------------------
 // Layout
 // ---------------------------------------------- */
-@import 'layout/default';
-@import 'layout/footer';
-@import 'layout/header';
+@use 'layout/default';
+@use 'layout/footer';
+@use 'layout/header';
 // -------------------------------------------------
 // Views
 // ---------------------------------------------- */
-@import 'views/404';
-@import 'views/front-page';
-@import 'views/search';
+@use 'views/error-404';
+@use 'views/front-page';
+@use 'views/search';

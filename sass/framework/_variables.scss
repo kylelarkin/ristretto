@@ -7,25 +7,24 @@ $heading-font: "roc-grotesk-condensed", Helvetica, Arial, sans-serif;
 $body-font: "aktiv-grotesk", Helvetica, Arial, sans-serif;
 
 $white: #fff;
-$gray10: #f2f2f2;
-$gray20: #B0B7B7;
-$gray30: #767676;
-$gray40: #444;
-$gray50: #2D1D1B;
+$gray-10: #f2f2f2;
+$gray-20: #B0B7B7;
+$gray-30: #767676;
+$gray-40: #444;
 $black: #000;
 
-$blue: #00ABB3;
+$blue-50: #00ABB3;
 
 $body-color: #555;
 $heading-color: #333;
 
-$primary: $blue;
+$primary: $blue-50;
 
-$warning-color: $blue;
+$warning-color: $blue-50;
 
-$highlight-color: $blue;
+$highlight-color: $blue-50;
 
-$link-color: $blue;
+$link-color: $blue-50;
 $link-hover: #000;
 
 $label-color: $body-color;

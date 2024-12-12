@@ -1,3 +1,82 @@
+/*
+  Modern CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
+* {
+  box-sizing: border-box;
+}
+
+body, select, input, textarea {
+  color: #333;
+}
+
+::-moz-selection {
+  background: #00ABB3;
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background: #00ABB3;
+  color: #000;
+  text-shadow: none;
+}
+
+a:link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  font-display: swap;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
 body.login div#login h1 a {
   background: url("../img/wp-login-logo-ristretto.png") no-repeat 0 0;
   background-size: contain;

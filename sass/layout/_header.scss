@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 header.body--header {
 	@include clearfix;
 

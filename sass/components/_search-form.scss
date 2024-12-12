@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 form.searchform {
   @include transition;
   padding: 0 1.5rem;

@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 body.error404 {
   background-color:  rgba(38, 76, 136, 0.9);
   position: relative;

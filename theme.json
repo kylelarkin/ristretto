@@ -13,54 +13,34 @@
       "link": true,
       "palette": [
         {
-          "name": "Green 10",
-          "slug": "green-10",
-          "color": "#4DFFD4"
-        },
-        {
-          "name": "Green 20",
-          "slug": "green-20",
-          "color": "#00DEC3"
-        },
-        {
-          "name": "Green 40",
-          "slug": "green-40",
-          "color": "#069B89"
-        },
-        {
-          "name": "Base",
-          "slug": "base",
-          "color": "#ffffff"
-        },
-        {
-          "name": "Gray 90",
-          "slug": "gray-90",
-          "color": "#212121"
-        },
-        {
-          "name": "Gray 80",
-          "slug": "gray-80",
-          "color": "#707070"
-        },
-        {
-          "name": "Gray 60",
-          "slug": "gray-60",
-          "color": "#B9B9B9"
-        },
-        {
-          "name": "Gray 20",
-          "slug": "gray-20",
-          "color": "#F3F3F0"
-        },
-        {
           "name": "Gray 10",
           "slug": "gray-10",
           "color": "#F2F2F2"
         },
         {
+          "name": "Gray 20",
+          "slug": "gray-20",
+          "color": "#B0B7B7"
+        },
+        {
+          "name": "Gray 30",
+          "slug": "gray-30",
+          "color": "#767676"
+        },
+        {
+          "name": "Gray 40",
+          "slug": "gray-40",
+          "color": "#444444"
+        },
+        {
           "name": "Black",
           "slug": "black",
           "color": "#000000"
+        },
+        {
+          "name": "Blue 50",
+          "slug": "blue-50",
+          "color": "#00ABB3"
         }
       ]
     },
@@ -159,7 +139,7 @@
     "elements": {
       "link": {
         "color": {
-          "text": "var(--wp--preset--color--green-40)"
+          "text": "var(--wp--preset--color--blue-50)"
         }
       },
       "h1": {
