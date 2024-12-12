@@ -19,7 +19,7 @@ function ristretto_enqueue_gutenberg() {
   wp_enqueue_style( 'ristretto-gutenberg-fonts' );
   // wp_enqueue_style( 'tiny-slider-css' );
   // Font Awesome for Editor
-  wp_register_script( 'fontawesome', '//kit.fontawesome.com/c20d1ab028.js', null, null, true );
+  wp_register_script( 'fontawesome', '//kit.fontawesome.com/ce9172c803.js', null, null, true );
   wp_register_script( 'editor-tiny-slider', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/min/tiny-slider.js', null, null, true );
   // wp_enqueue_script('editor-tiny-slider');
   // wp_enqueue_script('fontawesome');
