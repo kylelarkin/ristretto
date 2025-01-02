@@ -47,6 +47,19 @@ function get_blocks() {
 }
 
 /**
+ * Find post terms block, hide uncategorized if it's a term
+ */
+function filter_post_terms_block($block_content, $block) {
+   // Check if the block is the post terms block for the 'category' taxonomy
+   if ($block['blockName'] === 'core/post-terms' && isset($block['attrs']['term']) && $block['attrs']['term'] === 'category') {
+     // Remove 'Uncategorized' from the output
+     $block_content = preg_replace('/<a[^>]*>Uncategorized<\/a>,?\s?/', '', $block_content);
+   }
+   return $block_content;
+ }
+ add_filter('render_block', 'filter_post_terms_block', 10, 2);
+
+/**
  * Block categories
  *
  * @since 1.0.0
