@@ -1,2 +1,7 @@
 @use 'framework' as *;
 
+//prevents root blocks from touching edges of screen
+.is-root-container > *:not(.wp-block-group):not(.wp-block-cover):not(.alignfull):not(.is-reusable) {
+  padding-left: var(--wp--style--root--padding-right);
+  padding-right: var(--wp--style--root--padding-left);
+}
