@@ -426,10 +426,19 @@ header.body--header .searchform {
     padding-right: 2rem;
   }
 }
+header.body--header nav.nav--primary ul.menu {
+  max-height: 0;
+  overflow: hidden;
+  transform-origin: top;
+  transition: all 0.66s ease-in-out;
+}
 @media (min-width: 768px) {
   header.body--header nav.nav--primary ul.menu {
     display: flex;
   }
+}
+header.body--header nav.nav--primary ul.menu.open-sub-menu {
+  max-height: 500px;
 }
 header.body--header nav.nav--primary ul.menu li {
   font-family: "roc-grotesk-condensed", Helvetica, Arial, sans-serif;

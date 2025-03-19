@@ -34,9 +34,16 @@ header.body--header {
 
 	nav.nav--primary {
 		ul.menu {
+      max-height: 0;
+      overflow: hidden;
+      transform-origin: top;
+      transition: all .66s ease-in-out;
 			@include grid-media($nav) {
 				display: flex;
 			}
+      &.open-sub-menu {
+        max-height: 500px;
+      }
 			// Styles for ALL <li>'s and <a>'s
 			li {
 				font-family: $heading-font;

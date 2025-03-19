@@ -6,14 +6,28 @@ window.FontAwesomeConfig = {
 jQuery(document).ready(function ($) {
   // AOS
   AOS.init();
-  objectFitImages(); // Mobile Menu Toggle
-
+  
+  // Mobile Menu Toggle
   $('.menu-toggle').on('click', function (e) {
     $(this).toggleClass('active');
     $('.menu-wrapper').toggleClass('open');
     return $('.body--wrapper').toggleClass('nav-open');
-  }); // Header Search Toggle
-
+  }); 
+  
+  //sub menu toggles
+  $('#menu-primary-header-menu > .menu-item-has-children').on('click', function (e) {
+    var $submenu = $(this).find('.sub-menu');
+    // If the clicked sub-menu already has 'open-sub-menu', remove it
+    if ($submenu.hasClass('open-sub-menu')) {
+      $submenu.removeClass('open-sub-menu');
+    } else {
+      // Otherwise, add 'open-sub-menu' to the clicked one and remove it from its siblings
+      $submenu.addClass('open-sub-menu');
+      $(this).siblings().find('.sub-menu').removeClass('open-sub-menu');
+    }
+  });
+  
+  // Header Search Toggle
   $('.nav-search-btn').click(function () {
     $('.header-search-wrapper').addClass('search-open');
     return $('.header-search-input').focus();
