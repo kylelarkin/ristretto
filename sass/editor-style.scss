@@ -1,4 +1,5 @@
 @use 'framework' as *;
+@use 'wp_blocks' as *;
 
 //prevents root blocks from touching edges of screen
 .is-root-container > *:not(.wp-block-group):not(.wp-block-cover):not(.alignfull):not(.is-reusable) {

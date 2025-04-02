@@ -77,6 +77,16 @@ nav ul {
   padding-left: 0;
 }
 
+@media (max-width: 767px) {
+  .wp-block-columns.is-layout-flex {
+    display: grid !important;
+  }
+}
+
+.wp-block-embed {
+  clear: both;
+}
+
 .is-root-container > *:not(.wp-block-group):not(.wp-block-cover):not(.alignfull):not(.is-reusable) {
   padding-left: var(--wp--style--root--padding-right);
   padding-right: var(--wp--style--root--padding-left);

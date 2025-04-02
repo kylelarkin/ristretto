@@ -10,8 +10,7 @@ jQuery(document).ready(function ($) {
   // Mobile Menu Toggle
   $('.menu-toggle').on('click', function (e) {
     $(this).toggleClass('active');
-    $('.menu-wrapper').toggleClass('open');
-    return $('.body--wrapper').toggleClass('nav-open');
+    $('#menu-primary-header-menu').toggleClass('nav-open');
   }); 
   
   //sub menu toggles

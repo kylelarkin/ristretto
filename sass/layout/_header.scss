@@ -9,6 +9,14 @@ header.body--header {
 
 	nav.nav--secondary {
 		ul.menu {
+      @include grid-media($pre-nav-only) {
+        max-height: 0;
+        overflow:hidden;
+        transition: all .25s ease-in-out;
+        &.nav-open {
+          max-height: 1000px;
+        }
+      }
 			@include grid-media($nav) {
 				display: flex;
 			}

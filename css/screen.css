@@ -362,6 +362,12 @@ form.searchform #search-close {
   clear: both;
 }
 
+@media (max-width: 767px) {
+  .wp-block-columns.is-layout-flex {
+    display: grid !important;
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -415,6 +421,16 @@ header.body--header::after {
 }
 header.body--header .searchform {
   display: none;
+}
+@media (max-width: 767px) {
+  header.body--header nav.nav--secondary ul.menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+  }
+  header.body--header nav.nav--secondary ul.menu.nav-open {
+    max-height: 1000px;
+  }
 }
 @media (min-width: 768px) {
   header.body--header nav.nav--secondary ul.menu {

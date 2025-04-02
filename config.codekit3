@@ -265,6 +265,17 @@
       "oAP" : "\/index.php",
       "oF" : 0
     },
+    "\/js\/app-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/js\/app-min-min.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
     "\/js\/app.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -914,6 +925,19 @@
       "oAP" : "\/sass\/views\/.gitkeep",
       "oF" : 0
     },
+    "\/sass\/wp_blocks\/_columns.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/css\/_columns.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
     "\/sass\/wp_blocks\/_embed.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -923,6 +947,19 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/sass\/css\/_embed.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/sass\/wp_blocks\/_index.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/css\/_index.css",
       "oF" : 0,
       "oS" : 1,
       "pg" : 0

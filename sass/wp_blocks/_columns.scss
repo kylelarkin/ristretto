@@ -1,0 +1,8 @@
+@use '../framework' as *;
+
+.wp-block-columns.is-layout-flex {
+  //prevent columns from their standard 
+  @include grid-media($pre-medium-only) {
+    display: grid !important;
+  }
+}
