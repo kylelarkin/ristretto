@@ -24,5 +24,5 @@ if( !empty($block['className']) ) {
 ?>
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-  <p class="copyright">&copy;<?php echo date("Y"); ?> <em>The Carryall</em> & contributors</p>
+  <p class="copyright">&copy;<?php echo date("Y"); ?> <?= get_bloginfo('title'); ?></p>
 </div>
