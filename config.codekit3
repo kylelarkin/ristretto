@@ -33,7 +33,15 @@
       "oAP" : "\/404.php",
       "oF" : 0
     },
-    "\/blocks\/css\/social-sharing.css" : {
+    "\/blocks\/copyright\/block.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/blocks\/copyright\/block-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/blocks\/copyright\/copyright.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -41,8 +49,29 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/blocks\/css\/social-sharing-min.css",
+      "oAP" : "\/blocks\/copyright\/copyright-min.css",
       "oF" : 0,
+      "pg" : 0
+    },
+    "\/blocks\/copyright\/copyright.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/copyright\/copyright.php",
+      "oF" : 0
+    },
+    "\/blocks\/copyright\/copyright.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/css\/copyright.css",
+      "oF" : 0,
+      "oS" : 1,
       "pg" : 0
     },
     "\/blocks\/social-sharing\/block.json" : {

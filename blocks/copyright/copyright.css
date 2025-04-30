@@ -49,13 +49,13 @@ body, select, input, textarea {
 }
 
 ::-moz-selection {
-  background: #00ABB3;
+  background: #66764B;
   color: #000;
   text-shadow: none;
 }
 
 ::selection {
-  background: #00ABB3;
+  background: #66764B;
   color: #000;
   text-shadow: none;
 }
@@ -65,24 +65,16 @@ a:link {
 }
 
 body {
-  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
   font-display: swap;
 }
 
-.editor-styles-wrapper .block-social-sharing, .block-social-sharing {
-  display: flex;
-  gap: 1rem;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
-.editor-styles-wrapper .block-social-sharing a, .block-social-sharing a {
-  text-decoration: none;
-  position: relative;
-  transition: all 0.25s ease-in-out;
-}
-.editor-styles-wrapper .block-social-sharing a:hover, .block-social-sharing a:hover {
-  margin-top: -2px;
-}
-.editor-styles-wrapper .block-social-sharing a path, .block-social-sharing a path {
-  color: #fff;
+
+.editor-styles-wrapper .block-copyright p, .block-copyright p {
+  font-size: 0.875rem;
+  letter-spacing: 1px;
 }

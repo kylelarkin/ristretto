@@ -1,0 +1,17 @@
+{
+	"align": "full",
+	"category": "formatting",
+	"icon": "privacy",
+	"keywords": ["legal", "copyright"],
+	"name": "flat-white/copyright",
+	"style": [ "file:./copyright.css" ],
+	"title": "Copyright",
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "copyright.php"
+	},
+	"supports": {
+		"anchor": true
+	},
+  "version": 1.01
+}
