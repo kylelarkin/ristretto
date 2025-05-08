@@ -993,6 +993,19 @@
       "oS" : 1,
       "pg" : 0
     },
+    "\/sass\/wp_blocks\/_media-text.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/css\/_media-text.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
     "\/screenshot.png" : {
       "ft" : 32768,
       "iS" : 25973,

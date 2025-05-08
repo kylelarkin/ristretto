@@ -1,0 +1,31 @@
+@use '../framework' as *;
+
+.wp-block-media-text {
+  &.alignfull {
+    gap: 3rem;
+    .wp-block-media-text__content {
+      padding: 0 1.5rem;
+      @include grid-media($col) {
+        padding-top: 3rem;
+      }
+      @include grid-media($xl) {
+        padding: 0;
+      }
+    }
+    &:not(.has-media-on-the-right) {
+      .wp-block-media-text__content {
+        @include grid-media($xl) {
+          margin-right: calc(50vw - 720px);
+        }
+      }
+    }
+    &.has-media-on-the-right {
+      .wp-block-media-text__content {
+        @include grid-media($xl) {
+          margin-left: calc(50vw - 720px);
+        }
+      }
+    }
+  }
+  
+}

@@ -368,6 +368,33 @@ form.searchform #search-close {
   }
 }
 
+.wp-block-media-text.alignfull {
+  gap: 3rem;
+}
+.wp-block-media-text.alignfull .wp-block-media-text__content {
+  padding: 0 1.5rem;
+}
+@media (min-width: 600px) {
+  .wp-block-media-text.alignfull .wp-block-media-text__content {
+    padding-top: 3rem;
+  }
+}
+@media (min-width: 1344px) {
+  .wp-block-media-text.alignfull .wp-block-media-text__content {
+    padding: 0;
+  }
+}
+@media (min-width: 1344px) {
+  .wp-block-media-text.alignfull:not(.has-media-on-the-right) .wp-block-media-text__content {
+    margin-right: calc(50vw - 720px);
+  }
+}
+@media (min-width: 1344px) {
+  .wp-block-media-text.alignfull.has-media-on-the-right .wp-block-media-text__content {
+    margin-left: calc(50vw - 720px);
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
