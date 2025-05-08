@@ -9,7 +9,7 @@
         padding-top: 3rem;
       }
       @include grid-media($xl) {
-        padding: 0;
+        padding: 3rem 0 0;
       }
     }
     &:not(.has-media-on-the-right) {
