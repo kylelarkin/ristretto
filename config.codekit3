@@ -69,8 +69,8 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/blocks\/css\/copyright.css",
-      "oF" : 0,
+      "oAP" : "\/blocks\/copyright\/copyright.css",
+      "oF" : 2,
       "oS" : 1,
       "pg" : 0
     },
@@ -110,8 +110,8 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/blocks\/css\/social-sharing.css",
-      "oF" : 0,
+      "oAP" : "\/blocks\/social-sharing\/social-sharing.css",
+      "oF" : 2,
       "oS" : 1,
       "pg" : 0
     },

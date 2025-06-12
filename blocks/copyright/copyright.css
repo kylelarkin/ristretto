@@ -49,13 +49,13 @@ body, select, input, textarea {
 }
 
 ::-moz-selection {
-  background: #66764B;
+  background: #00ABB3;
   color: #000;
   text-shadow: none;
 }
 
 ::selection {
-  background: #66764B;
+  background: #00ABB3;
   color: #000;
   text-shadow: none;
 }
@@ -64,7 +64,10 @@ a:link {
   -webkit-tap-highlight-color: transparent;
 }
 
-body {
+body:not(.wp-admin) {
+  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
   font-display: swap;
 }
 

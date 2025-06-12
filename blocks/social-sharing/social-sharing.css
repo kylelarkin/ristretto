@@ -1,3 +1,44 @@
+/*
+  Modern CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
 /* SCSS Framework boilerplate from Ristretto: https://github.com/kylelarkin/ristretto */
 * {
   box-sizing: border-box;
@@ -8,13 +49,13 @@ body, select, input, textarea {
 }
 
 ::-moz-selection {
-  background: #ccc;
+  background: #00ABB3;
   color: #000;
   text-shadow: none;
 }
 
 ::selection {
-  background: #ccc;
+  background: #00ABB3;
   color: #000;
   text-shadow: none;
 }
@@ -23,129 +64,31 @@ a:link {
   -webkit-tap-highlight-color: transparent;
 }
 
-ins {
-  background-color: #ccc;
-  color: #000;
-  text-decoration: none;
+body:not(.wp-admin) {
+  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  font-display: swap;
 }
 
-mark {
-  background-color: #ccc;
-  color: #000;
-  font-style: normal;
-  font-weight: bold;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
-/***
-*
-* Headings
-*
-***/
-/***
-*
-* Paragraphs
-*
-***/
-/***
-*
-* Blocks and Components
-*
-***/
-/***
-*
-* WooCommerce Specific
-*
-***/
-/***
-*
-* Base Mixins
-*
-***/
-/***
-*
-* Headings
-*
-***/
-/***
-*
-* Paragraphs
-*
-***/
-/***
-*
-* Blocks and Components
-*
-***/
-/***
-*
-* WooCommerce Specific
-*
-***/
-/***
-*
-* Base Mixins
-*
-***/
 .editor-styles-wrapper .block-social-sharing, .block-social-sharing {
-  margin: 0 !important;
-}
-.editor-styles-wrapper .block-social-sharing h6, .block-social-sharing h6 {
-  font-size: 15px;
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.17;
-  letter-spacing: 0.48px;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-@media (min-width: 393px) {
-  .editor-styles-wrapper .block-social-sharing h6, .block-social-sharing h6 {
-    font-size: calc(15px + 1 * (100vw - 393px) / 1047);
-  }
-}
-@media (min-width: 1440px) {
-  .editor-styles-wrapper .block-social-sharing h6, .block-social-sharing h6 {
-    font-size: 16px;
-  }
-}
-.editor-styles-wrapper .block-social-sharing .social-sharing, .block-social-sharing .social-sharing {
   display: flex;
-  gap: 2rem;
-  margin: 0.7rem 3rem 0 0rem;
-}
-@media (min-width: 720px) {
-  .editor-styles-wrapper .block-social-sharing .social-sharing, .block-social-sharing .social-sharing {
-    margin: 0.7rem 3rem 0 -0.77rem;
-  }
+  gap: 1rem;
 }
 .editor-styles-wrapper .block-social-sharing a, .block-social-sharing a {
-  background-image: none;
-  display: inline-block;
-  border-radius: 12px;
-  color: #F7630E;
-  display: grid;
-  font-size: 1.3125rem;
-  height: 31.5px;
   text-decoration: none;
-  transition: all 0.25s ease;
-  width: 31.5px;
-  align-items: center;
+  position: relative;
+  transition: all 0.25s ease-in-out;
 }
-.editor-styles-wrapper .block-social-sharing a:after, .block-social-sharing a:after {
-  display: none;
+.editor-styles-wrapper .block-social-sharing a:hover, .block-social-sharing a:hover {
+  margin-top: -2px;
 }
-@media (min-width: 720px) {
-  .editor-styles-wrapper .block-social-sharing a, .block-social-sharing a {
-    height: 44px;
-    justify-content: center;
-    width: 44px;
-  }
-}
-@media (min-width: 720px) {
-  .editor-styles-wrapper .block-social-sharing a:hover, .editor-styles-wrapper .block-social-sharing a:focus, .block-social-sharing a:hover, .block-social-sharing a:focus {
-    background-color: rgba(1, 67, 115, 0.25);
-    color: #014373;
-    outline: 0;
-    color: #00508B;
-  }
+.editor-styles-wrapper .block-social-sharing a path, .block-social-sharing a path {
+  color: #fff;
 }

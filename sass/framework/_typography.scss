@@ -5,7 +5,7 @@
 // -------------------------------------------------
 // Ristretto Typography + Standard Element Defaults
 // ---------------------------------------------- */
-body {
+body:not(.wp-admin) {
   font-family: $body-font;
   font-size: 100%;
   line-height: 1.5;
