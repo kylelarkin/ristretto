@@ -7,7 +7,7 @@
       "uuidString" : "9E350C24-7153-46D2-86B7-2393A399A36E"
     }
   ],
-  "creatorBuild" : "34689",
+  "creatorBuild" : "34592",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -65,6 +65,7 @@
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -72,7 +73,8 @@
       "oAP" : "\/blocks\/copyright\/copyright.css",
       "oF" : 2,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/blocks\/social-sharing\/block.json" : {
       "ft" : 524288,
@@ -106,6 +108,7 @@
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -113,7 +116,8 @@
       "oAP" : "\/blocks\/social-sharing\/social-sharing.css",
       "oF" : 2,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/comments.php" : {
       "cB" : 0,
@@ -446,6 +450,7 @@
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -453,7 +458,8 @@
       "oAP" : "\/js\/css\/slick-theme.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/js\/slick\/slick.css" : {
       "aP" : 1,
@@ -511,6 +517,7 @@
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -518,7 +525,8 @@
       "oAP" : "\/js\/css\/slick.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/lib\/admin.php" : {
       "cB" : 0,
@@ -677,6 +685,7 @@
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -684,12 +693,14 @@
       "oAP" : "\/sass\/css\/_menu-button.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/components\/_post-nav.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -697,12 +708,14 @@
       "oAP" : "\/sass\/css\/_post-nav.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/components\/_search-form.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -710,12 +723,14 @@
       "oAP" : "\/sass\/css\/_search-form.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/components\/_social-sharing.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -723,12 +738,14 @@
       "oAP" : "\/sass\/css\/_social-sharing.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/editor-style.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -736,12 +753,14 @@
       "oAP" : "\/css\/editor-style.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/framework\/_grid.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -749,12 +768,14 @@
       "oAP" : "\/sass\/css\/_grid.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/framework\/_index.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -762,12 +783,14 @@
       "oAP" : "\/sass\/css\/_index.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/framework\/_reset.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -775,12 +798,14 @@
       "oAP" : "\/sass\/css\/_reset.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/framework\/_ristretto.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -788,12 +813,14 @@
       "oAP" : "\/sass\/css\/_ristretto.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/framework\/_typography.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -801,12 +828,14 @@
       "oAP" : "\/sass\/css\/_typography.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/framework\/_variables.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -814,12 +843,14 @@
       "oAP" : "\/sass\/css\/_variables.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/layout\/_default.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -827,12 +858,14 @@
       "oAP" : "\/sass\/css\/_default.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/layout\/_footer.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -840,12 +873,14 @@
       "oAP" : "\/sass\/css\/_footer.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/layout\/_header.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -853,12 +888,14 @@
       "oAP" : "\/sass\/css\/_header.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/login\/login.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -866,12 +903,14 @@
       "oAP" : "\/sass\/css\/login.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/print.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -879,12 +918,14 @@
       "oAP" : "\/css\/print.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/screen.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -892,12 +933,14 @@
       "oAP" : "\/css\/screen.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/vendor_overrides\/_facetwp.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -905,12 +948,14 @@
       "oAP" : "\/sass\/css\/_facetwp.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/views\/_error-404.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -918,12 +963,14 @@
       "oAP" : "\/sass\/css\/_error-404.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/views\/_front-page.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -931,12 +978,14 @@
       "oAP" : "\/sass\/css\/_front-page.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/views\/_search.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -944,7 +993,8 @@
       "oAP" : "\/sass\/css\/_search.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/views\/.gitkeep" : {
       "cB" : 0,
@@ -958,6 +1008,7 @@
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -965,12 +1016,14 @@
       "oAP" : "\/sass\/css\/_columns.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/wp_blocks\/_embed.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -978,12 +1031,14 @@
       "oAP" : "\/sass\/css\/_embed.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/wp_blocks\/_index.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -991,12 +1046,14 @@
       "oAP" : "\/sass\/css\/_index.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/sass\/wp_blocks\/_media-text.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
+      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
@@ -1004,11 +1061,12 @@
       "oAP" : "\/sass\/css\/_media-text.css",
       "oF" : 0,
       "oS" : 1,
-      "pg" : 0
+      "pg" : 0,
+      "sct" : 0
     },
     "\/screenshot.png" : {
       "ft" : 32768,
-      "iS" : 25973,
+      "iS" : 11264,
       "oA" : 0,
       "oAP" : "\/screenshot.png",
       "oF" : 0,
@@ -1373,6 +1431,8 @@
     "buildFolderActive" : 0,
     "buildFolderName" : "build",
     "cleanBuild" : 1,
+    "cssoForceMediaMerge" : 0,
+    "cssoRestructure" : 1,
     "environmentVariableEntries" : [
       "NODE_ENV:::production"
     ],
@@ -2513,7 +2573,9 @@
       "autoOutputPathReplace1" : "sass",
       "autoOutputPathReplace2" : "css",
       "autoOutputPathStyle" : 2,
+      "compilerType" : 0,
       "cssoStyle" : 0,
+      "decimalPrecision" : 10,
       "emitCharset" : 1,
       "outputStyle" : 1,
       "purgeCSSStyle" : 0,
@@ -2630,7 +2692,6 @@
     ],
     "rollupTreeshakingEnabled" : 1,
     "rollupTreeshakingModuleSideEffects" : 1,
-    "sassWarningStyle" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,

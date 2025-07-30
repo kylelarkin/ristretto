@@ -124,14 +124,6 @@
     }
   },
   "styles": {
-    "spacing": {
-      "padding": {
-        "top": "1.5rem",
-        "right": "1.5rem",
-        "bottom": "1.5rem",
-        "left": "1.5rem"
-      }
-    },
     "color": {
       "text": "var(--wp--preset--color--black)",
       "background": "var(--wp--preset--color--white)"
@@ -199,18 +191,15 @@
       "blockGap": "24px",
       "padding": {
         "top": "0",
-        "right": "var(--wp--preset--spacing--24)",
+        "right": "1.5rem",
         "bottom": 0,
-        "left": "var(--wp--preset--spacing--24)"
+        "left": "1.5rem"
       }
     },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--sans-serif)",
       "fontSize": "18px",
-      "lineHeight": "1.6",
-      "heading": {
-        "color": "#ffffff"
-      }
+      "lineHeight": "1.6"
     }
   }
 }

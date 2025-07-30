@@ -1,5 +1,9 @@
 @use '../framework' as *;
 
+@view-transition {
+  navigation: auto;
+}
+
 body{
   display: flex;
   flex-direction: column;
@@ -36,4 +40,10 @@ body{
 		margin: auto;
 		color: #fff;
 	}
+}
+
+.body--wrapper {  
+  .alignfull + .alignfull {
+    margin-block-start: 0;
+  }
 }
