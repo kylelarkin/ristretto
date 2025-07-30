@@ -27,3 +27,8 @@ define('TRIBE_DISABLE_TOOLBAR_ITEMS', true);
      return 'low';
  }
  add_filter( 'wpseo_metabox_prio', 'move_yoast_to_bottom');
+ 
+/** 
+ * remove Imagify from toolbar 
+ */
+add_filter( 'pre_get_imagify_option_admin_bar_menu', '__return_false' );
