@@ -66,7 +66,6 @@ a:link {
 
 body:not(.wp-admin) {
   font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  font-size: 100%;
   line-height: 1.5;
   font-display: swap;
 }
