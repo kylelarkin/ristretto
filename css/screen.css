@@ -394,6 +394,9 @@ form.searchform #search-close {
   }
 }
 
+@view-transition {
+  navigation: auto;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -429,6 +432,10 @@ body {
   position: static;
   margin: auto;
   color: #fff;
+}
+
+.body--wrapper .alignfull + .alignfull {
+  margin-block-start: 0;
 }
 
 footer.body--footer {
