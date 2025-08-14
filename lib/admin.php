@@ -11,7 +11,7 @@ function ristretto_login_logo() {
 
   wp_register_style( 'login-style', get_bloginfo( 'stylesheet_directory' ) . '/css/login.css', array(), null, 'all' );
   wp_enqueue_style('login-style');
-  
+
 }
 add_action( 'login_enqueue_scripts', 'ristretto_login_logo' );
 
@@ -29,7 +29,7 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
  */
 function ristretto_hide_admin_bar() {
     if (!current_user_can('edit_posts')) {
-        show_admin_bar(false);
+     how_admin_bar(false);
   }
 }
 add_action('set_current_user', 'ristretto_hide_admin_bar');
@@ -41,3 +41,10 @@ function ristretto_login_logo_url() {
     return home_url();
 }
 add_filter( 'login_headerurl', 'ristretto_login_logo_url' );
+
+/**
+ * Show Admin Bar only for Admins and Editors
+ */
+if (!current_user_can('edit_posts')) {
+   add_filter('show_admin_bar', '__return_false');
+}
