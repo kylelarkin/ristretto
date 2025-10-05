@@ -14,7 +14,7 @@
 	<?php wp_head(); ?>
 
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
-	
+
   <?php include( locate_template('components/_favicon.php') ); ?>
 
 </head>
@@ -22,15 +22,15 @@
 <body <?php body_class(); ?>>
 	<a href="#main-content" class="visually-hidden" title="skip to main content">Skip to main content</a>
 
-	<header class="is-layout-constrained has-global-padding" role="banner">		
+	<header class="is-layout-constrained has-global-padding body--header" role="banner">
 		<h6 class="logo">
 			<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>">
 				<?php $logo = get_theme_mod('ristretto_header_logo');
-				if($logo): 
+				if($logo):
 					$header_logo = wp_get_attachment_image( $logo, 'large' );
 					echo $header_logo;
 				?>
-					
+
 				<?php else:
 					bloginfo('title'); ?>
 				<?php endif; ?>
@@ -46,5 +46,5 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary-header-menu', 'container' => false) ); ?>
 		</nav>
 	</header>
-  
+
 	<section class="body--wrapper is-layout-constrained has-global-padding" role="main">
