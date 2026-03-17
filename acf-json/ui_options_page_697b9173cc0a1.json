@@ -1,0 +1,26 @@
+{
+    "key": "ui_options_page_697b9173cc0a1",
+    "title": "Site Logo",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Site Logo",
+    "menu_slug": "site-logo",
+    "parent_slug": "none",
+    "advanced_configuration": 0,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": 0,
+    "description": "",
+    "menu_icon": {
+        "type": "dashicons",
+        "value": "dashicons-admin-generic"
+    },
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1769705872
+}

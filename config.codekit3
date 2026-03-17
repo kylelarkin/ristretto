@@ -33,6 +33,22 @@
       "oAP" : "\/404.php",
       "oF" : 0
     },
+    "\/acf-json\/group_697b9120b336a.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_697b9120b336a-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/acf-json\/ui_options_page_697b9173cc0a1.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/ui_options_page_697b9173cc0a1-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
     "\/blocks\/copyright\/block.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -2073,7 +2089,7 @@
       }
     },
     "esLintSourceType" : 0,
-    "externalServerAddress" : "https:\/\/ristretto.local",
+    "externalServerAddress" : "https:\/\/ristretto.local\/",
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",

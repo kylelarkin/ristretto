@@ -278,67 +278,76 @@ body.login div#login h1 a {
   left: -2px;
 }
 
+@media (max-width: 767px) {
+  .nav-open + form.searchform {
+    opacity: 1;
+  }
+}
+
 form.searchform {
   transition: all 250ms ease-in-out;
-  padding: 0 1.5rem;
+  opacity: 0;
   position: relative;
+  transition: all 0.25s ease-in-out;
 }
 @media (min-width: 768px) {
   form.searchform {
-    border: 1px solid transparent;
-    overflow: hidden;
-    padding: 0;
     position: absolute;
-    top: 100%;
-    max-height: 0;
-  }
-  form.searchform.search-open {
-    max-height: 50px;
-    top: calc(100% + 1rem);
   }
 }
 form.searchform svg {
-  display: none;
-}
-form.searchform:before {
-  content: "\f002";
-  font: var(--fa-font-solid);
   color: #fff;
   position: absolute;
-  left: 2.375rem;
-  top: 0.625rem;
-  font-size: 0.875rem;
-  pointer-events: none;
+  left: 0.66rem;
+  top: 0.75rem;
 }
-@media (min-width: 768px) {
-  form.searchform:before {
-    left: 0.75rem;
-    top: 0.59375rem;
-  }
+form.searchform:before {
+  font: var(--fa-font-light);
+  content: "\f002";
+  display: none;
 }
 form.searchform input.search-input {
   transition: all 250ms ease-in-out;
   background: transparent;
-  border-radius: 1.5rem;
-  border: 1px solid #fff;
+  border: 1px solid #444;
   color: #fff;
   font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  letter-spacing: 0.7px;
-  padding: 0.25rem 2.25rem;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 2.25rem;
+  width: 100%;
 }
-@media (min-width: 768px) {
-  form.searchform input.search-input {
-    padding: 0.25rem 0 0.25rem 2rem;
-    background-color: rgba(89, 154, 255, 0.3);
-    width: 330px;
-  }
+form.searchform input.search-input::-moz-placeholder {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+form.searchform input.search-input::placeholder {
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 form.searchform input.search-input:focus {
-  border: 1px solid #00ABB3;
+  border: 1px solid #000;
   outline: 0;
+}
+@media (min-width: 768px) {
+  form.searchform:not(#searchform404):not(#searchpageform) input.search-input {
+    background-color: #000;
+    width: 525px;
+  }
 }
 form.searchform #search-close {
   display: none;
+}
+@media (min-width: 768px) {
+  form.searchform #search-close {
+    background-color: blue;
+    border-left: 1px solid #444;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    width: 40px;
+  }
 }
 
 .social-sharing {
@@ -435,16 +444,17 @@ body {
 }
 
 .body--wrapper .alignfull + .alignfull {
-  margin-block-start: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
 }
 
-footer.body--footer {
-  margin-top: auto;
-}
 footer.body--footer::after {
   clear: both;
   content: "";
   display: block;
+}
+footer.body--footer {
+  margin-top: auto;
 }
 
 header.body--header::after {
@@ -503,7 +513,7 @@ header.body--header nav.nav--primary ul.menu li {
   }
 }
 body.error404 {
-  background-color: rgba(38, 76, 136, 0.9);
+  background-color: rgba(0, 0, 0, 0.1);
   position: relative;
 }
 body.error404:before {
@@ -518,70 +528,50 @@ body.error404:before {
   mix-blend-mode: multiply;
   background-repeat: no-repeat;
 }
-body.error404 main {
-  z-index: 10;
+body.error404 .searchbar .searchform {
+  opacity: 1;
+  margin-top: 3.3125rem;
   position: relative;
-  margin-bottom: 8rem;
-  margin-top: 16rem;
+  max-width: 700px;
+  display: flex;
 }
-body.error404 main h1 {
-  color: #fff;
-  margin-bottom: 3rem;
+body.error404 .searchbar .searchform svg {
+  position: absolute;
+  color: #000;
 }
-body.error404 main p {
-  color: #fff;
+body.error404 .searchbar .searchform input.search-input {
+  padding-left: 2.125rem;
+  color: #000;
 }
-body.error404 main .search-form {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-content: center;
-  align-items: center;
-  max-width: 58rem;
+body.error404 .searchbar .searchform input.search-input:focus {
+  border-width: 2px;
+  border-color: #000;
 }
-body.error404 main .search-form label {
-  position: relative;
-  z-index: 0;
-}
-body.error404 main .search-form input.search-bar-input {
-  font-size: 1rem;
-  color: #818181;
-  letter-spacing: 0.16px;
-  border: 2px solid transparent;
-  padding-left: 1.5rem;
-  height: 44px !important;
-  width: 100%;
-}
-body.error404 main .search-form input.search-bar-input::-moz-placeholder {
-  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  text-transform: capitalize;
+body.error404 .searchbar .searchform input.search-input::-moz-placeholder {
+  color: #000;
+  text-transform: none;
+  font-size: 16px;
   font-style: italic;
-  font-weight: 300;
-  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
 }
-body.error404 main .search-form input.search-bar-input::placeholder {
-  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  text-transform: capitalize;
+body.error404 .searchbar .searchform input.search-input::placeholder {
+  color: #000;
+  text-transform: none;
+  font-size: 16px;
   font-style: italic;
-  font-weight: 300;
-  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
 }
-body.error404 main .search-form input.search-bar-input:focus {
-  outline: none;
-}
-body.error404 main .search-form input.search-submit {
-  font-family: "roc-grotesk-condensed", Helvetica, Arial, sans-serif;
-  height: 100%;
+body.error404 .searchbar .searchform input[type=submit] {
   border: 0;
-  font-size: 0.8125rem;
-  font-weight: 900;
+  background-color: #000;
+  color: #fff;
   text-transform: uppercase;
-  padding: 0 1.6rem;
-  cursor: pointer;
-  letter-spacing: 1px;
-  transition: all 250ms ease-in-out;
-}
-body.error404 main .search-form input.search-submit:hover {
-  filter: brightness(110%);
+  font-size: 0.875rem;
+  letter-spacing: 3px;
+  padding: 0 2rem;
+  line-height: 1;
 }
 
 body.search .search-background {
@@ -700,10 +690,6 @@ body.search .search-result a {
 }
 body.search .search-result h2 {
   font-size: 22px;
-  margin-bottom: 1rem;
-  margin: 0;
-  text-transform: uppercase;
-  transition: all 0.25s ease-out;
 }
 @media (min-width: 320px) {
   body.search .search-result h2 {
@@ -714,6 +700,12 @@ body.search .search-result h2 {
   body.search .search-result h2 {
     font-size: 26px;
   }
+}
+body.search .search-result h2 {
+  margin-bottom: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  transition: all 0.25s ease-out;
 }
 body.search .search-result .excerpt {
   font-size: 1.25rem;
