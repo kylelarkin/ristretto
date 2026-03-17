@@ -588,7 +588,7 @@ body.search .search-background {
   z-index: -1;
 }
 body.search .search-background::before {
-  background-color: #202F65 !important;
+  background-color: #f2f2f2 !important;
   mix-blend-mode: multiply;
   opacity: 0.85 !important;
   content: " ";
@@ -611,18 +611,7 @@ body.search .search-background picture img {
 body.search .search-intro {
   display: grid;
   gap: 1rem;
-  margin: 16rem 0 5rem;
-}
-body.search .search-intro h1 {
-  color: #fff;
-}
-body.search .search-intro p {
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "roc-grotesk-condensed", Helvetica, Arial, sans-serif;
-  font-weight: 900;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
+  margin: 5rem 0;
 }
 body.search .search-intro .search-page-search-form {
   display: grid;
@@ -722,7 +711,6 @@ body.search nav.single-post-nav {
   margin: 2rem 0;
 }
 body.search nav.single-post-nav a {
-  color: #fff;
   font-family: "roc-grotesk-condensed", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 900;

@@ -10,7 +10,7 @@ body.search {
     width: 100%;  
     z-index: -1;
     &::before {
-      background-color: #202F65 !important;
+      background-color: #f2f2f2 !important;
       mix-blend-mode: multiply;
       opacity: .85 !important;
       content: ' ';
@@ -34,18 +34,7 @@ body.search {
   .search-intro {
     display: grid;
     gap: 1rem;
-    margin: 16rem 0 5rem;
-    h1 {
-      color: #fff;
-    }
-    p {
-      color: #fff;
-      text-transform: uppercase;
-      font-family: $heading-font;
-      font-weight: 900;
-      font-size: 1rem;
-      letter-spacing: 0.5px;
-    }
+    margin: 5rem 0;
     
     .search-page-search-form {
       display: grid;
@@ -129,7 +118,7 @@ body.search {
     max-width: 58rem;
     margin: 2rem 0;
     a {
-      color: #fff;
+      //color: #fff;
       font-family: $heading-font;
       text-transform: uppercase;
       font-weight: 900;
