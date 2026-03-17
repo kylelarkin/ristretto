@@ -1,13 +1,13 @@
 {
-    "key": "group_697b9120b336a",
-    "title": "Site Logo: Header Logo",
+    "key": "group_69b9d83b3270e",
+    "title": "Contact Information: Email",
     "fields": [
         {
-            "key": "field_697b9120f9eab",
-            "label": "Header Logo",
-            "name": "header_logo",
+            "key": "field_69b9d83b3371f",
+            "label": "Email",
+            "name": "email",
             "aria-label": "",
-            "type": "image",
+            "type": "email",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,17 +16,11 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
+            "default_value": "",
             "allow_in_bindings": 0,
-            "preview_size": "medium"
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -34,7 +28,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "site-logo"
+                "value": "contact-information"
             }
         ]
     ],
@@ -48,5 +42,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1773786956
+    "modified": 1773787224
 }

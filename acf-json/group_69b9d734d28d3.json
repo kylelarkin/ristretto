@@ -1,11 +1,11 @@
 {
-    "key": "group_697b9120b336a",
-    "title": "Site Logo: Header Logo",
+    "key": "group_69b9d734d28d3",
+    "title": "Site Logo: Footer Logo",
     "fields": [
         {
-            "key": "field_697b9120f9eab",
-            "label": "Header Logo",
-            "name": "header_logo",
+            "key": "field_69b9d734d3cf2",
+            "label": "Footer Logo",
+            "name": "footer_logo",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -48,5 +48,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1773786956
+    "modified": 1773786945
 }

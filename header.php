@@ -25,10 +25,16 @@
 	<header class="is-layout-constrained has-global-padding body--header" role="banner">
 		<h6 class="logo">
 			<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>">
-				<?php $logo = get_theme_mod('ristretto_header_logo');
+				<?php 
+					$logo = get_field('header_logo', 'options');
+					$altlogo = get_field('footer_logo', 'options');
 				if($logo):
 					$header_logo = wp_get_attachment_image( $logo, 'large' );
 					echo $header_logo;
+					if($altlogo) {
+						$alt_logo = wp_get_attachment_image( $altlogo, 'large' );
+						echo $alt_logo;
+					}
 				?>
 
 				<?php else:
