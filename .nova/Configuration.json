@@ -1,4 +1,7 @@
 {
   "workspace.color" : 8,
-  "workspace.name" : "Ristretto"
+  "workspace.name" : "Ristretto",
+  "workspace.preview_append_paths" : false,
+  "workspace.preview_type" : "custom",
+  "workspace.preview_url" : "https:\/\/192.168.1.56:5757\/"
 }

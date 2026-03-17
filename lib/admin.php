@@ -27,12 +27,12 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 /**
  * Disable Admin Bar for Subscribers
  */
-function ristretto_hide_admin_bar() {
-    if (!current_user_can('edit_posts')) {
-     how_admin_bar(false);
-  }
-}
-add_action('set_current_user', 'ristretto_hide_admin_bar');
+// function ristretto_hide_admin_bar() {
+//     if (!current_user_can('edit_posts')) {
+//      how_admin_bar(false);
+//   }
+// }
+// add_action('set_current_user', 'ristretto_hide_admin_bar');
 
 /**
  * Change Login Logo to point to Home Page
