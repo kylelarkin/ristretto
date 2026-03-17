@@ -28,6 +28,9 @@ body.error404 {
       input.search-input {
         padding-left: 2.125rem;
         color: $black;
+        @include grid-media($nav) {
+          background-color: transparent !important;
+        }
         &:focus {
           border-width: 2px;
           border-color: $black;

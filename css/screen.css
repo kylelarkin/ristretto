@@ -543,6 +543,11 @@ body.error404 .searchbar .searchform input.search-input {
   padding-left: 2.125rem;
   color: #000;
 }
+@media (min-width: 768px) {
+  body.error404 .searchbar .searchform input.search-input {
+    background-color: transparent !important;
+  }
+}
 body.error404 .searchbar .searchform input.search-input:focus {
   border-width: 2px;
   border-color: #000;
