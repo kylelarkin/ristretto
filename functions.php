@@ -18,6 +18,7 @@ function ristretto_enqueue_init() {
   wp_register_script( 'fontawesome', '//kit.fontawesome.com/ce9172c803.js', null, null, true );
   wp_register_script( 'lity', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/lity/dist/lity.min.js', array('jquery'), null, true );
   wp_register_script( 'tiny-slider', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/min/tiny-slider.js', null, null, true );
+  wp_register_script( 'smoothScroll', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/jquery-smooth-scroll/jquery.smooth-scroll.min.js', null, null, true );
   wp_register_script( 'ristretto-app', get_bloginfo( 'stylesheet_directory' ) . '/js/dist/app-min.js', array('jquery'), $theme_version, true );
   
   // Enqueue Scripts
@@ -26,6 +27,7 @@ function ristretto_enqueue_init() {
   wp_enqueue_script('fontawesome');
   // wp_enqueue_script('lity');
   // wp_enqueue_script('tiny-slider');
+  wp_enqueue_script('smoothScroll');
   wp_enqueue_script('ristretto-app');
 
   // Register Styles

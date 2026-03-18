@@ -1,10 +1,81 @@
 @use '../framework' as *;
 
+@use '../framework' as *;
+
+// ==============================================
+// HEADER
+// ==============================================
+
 header.body--header {
 	@include clearfix;
+	//background: linear-gradient(180deg, #000 40.63%, rgba(25, 25, 25, 0) 100%);
+	// position: absolute;
+	z-index: 10000;
+	width: 100%;
+	transition: all 2s ease-in-out;
 
-	.searchform{
-		display: none;
+	@include grid-media($pre-nav-only) {
+		&:has(.nav-open) {
+			//background: linear-gradient(180deg, #000 10.63%, rgba(25, 25, 25, 1) 90%);
+		}
+	}
+
+	// ----------------------------------------
+	// Header grid wrapper
+	// ----------------------------------------
+
+	.header-flex {
+		@include grid-media($nav) {
+			display: grid;
+			padding: 3rem 0;
+			grid-template-columns: auto 1fr;
+			gap: 1.5rem 3rem;
+			align-items: center;
+			justify-content: space-between;
+			margin-left: auto !important;
+			margin-right: auto !important;
+			max-width: 1300px;
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: calc(100% - 80px);
+				border-bottom: 1px solid $white;
+				height: 2px;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+
+	// ----------------------------------------
+	// Logo + mobile menu toggle
+	// ----------------------------------------
+
+	.logo-menu-wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 1.5rem;
+
+		@include grid-media($pre-nav-only) {
+			padding: rem(38) 1.5rem rem(20);
+		}
+
+		img {
+			height: auto;
+			width: 100%;
+			max-width: 300px;
+			display: none;
+
+			@include grid-media($pre-nav-only) {
+				&:last-child { display: block; }
+			}
+
+			@include grid-media($nav) {
+				&:first-child { display: block; }
+			}
+		}
 	}
 
 	nav.nav--secondary {
@@ -41,17 +112,31 @@ header.body--header {
 	}
 
 	nav.nav--primary {
-		ul.menu {
-      max-height: 0;
-      overflow: hidden;
-      transform-origin: top;
-      transition: all .66s ease-in-out;
+		@include grid-media($nav) {
+			display: flex;
+			justify-content: flex-end;
+		}
+		@include grid-media($pre-nav-only) {
+			transform-origin: top;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.44s ease-in-out;
+		
+			&:has(.nav-open) {
+				max-height: 1500px;
+			}
+		}
+		.menu {
+      display: grid;
+			gap: 0;
+			transition: all 0.44s ease-in-out;
+			
+			
+			
 			@include grid-media($nav) {
 				display: flex;
+				align-items: end;
 			}
-      &.open-sub-menu {
-        max-height: 500px;
-      }
 			// Styles for ALL <li>'s and <a>'s
 			li {
 				font-family: $heading-font;
@@ -92,6 +177,9 @@ header.body--header {
 	
 	.search-toggle {
 		cursor: pointer;
+		@include grid-media($pre-nav-only) {
+			display: none;
+		}
 	}
 	
 	@include grid-media($pre-nav-only) {

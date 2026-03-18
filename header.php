@@ -23,34 +23,37 @@
 	<a href="#main-content" class="visually-hidden" title="skip to main content">Skip to main content</a>
 
 	<header class="is-layout-constrained has-global-padding body--header" role="banner">
-		<h6 class="logo">
-			<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>">
-				<?php 
-					$logo = get_field('header_logo', 'options');
-					$altlogo = get_field('footer_logo', 'options');
-				if($logo):
-					$header_logo = wp_get_attachment_image( $logo, 'large' );
-					echo $header_logo;
-					if($altlogo) {
-						$alt_logo = wp_get_attachment_image( $altlogo, 'large' );
-						echo $alt_logo;
-					}
-				?>
-
-				<?php else:
-					bloginfo('title'); ?>
-				<?php endif; ?>
-			</a>
-		</h6>
-		<nav class="nav--secondary" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'secondary-header-menu', 'container' => false) ); ?>
-		</nav>
-		<a href="#0" class="search-toggle"><span class="fa-solid fa-search"></span></a>
-		<?php include( locate_template('components/_search-form.php') ); ?>
-		<?php //include( locate_template('components/_menu-button.php') ); ?>
-		<nav class="nav--primary" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary-header-menu', 'container' => false) ); ?>
-		</nav>
+		<div class="header-flex alignfull">
+			<div class="logo-menu-wrapper">
+				<h6 class="logo">
+					<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('title'); ?>">
+						<?php 
+							$logo = get_field('header_logo', 'options');
+							$altlogo = get_field('footer_logo', 'options');
+						if($logo):
+							$header_logo = wp_get_attachment_image( $logo, 'large' );
+							echo $header_logo;
+							if($altlogo) {
+								$alt_logo = wp_get_attachment_image( $altlogo, 'large' );
+								echo $alt_logo;
+							}
+						?>
+						
+						<?php else:
+							bloginfo('title'); ?>
+						<?php endif; ?>
+					</a>
+				</h6>
+				<?php include( locate_template('components/_menu-button.php') ); ?>
+			</div>
+			
+			
+			<nav class="nav--primary alignfull has-global-padding" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary-header-menu', 'container' => false) ); ?>
+				<a href="#0" class="search-toggle"><span class="fa-solid fa-search"></span></a>
+				<?php include( locate_template('components/_search-form.php') ); ?>
+			</nav>
+		</div>
 	</header>
 
 	<section class="body--wrapper is-layout-constrained has-global-padding" role="main">

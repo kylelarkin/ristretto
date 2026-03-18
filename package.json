@@ -10,6 +10,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "jarallax": "^3.0.0",
+    "jquery-smooth-scroll": "^2.2.0",
     "lity": "^2.4.1",
     "tiny-slider": "^2.9.4",
     "video-worker": "^3.0.0"

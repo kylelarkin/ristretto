@@ -43,6 +43,7 @@ body{
 }
 
 .body--wrapper {  
+	z-index: 10;
   .alignfull + .alignfull {
     margin-block-start: 0;
   }

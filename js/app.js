@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
   // Mobile Menu Toggle
   $('.menu-toggle').on('click', function (e) {
     $(this).toggleClass('active');
-    $('ul.menu').toggleClass('nav-open');
+    $('.menu').toggleClass('nav-open');
   });
 
   // Search header Toggle
@@ -52,6 +52,6 @@ jQuery(window).on('load', function () {
     imgPosition: 'center bottom'
   });
 
-AOS.init();
+  AOS.init();
   
 });
