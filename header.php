@@ -45,7 +45,7 @@
 		<nav class="nav--secondary" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'secondary-header-menu', 'container' => false) ); ?>
 		</nav>
-		<div id="search-button"><a href="#0" title="Search the <?php bloginfo('title'); ?> website"><span class="fas fa-search"></span></a></div>
+		<a href="#0" class="search-toggle"><span class="fa-solid fa-search"></span></a>
 		<?php include( locate_template('components/_search-form.php') ); ?>
 		<?php //include( locate_template('components/_menu-button.php') ); ?>
 		<nav class="nav--primary" role="navigation">

@@ -512,6 +512,36 @@ header.body--header nav.nav--primary ul.menu li {
     padding-right: 2rem;
   }
 }
+header.body--header nav.nav--primary ul.sub-menu.open {
+  max-height: 1000px;
+}
+header.body--header .search-toggle {
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  header.body--header:has(.nav-open) .searchform {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  header.body--header .searchform {
+    position: absolute;
+    top: 2.5rem;
+    right: -1rem;
+    z-index: -1;
+  }
+  header.body--header .searchform.open {
+    opacity: 1;
+    z-index: 100;
+  }
+}
+@media (min-width: 768px) {
+  header.body--header .searchform #search-close {
+    display: unset;
+    cursor: pointer;
+  }
+}
+
 body.error404 {
   background-color: rgba(0, 0, 0, 0.1);
   position: relative;

@@ -1,0 +1,17 @@
+{
+  "name": "codekit-project",
+  "version": "1.0.0",
+  "description": "CodeKit created this starter package.json file. You should customize it appropriately. (If you intend to publish this project on npm, add an entry in the 'repository' field and remove the 'private' attribute, below.)",
+  "scripts": {},
+  "author": "",
+  "license": "UNLICENSED",
+  "repository": {},
+  "private": true,
+  "dependencies": {
+    "aos": "^2.3.4",
+    "jarallax": "^3.0.0",
+    "lity": "^2.4.1",
+    "tiny-slider": "^2.9.4",
+    "video-worker": "^3.0.0"
+  }
+}

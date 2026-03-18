@@ -77,12 +77,45 @@ header.body--header {
 			}
 		}
 		ul.sub-menu {
+			&.open { 
+				max-height: 1000px; 
+			}
 			// Styles for only CHILD LEVEL <li>'s and <a>'s
 			& > li {
 				&:hover, &:active {}
 				a {
 					&:hover, &:active {}
 				}
+			}
+		}
+	}
+	
+	.search-toggle {
+		cursor: pointer;
+	}
+	
+	@include grid-media($pre-nav-only) {
+		&:has(.nav-open) {
+			.searchform {
+				opacity: 1;
+			}
+		}
+	}
+	.searchform {
+		@include grid-media($nav) {
+			position: absolute;
+			top: 2.5rem;
+			right: -1rem;
+			z-index: -1;
+			&.open {
+				opacity: 1;
+				z-index: 100;
+			}
+		}
+		#search-close {
+			@include grid-media($nav) {
+				display: unset;
+				cursor: pointer;
 			}
 		}
 	}
