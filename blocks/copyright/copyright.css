@@ -66,7 +66,6 @@ a:link {
 
 body:not(.wp-admin) {
   font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-  font-size: 100%;
   line-height: 1.5;
   font-display: swap;
 }
@@ -77,7 +76,7 @@ nav ul {
   padding-left: 0;
 }
 
-.editor-styles-wrapper .block-copyright p, .block-copyright p {
+.editor-styles-wrapper .wp-block-ristretto-copyright p, .wp-block-ristretto-copyright p {
   font-size: 0.875rem;
   letter-spacing: 1px;
 }

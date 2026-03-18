@@ -3,7 +3,7 @@
 	"category": "formatting",
 	"icon": "privacy",
 	"keywords": ["legal", "copyright"],
-	"name": "flat-white/copyright",
+	"name": "ristretto/copyright",
 	"style": [ "file:./copyright.css" ],
 	"title": "Copyright",
 	"acf": {
@@ -13,5 +13,5 @@
 	"supports": {
 		"anchor": true
 	},
-  "version": 1.01
+  "version": "1.0"
 }

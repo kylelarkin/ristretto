@@ -589,14 +589,6 @@
       "oAP" : "\/lib\/blocks.php",
       "oF" : 0
     },
-    "\/lib\/customizer.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/lib\/customizer.php",
-      "oF" : 0
-    },
     "\/lib\/editor.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1103,6 +1095,18 @@
       "oA" : 0,
       "oAP" : "\/single.php",
       "oF" : 0
+    },
+    "\/style-min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/style-min-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/style.css" : {
       "aP" : 1,

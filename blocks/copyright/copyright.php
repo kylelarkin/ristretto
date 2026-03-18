@@ -1,28 +1,38 @@
 <?php
 
 /**
- * Social Sharing Block Template.
+ * Copyright Block Template.
  *
- * @param   array $block The block settings and attributes.
- * @param   string $content The block inner HTML (empty).
- * @param   bool $is_preview True during AJAX preview.
- * @param   (int|string) $post_id The post ID this block is saved to.
+  * @param   array $block The block settings and attributes.
+  * @param   string $content The block inner HTML (empty).
+  * @param   bool $is_preview True during AJAX preview.
+  * @param   (int|string) $post_id The post ID this block is saved to.
+  */
+
+ // Check for Custom Anchor
+ if( !empty($block['anchor']) ) {
+   $id = $block['anchor'];
+ } else {
+   $id = null;
+ }
+/**
+ * IMPORTANT PART:
+ * When inside a Query Loop, the current post ID is passed via block context.
+ * In a normal single post view, fall back to the global $post or $post_id.
  */
+$loop_post_id = null;
 
-// Create id attribute allowing for custom "anchor" value.
-$id = 'block-copyright-' . $block['id'];
-if( !empty($block['anchor']) ) {
-		$id = $block['anchor'];
+// Newer ACF block renderer passes context in $block['context'].
+if ( isset( $block['context']['postId'] ) ) {
+    $loop_post_id = $block['context']['postId'];
 }
 
-// Create class attribute allowing for custom "className", "align", "background" values.
-$className = 'block-copyright';
-
-if( !empty($block['className']) ) {
-		$className .= ' ' . $block['className'];
-}
 ?>
 
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-  <p class="copyright">&copy;<?php echo date("Y"); ?> <?= get_bloginfo('title'); ?></p>
-</div>
+<?php if ( ! $is_preview ) { ?>
+  <div id="<?php echo esc_attr( $id ); ?>" <?php echo get_block_wrapper_attributes($class_names); ?>>
+<?php } ?>
+   <p class="copyright">&copy;<?php echo date("Y"); ?> <?= get_bloginfo('title'); ?></p>
+<?php if ( ! $is_preview ) { ?>
+  </div>
+<?php } ?>
