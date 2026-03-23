@@ -1,8 +1,4 @@
 <?php
-/**
- * Remove theme/plugin editor
- */
-define( 'DISALLOW_FILE_EDIT', true );
 
 /**
  * Add custom logo to Wordpress Login page(s). Logo should be no bigger than 323 pixels wide by 67 pixels high
@@ -27,12 +23,12 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 /**
  * Disable Admin Bar for Subscribers
  */
-// function ristretto_hide_admin_bar() {
-//     if (!current_user_can('edit_posts')) {
-//      how_admin_bar(false);
-//   }
-// }
-// add_action('set_current_user', 'ristretto_hide_admin_bar');
+function ristretto_hide_admin_bar() {
+    if (!current_user_can('edit_posts')) {
+     show_admin_bar(false);
+  }
+}
+add_action('set_current_user', 'ristretto_hide_admin_bar');
 
 /**
  * Change Login Logo to point to Home Page
