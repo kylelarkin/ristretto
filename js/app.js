@@ -51,7 +51,5 @@ jQuery(window).on('load', function () {
     speed: 0.2,
     imgPosition: 'center bottom'
   });
-
-  AOS.init();
   
 });
