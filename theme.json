@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "version": 2,
+  "version": 3,
   "settings": {
     "appearanceTools": true,
     "useRootPaddingAwareAlignments": true,
@@ -22,6 +22,7 @@
       ]
     },
     "spacing": {
+      "defaultSpacingSizes": false,
       "spacingScale": {
         "steps": 0,
         "mediumStep": "1"
@@ -37,6 +38,7 @@
       "units": ["%", "px", "em", "rem", "vh", "vw"]
     },
     "typography": {
+      "defaultFontSizes": false,
       "lineHeight": true,
       "fontFamilies": [
         {
@@ -56,6 +58,61 @@
     }
   },
   "styles": {
+    "blocks": {
+      "core/button": {
+        "border": {
+          "radius": "0px"
+        },
+        "colors": {
+          "background": "var(--wp--preset--color---black)",
+          "text": "var(--wp--preset--color---white)"
+        },
+        "spacing": {
+          "padding": "10px 30px"
+        },
+        "typography": {
+          "fontSize": "14px",
+          "fontWeight": "700",
+          "lineHeight": "1.5",
+          "letterSpacing": "2.8px",
+          "textTransform": "uppercase"
+        },
+        "variations": {
+          "arrow": {
+            "color": {
+              "text": "inherit",
+              "background": "transparent"
+            },
+            "spacing": {
+              "padding": "0"
+            },
+            "typography": {
+              "fontSize": "15px",
+              "letterSpacing": "3px"
+            }
+          },
+          "email": {
+            "color": {
+              "text": "inherit",
+              "background": "transparent"
+            },
+            "spacing": {
+              "padding": "0"
+            },
+            "typography": {
+              "fontSize": "15px",
+              "letterSpacing": "3px"
+            }
+          },
+          "outline": {
+            "border": {
+              "width": "2px",
+              "style": "solid"
+            }
+          }
+        }
+      }
+    },
     "spacing": {
       "blockGap": "24px",
       "padding": {
