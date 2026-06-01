@@ -36,16 +36,6 @@ header.body--header {
 			margin-right: auto !important;
 			max-width: 1300px;
 			position: relative;
-
-			&::before {
-				content: '';
-				position: absolute;
-				width: calc(100% - 80px);
-				border-bottom: 1px solid $white;
-				height: 2px;
-				right: 0;
-				bottom: 0;
-			}
 		}
 	}
 

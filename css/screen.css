@@ -605,15 +605,6 @@ header.body--header {
     max-width: 1300px;
     position: relative;
   }
-  header.body--header .header-flex::before {
-    content: "";
-    position: absolute;
-    width: calc(100% - 80px);
-    border-bottom: 1px solid #fff;
-    height: 2px;
-    right: 0;
-    bottom: 0;
-  }
 }
 header.body--header .logo-menu-wrapper {
   display: flex;
