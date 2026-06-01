@@ -15,18 +15,8 @@
  } else {
    $id = null;
  }
-/**
- * IMPORTANT PART:
- * When inside a Query Loop, the current post ID is passed via block context.
- * In a normal single post view, fall back to the global $post or $post_id.
- */
-$loop_post_id = null;
-
-// Newer ACF block renderer passes context in $block['context'].
-if ( isset( $block['context']['postId'] ) ) {
-    $loop_post_id = $block['context']['postId'];
-}
-
+ $class_names = array();
+ 
 ?>
 
 <?php if ( ! $is_preview ) { ?>
