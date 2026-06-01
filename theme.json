@@ -91,19 +91,6 @@
               "letterSpacing": "3px"
             }
           },
-          "email": {
-            "color": {
-              "text": "inherit",
-              "background": "transparent"
-            },
-            "spacing": {
-              "padding": "0"
-            },
-            "typography": {
-              "fontSize": "15px",
-              "letterSpacing": "3px"
-            }
-          },
           "outline": {
             "border": {
               "width": "2px",

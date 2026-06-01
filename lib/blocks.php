@@ -104,9 +104,9 @@ register_block_style(
 );
 
 register_block_style(
-  'core/heading',
+  'core/button',
   array(
-    'name' => 'highlight',
-    'label' => __('Highlight'),
+    'name' => 'arrow',
+    'label' => __('Arrow'),
   )
 );
