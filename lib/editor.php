@@ -13,16 +13,19 @@ function ristretto_add_editor_styles() {
 add_action( 'init', 'ristretto_add_editor_styles' );
 
 function ristretto_enqueue_gutenberg() {
-  // Enqueue Typekit for Editor.
-  wp_register_style( 'ristretto-gutenberg-fonts', '//use.typekit.net/vbl0nii.css' );
-  // wp_register_style( 'tiny-slider-css', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/tiny-slider.css', array(), null, 'all' );
   
+  // Enqueue font styles for Editor.
+  wp_register_style( 'ristretto-gutenberg-fonts', '//use.typekit.net/vbl0nii.css' );
   wp_enqueue_style( 'ristretto-gutenberg-fonts' );
+  
+  // Enqueue slider styles for Editor.
+  // wp_register_style( 'tiny-slider-css', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/tiny-slider.css', array(), null, 'all' );
   // wp_enqueue_style( 'tiny-slider-css' );
 
+ // Enqueue slider scripts for Editor.
   wp_register_script( 'editor-tiny-slider', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/min/tiny-slider.js', null, null, true );
-  
   // wp_enqueue_script('editor-tiny-slider');
+  
 
 }
 add_action( 'enqueue_block_editor_assets', 'ristretto_enqueue_gutenberg' );
