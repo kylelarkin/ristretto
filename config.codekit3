@@ -7,7 +7,7 @@
       "uuidString" : "9E350C24-7153-46D2-86B7-2393A399A36E"
     }
   ],
-  "creatorBuild" : "34903",
+  "creatorBuild" : "34921",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -778,6 +778,18 @@
       "oS" : 1,
       "pg" : 0
     },
+    "\/sass\/css\/_gravityforms.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/css\/_gravityforms-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/sass\/editor-style.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -956,6 +968,19 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/sass\/css\/_facetwp.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0
+    },
+    "\/sass\/vendor_overrides\/_gravityforms.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/css\/_gravityforms.css",
       "oF" : 0,
       "oS" : 1,
       "pg" : 0
@@ -2138,7 +2163,7 @@
       }
     },
     "esLintSourceType" : 0,
-    "externalServerAddress" : "https:\/\/ristretto.local\/",
+    "externalServerAddress" : "https:\/\/ristretto.local:52407\/",
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",

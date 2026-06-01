@@ -174,6 +174,129 @@ p + .facetwp-facet {
   margin-top: -12px;
 }
 
+.gform_confirmation_wrapper, .gform_validation_errors {
+  background-color: #007787 !important;
+  padding: 1rem 1.25rem !important;
+  border: 0 !important;
+  border-bottom: 4px solid #ccc !important;
+  color: #fff !important;
+}
+.gform_confirmation_wrapper h2, .gform_confirmation_wrapper span, .gform_validation_errors h2, .gform_validation_errors span {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+.gform_confirmation_wrapper:focus, .gform_validation_errors:focus {
+  outline-color: #f2f2f2 !important;
+}
+.gform_confirmation_wrapper ol a.gform_validation_error_link, .gform_confirmation_wrapper li:has(.gform_validation_error_link), .gform_validation_errors ol a.gform_validation_error_link, .gform_validation_errors li:has(.gform_validation_error_link) {
+  color: #fff;
+}
+
+.gform_wrapper .gform_required_legend {
+  display: none;
+}
+.gform_wrapper .gform_heading + form {
+  margin-top: 1.875rem;
+}
+.gform_wrapper form .gform_fields {
+  gap: 1.5rem 1rem;
+}
+.gform_wrapper form .gfield_description {
+  color: #000;
+}
+.gform_wrapper form .ginput_container label.gform-field-label, .gform_wrapper form .ginput_container label.gfield_label, .gform_wrapper form .ginput_container legend, .gform_wrapper form .gfield label.gform-field-label, .gform_wrapper form .gfield label.gfield_label, .gform_wrapper form .gfield legend {
+  color: #007787;
+  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.gform_wrapper form .ginput_container label.gform-field-label.gform-field-label--type-sub, .gform_wrapper form .ginput_container label.gform-field-label.gform-field-label--type-inline, .gform_wrapper form .ginput_container label.gfield_label.gform-field-label--type-sub, .gform_wrapper form .ginput_container label.gfield_label.gform-field-label--type-inline, .gform_wrapper form .ginput_container legend.gform-field-label--type-sub, .gform_wrapper form .ginput_container legend.gform-field-label--type-inline, .gform_wrapper form .gfield label.gform-field-label.gform-field-label--type-sub, .gform_wrapper form .gfield label.gform-field-label.gform-field-label--type-inline, .gform_wrapper form .gfield label.gfield_label.gform-field-label--type-sub, .gform_wrapper form .gfield label.gfield_label.gform-field-label--type-inline, .gform_wrapper form .gfield legend.gform-field-label--type-sub, .gform_wrapper form .gfield legend.gform-field-label--type-inline {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #333;
+}
+.gform_wrapper form .ginput_container input, .gform_wrapper form .ginput_container textarea, .gform_wrapper form .ginput_container select, .gform_wrapper form .gfield input, .gform_wrapper form .gfield textarea, .gform_wrapper form .gfield select {
+  border-radius: 0;
+  border: 1px solid #D9D9D9;
+  box-shadow: 0 0 0 0 transparent;
+}
+.gform_wrapper form .ginput_container input:not([type=checkbox]), .gform_wrapper form .ginput_container textarea:not([type=checkbox]), .gform_wrapper form .ginput_container select:not([type=checkbox]), .gform_wrapper form .gfield input:not([type=checkbox]), .gform_wrapper form .gfield textarea:not([type=checkbox]), .gform_wrapper form .gfield select:not([type=checkbox]) {
+  margin-top: 0.4375rem;
+}
+.gform_wrapper form .ginput_container input::-moz-placeholder, .gform_wrapper form .ginput_container textarea::-moz-placeholder, .gform_wrapper form .ginput_container select::-moz-placeholder, .gform_wrapper form .gfield input::-moz-placeholder, .gform_wrapper form .gfield textarea::-moz-placeholder, .gform_wrapper form .gfield select::-moz-placeholder {
+  font-weight: 300;
+}
+.gform_wrapper form .ginput_container input::placeholder, .gform_wrapper form .ginput_container textarea::placeholder, .gform_wrapper form .ginput_container select::placeholder, .gform_wrapper form .gfield input::placeholder, .gform_wrapper form .gfield textarea::placeholder, .gform_wrapper form .gfield select::placeholder {
+  font-weight: 300;
+}
+.gform_wrapper form .ginput_container input:focus, .gform_wrapper form .ginput_container textarea:focus, .gform_wrapper form .ginput_container select:focus, .gform_wrapper form .gfield input:focus, .gform_wrapper form .gfield textarea:focus, .gform_wrapper form .gfield select:focus {
+  outline-color: #00ABB3;
+}
+.gform_wrapper form .ginput_container .gfield_radio, .gform_wrapper form .ginput_container .gfield_checkbox, .gform_wrapper form .ginput_container:has([type=checkbox]), .gform_wrapper form .gfield .gfield_radio, .gform_wrapper form .gfield .gfield_checkbox, .gform_wrapper form .gfield:has([type=checkbox]) {
+  gap: 1rem 3.75rem;
+  margin-top: 1rem;
+}
+@media (min-width: 580px) {
+  .gform_wrapper form .ginput_container .gfield_radio, .gform_wrapper form .ginput_container .gfield_checkbox, .gform_wrapper form .ginput_container:has([type=checkbox]), .gform_wrapper form .gfield .gfield_radio, .gform_wrapper form .gfield .gfield_checkbox, .gform_wrapper form .gfield:has([type=checkbox]) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: start;
+  }
+}
+.gform_wrapper form .ginput_container .gfield_radio .gchoice, .gform_wrapper form .ginput_container .gfield_radio .ginput_container_consent, .gform_wrapper form .ginput_container .gfield_checkbox .gchoice, .gform_wrapper form .ginput_container .gfield_checkbox .ginput_container_consent, .gform_wrapper form .ginput_container:has([type=checkbox]) .gchoice, .gform_wrapper form .ginput_container:has([type=checkbox]) .ginput_container_consent, .gform_wrapper form .gfield .gfield_radio .gchoice, .gform_wrapper form .gfield .gfield_radio .ginput_container_consent, .gform_wrapper form .gfield .gfield_checkbox .gchoice, .gform_wrapper form .gfield .gfield_checkbox .ginput_container_consent, .gform_wrapper form .gfield:has([type=checkbox]) .gchoice, .gform_wrapper form .gfield:has([type=checkbox]) .ginput_container_consent {
+  display: flex !important;
+  align-items: start !important;
+  align-content: center !important;
+  gap: 0.5rem !important;
+}
+.gform_wrapper form .ginput_container .gfield_radio .gchoice input, .gform_wrapper form .ginput_container .gfield_radio .ginput_container_consent input, .gform_wrapper form .ginput_container .gfield_checkbox .gchoice input, .gform_wrapper form .ginput_container .gfield_checkbox .ginput_container_consent input, .gform_wrapper form .ginput_container:has([type=checkbox]) .gchoice input, .gform_wrapper form .ginput_container:has([type=checkbox]) .ginput_container_consent input, .gform_wrapper form .gfield .gfield_radio .gchoice input, .gform_wrapper form .gfield .gfield_radio .ginput_container_consent input, .gform_wrapper form .gfield .gfield_checkbox .gchoice input, .gform_wrapper form .gfield .gfield_checkbox .ginput_container_consent input, .gform_wrapper form .gfield:has([type=checkbox]) .gchoice input, .gform_wrapper form .gfield:has([type=checkbox]) .ginput_container_consent input {
+  margin: 0;
+}
+.gform_wrapper form .ginput_container .gfield_radio input, .gform_wrapper form .ginput_container .gfield_checkbox input, .gform_wrapper form .ginput_container:has([type=checkbox]) input, .gform_wrapper form .gfield .gfield_radio input, .gform_wrapper form .gfield .gfield_checkbox input, .gform_wrapper form .gfield:has([type=checkbox]) input {
+  margin: 0;
+  aspect-ratio: 1;
+}
+.gform_wrapper form .ginput_container .gfield_radio input:not([type=checkbox]), .gform_wrapper form .ginput_container .gfield_checkbox input:not([type=checkbox]), .gform_wrapper form .ginput_container:has([type=checkbox]) input:not([type=checkbox]), .gform_wrapper form .gfield .gfield_radio input:not([type=checkbox]), .gform_wrapper form .gfield .gfield_checkbox input:not([type=checkbox]), .gform_wrapper form .gfield:has([type=checkbox]) input:not([type=checkbox]) {
+  border-radius: 100%;
+  cursor: pointer;
+}
+.gform_wrapper form .ginput_container .gfield_radio input:not([type=checkbox]):before, .gform_wrapper form .ginput_container .gfield_checkbox input:not([type=checkbox]):before, .gform_wrapper form .ginput_container:has([type=checkbox]) input:not([type=checkbox]):before, .gform_wrapper form .gfield .gfield_radio input:not([type=checkbox]):before, .gform_wrapper form .gfield .gfield_checkbox input:not([type=checkbox]):before, .gform_wrapper form .gfield:has([type=checkbox]) input:not([type=checkbox]):before {
+  background-color: #ccc;
+}
+.gform_wrapper form .ginput_container .gfield_radio label, .gform_wrapper form .ginput_container .gfield_checkbox label, .gform_wrapper form .ginput_container:has([type=checkbox]) label, .gform_wrapper form .gfield .gfield_radio label, .gform_wrapper form .gfield .gfield_checkbox label, .gform_wrapper form .gfield:has([type=checkbox]) label {
+  font-weight: 300;
+  font-size: 0.9375rem;
+}
+.gform_wrapper form .gform-footer {
+  margin-bottom: clamp(50px, 4.5vw, 72px);
+}
+.gform_wrapper form .gform-footer input.gform_button[type=submit] {
+  padding: 0.625rem 2.5rem 0.5rem !important;
+  border-radius: 0px !important;
+  background-color: #105963 !important;
+  text-transform: uppercase !important;
+  font-size: 0.875rem !important;
+  letter-spacing: 2.8px !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease-in-out !important;
+}
+.gform_wrapper form .gform-footer input.gform_button[type=submit]:hover {
+  transition-delay: ease-in;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25) !important;
+  transform: scale(1.0125);
+}
+.gform_wrapper form .gform-footer input.gform_button[type=submit]:focus {
+  outline-color: #f2f2f2 !important;
+}
+
 body.login div#login h1 a {
   background: url("../img/wp-login-logo-ristretto.png") no-repeat 0 0;
   background-size: contain;
@@ -447,8 +570,7 @@ body {
   z-index: 10;
 }
 .body--wrapper .alignfull + .alignfull {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
+  margin-block-start: 0;
 }
 
 footer.body--footer::after {
