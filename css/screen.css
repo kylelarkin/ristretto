@@ -517,12 +517,12 @@ form.searchform #search-close {
 }
 @media (min-width: 1344px) {
   .wp-block-media-text.alignfull:not(.has-media-on-the-right) .wp-block-media-text__content {
-    margin-right: calc(50vw - 720px);
+    margin-right: calc(50vw - var(--wp--style--global--wide-size) / 2);
   }
 }
 @media (min-width: 1344px) {
   .wp-block-media-text.alignfull.has-media-on-the-right .wp-block-media-text__content {
-    margin-left: calc(50vw - 720px);
+    margin-left: calc(50vw - var(--wp--style--global--wide-size) / 2);
   }
 }
 
@@ -573,24 +573,24 @@ body {
   margin-block-start: 0;
 }
 
+footer.body--footer {
+  margin-top: auto;
+}
 footer.body--footer::after {
   clear: both;
   content: "";
   display: block;
 }
-footer.body--footer {
-  margin-top: auto;
-}
 
-header.body--header::after {
-  clear: both;
-  content: "";
-  display: block;
-}
 header.body--header {
   z-index: 10000;
   width: 100%;
   transition: all 2s ease-in-out;
+}
+header.body--header::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 @media (min-width: 768px) {
   header.body--header .header-flex {
@@ -900,6 +900,10 @@ body.search .search-result a {
 }
 body.search .search-result h2 {
   font-size: 22px;
+  margin-bottom: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  transition: all 0.25s ease-out;
 }
 @media (min-width: 320px) {
   body.search .search-result h2 {
@@ -910,12 +914,6 @@ body.search .search-result h2 {
   body.search .search-result h2 {
     font-size: 26px;
   }
-}
-body.search .search-result h2 {
-  margin-bottom: 1rem;
-  margin: 0;
-  text-transform: uppercase;
-  transition: all 0.25s ease-out;
 }
 body.search .search-result .excerpt {
   font-size: 1.25rem;
