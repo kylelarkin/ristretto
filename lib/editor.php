@@ -1,16 +1,14 @@
 <?php
 /**
- * Add Support for Editor Styles
+ * Editor styles — must run at after_setup_theme.
  */
-add_theme_support('editor-styles');
+function ristretto_editor_styles() {
+  add_theme_support( 'editor-styles' );
 
-/**
- * Registers Editor Styles
- */
-function ristretto_add_editor_styles() {
-    add_editor_style( 'css/editor-style.css' );
+  // Relative to theme root.
+  add_editor_style( 'css/editor-style.css' );
 }
-add_action( 'init', 'ristretto_add_editor_styles' );
+add_action( 'after_setup_theme', 'ristretto_editor_styles' );
 
 function ristretto_enqueue_gutenberg() {
   
@@ -22,11 +20,10 @@ function ristretto_enqueue_gutenberg() {
   // wp_register_style( 'tiny-slider-css', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/tiny-slider.css', array(), null, 'all' );
   // wp_enqueue_style( 'tiny-slider-css' );
 
- // Enqueue slider scripts for Editor.
-  wp_register_script( 'editor-tiny-slider', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/min/tiny-slider.js', null, null, true );
+  // Enqueue slider scripts for Editor.
+  // wp_register_script( 'editor-tiny-slider', get_bloginfo( 'stylesheet_directory' ) . '/node_modules/tiny-slider/dist/min/tiny-slider.js', null, null, true );
   // wp_enqueue_script('editor-tiny-slider');
   
-
 }
 add_action( 'enqueue_block_editor_assets', 'ristretto_enqueue_gutenberg' );
 
